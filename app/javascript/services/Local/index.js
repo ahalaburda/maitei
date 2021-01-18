@@ -18,7 +18,7 @@ class Local extends Component {
    * GET: get the record from the local API and update the state with the response
    */
   getNews() {
-     axios.get('http://localhost:3000/api/v1/posts.json')
+     axios.get('/api/v1/posts.json')
         .then(response => {
           const reversed = response.data.data.reverse();
           this.setState({articles: reversed});
