@@ -5,6 +5,7 @@
 [Site](maitei.uni.edu.py)
 
 * * *
+Adrian Halaburda
 
   El proyecto fue postulado el 3 de abril de 2018. Fue adjudicado por el CONACYT por Res. No. 010/2020 del 9 de enero de 2020 y en nómina final para su ejecución correspondiente, mediante la Resolución de CONACYT No. 136/2020 del 1 de abril de 2020, con el Código PINV18-1284 en la Modalidad Investigación con Enfoque Ciencia, Tecnología y Sociedad (CTS) para el área de Humanidades 
     
