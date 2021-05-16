@@ -1,5 +1,5 @@
 """
-ASGI config for maitei project.
+ASGI config for guarani project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'maitei.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'guarani.settings')
 
 application = get_asgi_application()
