@@ -15,9 +15,10 @@ class Progress(models.Model):
     def __str__(self):
         return str(self.user_id)+" - "+str(self.level)+" - "+str(self.experience)
 
+
 class Record(models.Model):
     progress_id = models.ForeignKey(Progress, db_column='progress_id',  null=False, blank=True, on_delete=models.CASCADE)
-    exercise_detail_id = models.ForeignKey(Exercise_detail, db_column='progress_id',  null=False, blank=True, on_delete=models.CASCADE)
+    current_exercise_id = models.ForeignKey(Exercise_detail, db_column='current_exercise_id',  null=False, blank=True, on_delete=models.CASCADE)
     user_id = models.ForeignKey(settings.AUTH_USER_MODEL, db_column='user_id',  null=False, blank=True, on_delete=models.CASCADE)
     status = models.CharField(max_length=100) #TODO:CHANGE TO ENUM
 
@@ -25,4 +26,4 @@ class Record(models.Model):
         verbose_name_plural = "Records"
 
     def __str__(self):
-        return str(self.progress_id)+" - "+str(self.exercise_detail_id)+" - "+str(self.user_id)
+        return str(self.progress_id)+" - "+str(self.current_exercise_id)+" - "+str(self.user_id)

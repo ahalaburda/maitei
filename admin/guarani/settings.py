@@ -34,6 +34,8 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+    'adminlte3',
+    'adminlte3_theme',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -46,8 +48,8 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt.token_blacklist',
     'exercises',
     'progress',
-    # 'apps.reactives',
-    # 'apps.authentication'
+    'reactives',
+    'authentication'
 ]
 
 MIDDLEWARE = [
@@ -133,6 +135,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
@@ -165,15 +168,6 @@ SIMPLE_JWT = {
     'TOKEN_TYPE_CLAIM': 'token_type'
 }
 
-CACHES = {
-    'default': {
-        'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
-        'LOCATION': [
-            'localhost:11211',
-            'localhost:11211',
-        ]
-    }
-}
 
 CORS_ORIGIN_WHITELIST = ('http://localhost:3000',)
 CORS_ALLOW_CREDENTIALS = True

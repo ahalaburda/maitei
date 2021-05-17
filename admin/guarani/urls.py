@@ -29,6 +29,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('exercises.urls')),
     path('api/', include('progress.urls')),
-    path('api/', include('reactives.api.urls')),
+    path('api/', include('reactives.urls')),
     path('api/', include('authentication.urls'))
 ]

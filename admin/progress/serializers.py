@@ -1,18 +1,15 @@
 from rest_framework import serializers
 
-from .models import Level
-from .models import Chapter
-from .models import Reactive
-from .models import Exercise
-from .models import Exercise_detail
+from .models import Progress
+from .models import Record
 
 
 class ProgressSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Level
+        model = Progress
         fields = '__all__'
 
 class RecordSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Level
+        model = Record
         fields = '__all__'
