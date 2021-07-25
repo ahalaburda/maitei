@@ -11,6 +11,7 @@ import Footer from './components/Footer/index'
 import Home from './components/Home/index'
 import Levels from './components/Levels/index'
 import Chapters from './components/Chapters/index'
+import Exercises from './components/Exercises';
 import Profile from './components/Profile/index'
 
 
@@ -22,10 +23,10 @@ function App() {
     <body id="page-top">
     <div id="wrapper">
         <Sidebar />
-        <div class="d-flex flex-column" id="content-wrapper">
+        <div className="d-flex flex-column" id="content-wrapper">
             <div id="content">
                 <Header />
-                <div class="container-fluid">
+                <div className="container-fluid">
                     <Switch>
                         <Route exact path="/">
                             <Home />
@@ -38,6 +39,9 @@ function App() {
                         </Route>
                         <Route exact path="/chapters">
                             <Chapters />
+                        </Route>
+                        <Route exact path="/exercises">
+                            <Exercises />
                         </Route>
                     </Switch>
                 </div>
