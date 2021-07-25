@@ -1,5 +1,6 @@
 from django.urls import path
-from .views import LevelListView, LevelDetailView, ChapterListView, ChapterDetailView, ReactiveListView, ReactiveDetailView,ExerciseListView, ExerciseDetailView, Exercise_detailListView, Exercise_detailDetailView
+# from .views import LevelListView, LevelDetailView, ChapterListView, ChapterDetailView, ReactiveListView, ReactiveDetailView,ExerciseListView, ExerciseDetailView, Exercise_detailListView, Exercise_detailDetailView
+from .views import *
 
 urlpatterns = [
     path('levels/', LevelListView.as_view(), name="levels"),
