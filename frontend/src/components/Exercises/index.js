@@ -114,7 +114,6 @@ class Exercises extends Component {
                                   answers = {answer2}  />
                     case 3: //{id: 3, description: "Audio/ Seleccionar Texto", active: true}
                       let answer3 = data.exercise_Media_to_text.answers;
-                      console.log(answer3)
                       return <Audio_to_select_texts 
                                 key = {id}
                                 filename = {data.exercise_Media_to_text.filename}
