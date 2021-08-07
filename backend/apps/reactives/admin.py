@@ -11,36 +11,48 @@ from .models import Media_to_media_detail
 
 
 class Text_to_text_detailTabularInline(admin.TabularInline):
-	model = Text_to_text_detail
+    model = Text_to_text_detail
+
 
 class Text_to_textAdmin(admin.ModelAdmin):
-	inlines = [Text_to_text_detailTabularInline]
-	class Meta:
-		model = Text_to_text
+    inlines = [Text_to_text_detailTabularInline]
+
+    class Meta:
+        model = Text_to_text
+
 
 class Text_to_media_detailTabularInline(admin.TabularInline):
-	model = Text_to_media_detail
+    model = Text_to_media_detail
+
 
 class Text_to_mediaAdmin(admin.ModelAdmin):
-	inlines = [Text_to_media_detailTabularInline]
-	class Meta:
-		model = Text_to_media
+    inlines = [Text_to_media_detailTabularInline]
+
+    class Meta:
+        model = Text_to_media
+
 
 class Media_to_text_detailTabularInline(admin.TabularInline):
-	model = Media_to_text_detail
+    model = Media_to_text_detail
+
 
 class Media_to_textAdmin(admin.ModelAdmin):
-	inlines = [Media_to_text_detailTabularInline]
-	class Meta:
-		model = Media_to_text
+    inlines = [Media_to_text_detailTabularInline]
+
+    class Meta:
+        model = Media_to_text
+
 
 class Media_to_media_detailTabularInline(admin.TabularInline):
-	model = Media_to_media_detail
+    model = Media_to_media_detail
+
 
 class Media_to_mediaAdmin(admin.ModelAdmin):
-	inlines = [Media_to_media_detailTabularInline]
-	class Meta:
-		model = Media_to_media
+    inlines = [Media_to_media_detailTabularInline]
+
+    class Meta:
+        model = Media_to_media
+
 
 admin.site.register(Text_to_text, Text_to_textAdmin)
 # admin.site.register(Text_to_text_detail)

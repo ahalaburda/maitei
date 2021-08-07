@@ -22,10 +22,12 @@ class ChapterSerializer(serializers.ModelSerializer):
         model = Chapter
         fields = '__all__'
         depth = 1
-        
+
+
 class ChapterNewUpdateSerializer(serializers.ModelSerializer):
     class Meta:
         model = Chapter
+
 
 class ReactiveSerializer(serializers.ModelSerializer):
     class Meta:
@@ -33,7 +35,7 @@ class ReactiveSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
-class ExerciseSerializer(serializers.ModelSerializer):  
+class ExerciseSerializer(serializers.ModelSerializer):
     class Meta:
         model = Exercise
         fields = '__all__'
