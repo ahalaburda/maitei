@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Profile(props) {
+function Profile() {
     return (
         <>
             <h3 className="text-dark mb-4">Usuario</h3>

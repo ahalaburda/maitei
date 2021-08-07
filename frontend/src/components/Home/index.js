@@ -1,7 +1,6 @@
 import React from 'react';
-// import './Header.css'
 
-function Home(props) {
+function Home() {
     return (
         <>
             <div className="d-sm-flex justify-content-between align-items-center mb-4">

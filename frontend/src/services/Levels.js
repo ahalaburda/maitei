@@ -12,7 +12,7 @@ class Levels {
   /**
    * Get all Levels without pagination
    */
-  getAllLevels(){
+  getAllLevels() {
     return http.get('/levels_all/?format=json');
   }
 }

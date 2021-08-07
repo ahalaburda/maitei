@@ -1,6 +1,6 @@
 import http from './http-common';
 
-class Chapters{
+class Chapters {
   /**
    * Get all Chapters by Level ID
    * @param id Level ID

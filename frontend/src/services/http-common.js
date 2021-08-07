@@ -24,8 +24,8 @@ axiosInstance.interceptors.response.use(
   response => response,
   error => {
     const originalRequest = error.config;
-    if (error.response.status === 401 && error.response.statusText === "Unauthorized"
-      && error.response.data.code === "token_not_valid") {
+    if (error.response.status === 401 && error.response.statusText === "Unauthorized" &&
+      error.response.data.code === "token_not_valid") {
       const refreshToken = sessionStorage.getItem('refresh_token');
       if (refreshToken) {
         const tokenParts = JSON.parse(atob(refreshToken.split('.')[1]));
@@ -33,7 +33,7 @@ axiosInstance.interceptors.response.use(
         const now = Math.ceil(Date.now() / 1000);
         if (tokenParts.exp > now) {
           return axiosInstance
-            .post('/token/refresh/', {refresh: refreshToken})
+            .post('/token/refresh/', { refresh: refreshToken })
             .then((response) => {
 
               sessionStorage.setItem('access_token', response.data.access);

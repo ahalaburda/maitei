@@ -19,8 +19,9 @@ import './App.css';
 
 function App() {
   return (
+    <div id="page-top">
+
     <Router>
-    <body id="page-top">
     <div id="wrapper">
         <Sidebar />
         <div className="d-flex flex-column" id="content-wrapper">
@@ -49,8 +50,9 @@ function App() {
             <Footer />
         </div>
     </div>
-    </body>
+    
     </Router>
+    </div>
   );
 }
 

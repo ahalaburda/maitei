@@ -6,8 +6,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTachometerAlt, faUser, faTable, faHandsHelping, faUserCircle, faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 import './Sidebar.css'
 
-import Home from '../Home/index'
-
 import $ from "jquery";
 
 class Sidebar extends Component {

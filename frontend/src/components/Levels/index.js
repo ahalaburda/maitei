@@ -1,11 +1,13 @@
-import React, { Component } from 'react'
+import React, {
+    Component
+} from 'react'
 import {
     Link
-  } from "react-router-dom";
+} from "react-router-dom";
 import LevelsService from "../../services/Levels";
 
 class Levels extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {
             levels: []
@@ -14,32 +16,30 @@ class Levels extends Component {
 
     retrieveLevels() {
         LevelsService.getLevels()
-        .then((response) =>{
-            this.setState({
-                levels: response.data.map((data) =>{
-                    return {
-                        id: data.id,
-                        description: data.description,
-                        active: data.active
-                    }
+            .then((response) => {
+                this.setState({
+                    levels: response.data.map((data) => {
+                        return {
+                            id: data.id,
+                            description: data.description,
+                            active: data.active
+                        }
+                    })
                 })
             })
-        })
-        .catch((e) =>{
-            alert(e);
-            console.log(e);
-        })
+            .catch((e) => {
+                alert(e);
+                console.log(e);
+            })
     }
 
     handleClick(id) {
-        sessionStorage.setItem('maitei_level_id',id);
-                
+        sessionStorage.setItem('maitei_level_id', id);
     }
 
-    componentDidMount(){
+    componentDidMount() {
         this.retrieveLevels();
     }
-
 
     render() {
         return (

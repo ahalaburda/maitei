@@ -1,6 +1,6 @@
 import http from './http-common';
 
-class Exercise{
+class Exercise {
   /**
    * Get all exercises details by exercise_id ID
    * @param id exercise_id ID
@@ -14,7 +14,7 @@ class Exercise{
    * @param id chapter_id ID
    * @returns {Promise<AxiosResponse<Chapr>>}
    */
-  getExercises(id){
+  getExercises(id) {
     return http.get(`exercises/?format=json&chapter=${id}`);
   }
 }
