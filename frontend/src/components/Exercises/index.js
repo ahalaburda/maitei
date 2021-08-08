@@ -11,6 +11,7 @@ import ExercisesService from "../../services/Exercises";
 import Audio_to_talk from "../../reactives/Audio_to_talk";
 import Audio_to_complete_texts from "../../reactives/Audio_to_complete_text";
 import Audio_to_select_texts from "../../reactives/Audio_to_select_text";
+import Audio_to_audios from "../../reactives/Audio_to_audios";
 
 
 
@@ -63,10 +64,6 @@ class Exercises extends Component {
         })
     }
 
-    handleClick(id) {
-      // sessionStorage.setItem('maitei_chapter_id',id);
-    }
-
     componentDidMount() {
       let chapterId = sessionStorage.getItem('maitei_chapter_id');
       this.getExercisesId(chapterId);
@@ -74,6 +71,7 @@ class Exercises extends Component {
 
     componentDidUpdate() {
       let exercise_id = this.state.exerciseId;
+      // console.log("asdasdad");
       this.retrieveExerciseDetails(exercise_id);
     }
 
@@ -89,15 +87,9 @@ class Exercises extends Component {
       });
     }
 
-    audioButton = (audioFile) => {
-      let audio = new Audio(audioFile)
-      audio.play();
-    }
     render() {
-
         let reactive = this.state.exercises.map((data, id) => {
             if (data.order == this.state.currentOrder) {
-                // return <Audio_to_talk  key={id} filename={data.exercise_Media_to_media.filename} fileAnswer={data.answers[0].fileAnswer} function={this.playSound(data.description)} />
                 switch (data.reactive.id) {
                     case 1: //{id: 1, description: "Audio / Hablar", active: true}
                         let answer = data.exercise_Media_to_media.answers;
@@ -119,7 +111,12 @@ class Exercises extends Component {
                                 filename = {data.exercise_Media_to_text.filename}
                                 answers = {answer3}  />
                     case 4: //{id: 4, description: "Audio / Audio", active: true}
-                        
+                      let answer4 = data.exercise_Media_to_media.answers;
+                      // console.log(answer4)
+                      return  <Audio_to_audios 
+                              key = {id}
+                              filename = {data.exercise_Media_to_media.filename}
+                              answers = {answer4}  />
                     case 5:
                         
                     default:
@@ -130,7 +127,7 @@ class Exercises extends Component {
         return (
             <>
                 <div className="d-sm-flex justify-content-between align-items-center mb-4">
-                    <h3 className="text-dark mb-0">Ejercicio # </h3>
+                    <h3 className="text-dark mb-0">Ejercicio #{this.state.currentOrder} </h3>
                 </div>
                 <div>
                     <ProgressBar animated now={this.progressPosition(this.state.currentOrder, this.state.exercises.length)} />
@@ -148,7 +145,3 @@ class Exercises extends Component {
 }
 
 export default Exercises;
-
-// <Audio_to_talk filename={d.exercise_Media_to_media.filename} />
-// <button className="btn btn-info" onClick={this.nextStep} >Next </button>
-// {/* onclick={this.playSound("hola")}/> */}
