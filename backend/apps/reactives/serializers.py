@@ -29,8 +29,7 @@ class Text_to_textSerializer(serializers.ModelSerializer):
         return text_to_text
 
     class Meta:
-        model = Media_to_text
-        # fields = ['id', 'filename', 'description', 'active', 'answers']
+        model = Text_to_text
         fields = '__all__'
 
 
@@ -52,8 +51,7 @@ class Text_to_mediaSerializer(serializers.ModelSerializer):
         return text_to_media
 
     class Meta:
-        model = Media_to_text
-        # fields = ['id', 'filename', 'description', 'active', 'answers']
+        model = Text_to_media
         fields = '__all__'
 
 
