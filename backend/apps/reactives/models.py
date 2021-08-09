@@ -4,7 +4,7 @@ from django.db import models
 
 
 class Text_to_text(models.Model):
-    question = models.CharField(max_length=100)
+    question = models.CharField(max_length=200)
     active = models.BooleanField(default=True)
 
     class Meta:
@@ -23,7 +23,7 @@ class Text_to_text_detail(models.Model):
         blank=True,
         on_delete=models.CASCADE,
     )
-    answer = models.CharField(max_length=100)
+    answer = models.CharField(max_length=200)
     correct_answer = models.BooleanField(default=False)
 
     class Meta:
@@ -34,14 +34,14 @@ class Text_to_text_detail(models.Model):
 
 
 class Text_to_media(models.Model):
-    question = models.CharField(max_length=100, default="question")
+    question = models.CharField(max_length=200, default="question")
     active = models.BooleanField(default=True)
 
     class Meta:
         verbose_name_plural = "Text to media files"
 
     def __str__(self):
-        return str(self.question)
+        return str(self.id)+" - "+str(self.question)
 
 
 class Text_to_media_detail(models.Model):
@@ -57,7 +57,7 @@ class Text_to_media_detail(models.Model):
         upload_to='text_to_media/', null=True, blank=True
     )
     correct_answer = models.BooleanField(default=False)
-    description = models.CharField(max_length=100, blank=True)
+    description = models.CharField(max_length=200, blank=True)
 
     class Meta:
         verbose_name_plural = "Text to media files details"
@@ -68,7 +68,7 @@ class Text_to_media_detail(models.Model):
 
 class Media_to_text(models.Model):
     filename = models.FileField(upload_to='media_to_text/', null=True, blank=True)
-    description = models.CharField(max_length=100, blank=True)
+    description = models.CharField(max_length=200, blank=True)
     active = models.BooleanField(default=True)
 
     class Meta:
@@ -87,7 +87,7 @@ class Media_to_text_detail(models.Model):
         blank=True,
         on_delete=models.CASCADE,
     )
-    answer = models.CharField(max_length=100)
+    answer = models.CharField(max_length=200)
     correct_answer = models.BooleanField(default=False)
 
     class Meta:
@@ -99,7 +99,7 @@ class Media_to_text_detail(models.Model):
 
 class Media_to_media(models.Model):
     filename = models.FileField(upload_to='media_to_media/', null=True, blank=True)
-    description = models.CharField(max_length=100, blank=True)
+    description = models.CharField(max_length=200, blank=True)
     active = models.BooleanField(default=True)
 
     class Meta:
@@ -122,7 +122,7 @@ class Media_to_media_detail(models.Model):
         upload_to='Media_to_media_details/', null=True, blank=True
     )
     correct_answer = models.BooleanField(default=False)
-    description = models.CharField(max_length=100, blank=True)
+    description = models.CharField(max_length=200, blank=True)
 
     class Meta:
         verbose_name_plural = "Media file to media files details"
