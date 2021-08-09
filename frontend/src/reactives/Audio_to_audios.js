@@ -1,6 +1,4 @@
 import React from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlayCircle } from '@fortawesome/free-solid-svg-icons'
 import ReactAudioPlayer from 'react-audio-player';
 
 
@@ -16,7 +14,7 @@ function Audio_to_audios(props) {
         <div className="col-lg-12 text-md-center">
             <ReactAudioPlayer
               src={ props.filename}
-              // autoPlay
+              autoPlay
               controls
             />
             <br/>
@@ -27,18 +25,18 @@ function Audio_to_audios(props) {
         <div className="col-lg-12 text-md-center">
             <br/>
             <br/>
-            <label for="exampleFormControlTextarea1">Selecciona la respuesta correcta</label>
+            <label>Selecciona la respuesta correcta</label>
             <hr/>
             <br/>
             <br/>
-                <div class="row justify-content-center">
-                { props.answers.map((d) => {
+                <div className="row justify-content-center">
+                { props.answers.map((data, idx) => {
                     return (
-                    <div>
-                        <input type="radio" name="options" id={"option" + d.id} />
+                    <div key={idx}>
+                        <input type="radio" name="options" id={"option" + data.id} />
                         <br/>
                         <ReactAudioPlayer
-                            src={"http://localhost:8000" +  d.answer_filename}
+                            src={"http://localhost:8000" +  data.answer_filename}
                             controls
                         />
                   </div>
