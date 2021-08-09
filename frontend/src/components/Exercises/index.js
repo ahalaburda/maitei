@@ -12,7 +12,10 @@ import Audio_to_talk from "../../reactives/Audio_to_talk";
 import Audio_to_complete_texts from "../../reactives/Audio_to_complete_text";
 import Audio_to_select_texts from "../../reactives/Audio_to_select_text";
 import Audio_to_audios from "../../reactives/Audio_to_audios";
-
+import Audio_to_images from "../../reactives/Audio_to_images";
+import Text_to_images from "../../reactives/Text_to_images";
+import Text_to_select_text from '../../reactives/Text_to_select_text';
+import Text_to_complete_texts from '../../reactives/Text_to_complete_texts';
 
 
 class Exercises extends Component {
@@ -29,9 +32,28 @@ class Exercises extends Component {
     getExercisesId(chapterId) {
       ExercisesService.getExercises(chapterId)
         .then((response) => {
-          this.setState({
-            exerciseId: response.data[0].id
-          })
+            ExercisesService.getExerciseDetails(response.data[0].id)
+            .then((response) => {
+              this.setState({
+                exercises: response.data.map((data) => {
+                  return {
+                    id: data.id,
+                    exercise_Text_to_text: data.exercise_id_Text_to_text,
+                    exercise_Text_to_media: data.exercise_id_Text_to_media,
+                    exercise_Media_to_text: data.exercise_id_Media_to_text,
+                    exercise_Media_to_media: data.exercise_id_Media_to_media,
+                    order: data.order,
+                    experience: data.experience,
+                    active: data.active,
+                    reactive: data.reactive_id,
+                  }
+                }),
+              })
+            })
+            .catch((e) => {
+              alert(e);
+              console.log(e);
+            })
         })
         .catch((e) => {
           alert(e);
@@ -39,40 +61,10 @@ class Exercises extends Component {
         })
     }
 
-    retrieveExerciseDetails(exerciseId) {
-      ExercisesService.getExerciseDetails(exerciseId)
-        .then((response) => {
-          this.setState({
-            exercises: response.data.map((data) => {
-              return {
-                id: data.id,
-                exercise_Text_to_text: data.exercise_id_Text_to_text,
-                exercise_Text_to_media: data.exercise_id_Text_to_media,
-                exercise_Media_to_text: data.exercise_id_Media_to_text,
-                exercise_Media_to_media: data.exercise_id_Media_to_media,
-                order: data.order,
-                experience: data.experience,
-                active: data.active,
-                reactive: data.reactive_id,
-              }
-            }),
-          })
-        })
-        .catch((e) => {
-          alert(e);
-          console.log(e);
-        })
-    }
 
     componentDidMount() {
       let chapterId = sessionStorage.getItem('maitei_chapter_id');
       this.getExercisesId(chapterId);
-    }
-
-    componentDidUpdate() {
-      let exercise_id = this.state.exerciseId;
-      // console.log("asdasdad");
-      this.retrieveExerciseDetails(exercise_id);
     }
 
     progressPosition = (currentOrder, total) => {
@@ -89,40 +81,60 @@ class Exercises extends Component {
 
     render() {
         let reactive = this.state.exercises.map((data, id) => {
+          if (this.state.exercises.length === this.state.currentOrder-1) {
+            alert('Felicidades, sigue asi')
+          } else {
             if (data.order == this.state.currentOrder) {
-                switch (data.reactive.id) {
-                    case 1: //{id: 1, description: "Audio / Hablar", active: true}
-                        let answer = data.exercise_Media_to_media.answers;
-                        return <Audio_to_talk 
-                                    key = {id}
-                                    filename={data.exercise_Media_to_media.filename}
-                                    fileAnswer={answer[0].answer_filename}
-                                    description={answer[0].description}  />
-                    case 2: //{id: 2, description: "Audio/ Completar oracion", active: true}
-                        let answer2 = data.exercise_Media_to_text.answers;
-                        return <Audio_to_complete_texts 
-                                  key = {id}
-                                  filename = {data.exercise_Media_to_text.filename}
-                                  answers = {answer2}  />
-                    case 3: //{id: 3, description: "Audio/ Seleccionar Texto", active: true}
-                      let answer3 = data.exercise_Media_to_text.answers;
-                      return <Audio_to_select_texts 
-                                key = {id}
-                                filename = {data.exercise_Media_to_text.filename}
-                                answers = {answer3}  />
-                    case 4: //{id: 4, description: "Audio / Audio", active: true}
-                      let answer4 = data.exercise_Media_to_media.answers;
-                      // console.log(answer4)
-                      return  <Audio_to_audios 
+              switch (data.reactive.id) {
+                  case 1: //1 - Audio / Hablar
+                    let answer = data.exercise_Media_to_media.answers;
+                    return <Audio_to_talk 
+                              key = {id}
+                              filename={data.exercise_Media_to_media.filename}
+                              fileAnswer={answer[0].answer_filename}
+                              description={answer[0].description}  />
+                  case 2: //2 - Audio / Completar oracion
+                    return <Audio_to_complete_texts 
+                              key = {id}
+                              filename = {data.exercise_Media_to_text.filename}
+                              question = {data.exercise_Media_to_text.description}  />
+                  case 3: //3 - Audio / Seleccionar Texto
+                    return <Audio_to_select_texts 
+                              key = {id}
+                              filename = {data.exercise_Media_to_text.filename}
+                              answers = {data.exercise_Media_to_text.answers}  />
+                  case 4: //4 - Audio / Audio
+                    return  <Audio_to_audios 
                               key = {id}
                               filename = {data.exercise_Media_to_media.filename}
-                              answers = {answer4}  />
-                    case 5:
-                        
-                    default:
-                        break;
-                }
-            }
+                              answers = {data.exercise_Media_to_media.answers}  />
+                  case 5: //5 - Audio / Imagen
+                    return  <Audio_to_images
+                              key = {id}
+                              filename = {data.exercise_Media_to_media.filename}
+                              description={data.exercise_Media_to_media.description}
+                              answers = {data.exercise_Media_to_media.answers}  />
+                  case 6: //6 - Texto / Imagenes
+                    return  <Text_to_images
+                              key = {id}
+                              question = {data.exercise_Text_to_media.question}
+                              answers = {data.exercise_Text_to_media.answers}  />
+                  case 7: //7 - Texto / Seleccionar texto
+                    return  <Text_to_select_text
+                              key = {id}
+                              question = {data.exercise_Text_to_text.question}
+                              answers = {data.exercise_Text_to_text.answers}  />
+                  case 8: //8 - Texto / Completar Oracion
+                    return  <Text_to_complete_texts
+                              key = {id}
+                              question = {data.exercise_Text_to_text.question}
+                              answers = {data.exercise_Text_to_text.answers}  />
+                  default:
+                      break;
+              }
+          }
+          }
+            
         })
         return (
             <>
