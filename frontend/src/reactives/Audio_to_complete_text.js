@@ -1,6 +1,4 @@
 import React from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlayCircle } from '@fortawesome/free-solid-svg-icons'
 import ReactAudioPlayer from 'react-audio-player';
 
 
@@ -16,30 +14,29 @@ function Audio_to_complete_texts(props) {
         <div className="col-lg-12 text-md-center">
             <ReactAudioPlayer
               src={ props.filename}
-              // autoPlay
+              autoPlay
               controls
             />
             <br/>
             <br/>
-            <div id="text">{props.description}</div>
         </div>
 
         <div className="col-lg-12 text-md-center">
             <br/>
             <br/>
-            <label for="exampleFormControlTextarea1">Completa la Oracion</label>
+            <label>Completa la Oracion</label>
             <hr/>
             <br/>
             <br/>
-                <div class="row justify-content-center">
-                { props.answers.map((d) => {
-                    if (d.correct_answer) {
-                        return <input type="text" />
-
-                    } else {
-                        return <p className="ml-5 mr-5">{d.answer}</p>
-                    }
-                })}  
+                <div className="row justify-content-center">
+                  { props.question.split(' ').map((data,idx) =>{
+                      if (data === "INPUT") {
+                        return <input type="text" key={idx} />
+                      } else {
+                        return <p className="ml-1 mr-1" key={idx}>{data}</p>
+                      }
+                    })
+                  }
                 </div>
         </div>
 

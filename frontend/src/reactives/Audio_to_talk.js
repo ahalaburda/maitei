@@ -1,6 +1,4 @@
 import React from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlayCircle } from '@fortawesome/free-solid-svg-icons'
 import ReactAudioPlayer from 'react-audio-player';
 
 
@@ -25,7 +23,7 @@ function Audio_to_talk(props) {
             {/* <button type="button" className="btn btn-info" ><FontAwesomeIcon icon={faPlayCircle} /></button> */}
             <ReactAudioPlayer
               src={"http://localhost:8000" + props.fileAnswer}
-              // autoPlay
+              autoPlay
               controls
             />
         </div>
