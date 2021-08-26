@@ -4,7 +4,8 @@ from django.db import models
 
 
 class Text_to_text(models.Model):
-    question = models.CharField(max_length=200)
+    description = models.CharField(max_length=300, blank=True)
+    question = models.CharField(max_length=300)
     active = models.BooleanField(default=True)
 
     class Meta:

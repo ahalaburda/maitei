@@ -1,0 +1,2040 @@
+[{
+    "model": "exercises.level",
+    "pk": 1,
+    "fields": {
+        "description": "Principiante",
+        "active": true
+    }
+}, {
+    "model": "exercises.chapter",
+    "pk": 1,
+    "fields": {
+        "level_id": 1,
+        "description": "Capitulo - 1.A",
+        "active": true,
+        "chapter_image": ""
+    }
+}, {
+    "model": "exercises.chapter",
+    "pk": 2,
+    "fields": {
+        "level_id": 1,
+        "description": "Capitulo - 1.B",
+        "active": true,
+        "chapter_image": ""
+    }
+}, {
+    "model": "exercises.chapter",
+    "pk": 3,
+    "fields": {
+        "level_id": 1,
+        "description": "Capitulo - 1.C",
+        "active": true,
+        "chapter_image": ""
+    }
+}, {
+    "model": "exercises.chapter",
+    "pk": 4,
+    "fields": {
+        "level_id": 1,
+        "description": "Capitulo - 1.D",
+        "active": true,
+        "chapter_image": ""
+    }
+}, {
+    "model": "exercises.chapter",
+    "pk": 5,
+    "fields": {
+        "level_id": 1,
+        "description": "Capitulo - 2.A",
+        "active": true,
+        "chapter_image": ""
+    }
+}, {
+    "model": "exercises.chapter",
+    "pk": 6,
+    "fields": {
+        "level_id": 1,
+        "description": "Capitulo - 2.B",
+        "active": true,
+        "chapter_image": ""
+    }
+}, {
+    "model": "exercises.chapter",
+    "pk": 7,
+    "fields": {
+        "level_id": 1,
+        "description": "Capitulo - 2.C",
+        "active": true,
+        "chapter_image": ""
+    }
+}, {
+    "model": "exercises.chapter",
+    "pk": 8,
+    "fields": {
+        "level_id": 1,
+        "description": "Capitulo - 3.A",
+        "active": true,
+        "chapter_image": ""
+    }
+}, {
+    "model": "exercises.chapter",
+    "pk": 9,
+    "fields": {
+        "level_id": 1,
+        "description": "Capitulo - 3.B",
+        "active": true,
+        "chapter_image": ""
+    }
+}, {
+    "model": "exercises.chapter",
+    "pk": 10,
+    "fields": {
+        "level_id": 1,
+        "description": "Capitulo - 3.C",
+        "active": true,
+        "chapter_image": ""
+    }
+}, {
+    "model": "exercises.chapter",
+    "pk": 11,
+    "fields": {
+        "level_id": 1,
+        "description": "Capitulo - 3.A",
+        "active": true,
+        "chapter_image": ""
+    }
+}, {
+    "model": "exercises.chapter",
+    "pk": 12,
+    "fields": {
+        "level_id": 1,
+        "description": "Capitulo - 3.B",
+        "active": true,
+        "chapter_image": ""
+    }
+}, {
+    "model": "exercises.chapter",
+    "pk": 13,
+    "fields": {
+        "level_id": 1,
+        "description": "Capitulo - 3.C",
+        "active": true,
+        "chapter_image": ""
+    }
+}, {
+    "model": "exercises.reactive",
+    "pk": 1,
+    "fields": {
+        "description": "Audio / Hablar",
+        "active": true
+    }
+}, {
+    "model": "exercises.reactive",
+    "pk": 2,
+    "fields": {
+        "description": "Audio / Completar Oracion",
+        "active": true
+    }
+}, {
+    "model": "exercises.reactive",
+    "pk": 3,
+    "fields": {
+        "description": "Audio / Seleccionar Texto",
+        "active": true
+    }
+}, {
+    "model": "exercises.reactive",
+    "pk": 4,
+    "fields": {
+        "description": "Audio / Seleccionar Audio",
+        "active": true
+    }
+}, {
+    "model": "exercises.reactive",
+    "pk": 5,
+    "fields": {
+        "description": "Audio / Seleccionar Imagen",
+        "active": true
+    }
+}, {
+    "model": "exercises.reactive",
+    "pk": 6,
+    "fields": {
+        "description": "Texto / Seleccionar Imagen",
+        "active": true
+    }
+}, {
+    "model": "exercises.reactive",
+    "pk": 7,
+    "fields": {
+        "description": "Texto / Seleccionar Texto",
+        "active": true
+    }
+}, {
+    "model": "exercises.reactive",
+    "pk": 8,
+    "fields": {
+        "description": "Texto /  Completar Oracion",
+        "active": true
+    }
+}, {
+    "model": "exercises.reactive",
+    "pk": 9,
+    "fields": {
+        "description": "Texto / Seleccionar Audio",
+        "active": true
+    }
+}, {
+    "model": "exercises.reactive",
+    "pk": 10,
+    "fields": {
+        "description": "Imagen / Seleccionar Texto",
+        "active": true
+    }
+}, {
+    "model": "exercises.reactive",
+    "pk": 11,
+    "fields": {
+        "description": "Imagen / Completar Oracion",
+        "active": true
+    }
+}, {
+    "model": "exercises.reactive",
+    "pk": 12,
+    "fields": {
+        "description": "Imagen / Seleccionar Audio",
+        "active": true
+    }
+}, {
+    "model": "exercises.exercise",
+    "pk": 1,
+    "fields": {
+        "chapter_id": 1,
+        "description": "Ejercicios - 1.A",
+        "active": true
+    }
+}, {
+    "model": "exercises.exercise",
+    "pk": 2,
+    "fields": {
+        "chapter_id": 2,
+        "description": "Ejercitario - 1.B",
+        "active": true
+    }
+}, {
+    "model": "exercises.exercise",
+    "pk": 3,
+    "fields": {
+        "chapter_id": 3,
+        "description": "Ejercitario - 1.C",
+        "active": true
+    }
+}, {
+    "model": "exercises.exercise",
+    "pk": 4,
+    "fields": {
+        "chapter_id": 4,
+        "description": "Ejercitario - 1.D",
+        "active": true
+    }
+}, {
+    "model": "exercises.exercise",
+    "pk": 5,
+    "fields": {
+        "chapter_id": 5,
+        "description": "Ejercitario - 2.A",
+        "active": true
+    }
+}, {
+    "model": "exercises.exercise",
+    "pk": 6,
+    "fields": {
+        "chapter_id": 6,
+        "description": "Ejercitario - 2.B",
+        "active": true
+    }
+}, {
+    "model": "exercises.exercise",
+    "pk": 7,
+    "fields": {
+        "chapter_id": 7,
+        "description": "Ejercitario - 2.C",
+        "active": true
+    }
+}, {
+    "model": "exercises.exercise",
+    "pk": 8,
+    "fields": {
+        "chapter_id": 8,
+        "description": "Ejercitario - 3.A",
+        "active": true
+    }
+}, {
+    "model": "exercises.exercise",
+    "pk": 9,
+    "fields": {
+        "chapter_id": 9,
+        "description": "Ejercitario - 3.B",
+        "active": true
+    }
+}, {
+    "model": "exercises.exercise",
+    "pk": 10,
+    "fields": {
+        "chapter_id": 10,
+        "description": "Ejercitario - 3.C",
+        "active": true
+    }
+}, {
+    "model": "exercises.exercise_detail",
+    "pk": 1,
+    "fields": {
+        "exercise_id": 1,
+        "reactive_id": 1,
+        "exercise_id_Text_to_text": null,
+        "exercise_id_Text_to_media": null,
+        "exercise_id_Media_to_text": null,
+        "exercise_id_Media_to_media": 1,
+        "order": 1,
+        "experience": 100,
+        "active": true
+    }
+}, {
+    "model": "exercises.exercise_detail",
+    "pk": 2,
+    "fields": {
+        "exercise_id": 1,
+        "reactive_id": 1,
+        "exercise_id_Text_to_text": null,
+        "exercise_id_Text_to_media": null,
+        "exercise_id_Media_to_text": null,
+        "exercise_id_Media_to_media": 2,
+        "order": 2,
+        "experience": 100,
+        "active": true
+    }
+}, {
+    "model": "exercises.exercise_detail",
+    "pk": 3,
+    "fields": {
+        "exercise_id": 1,
+        "reactive_id": 1,
+        "exercise_id_Text_to_text": null,
+        "exercise_id_Text_to_media": null,
+        "exercise_id_Media_to_text": null,
+        "exercise_id_Media_to_media": 3,
+        "order": 3,
+        "experience": 100,
+        "active": true
+    }
+}, {
+    "model": "exercises.exercise_detail",
+    "pk": 4,
+    "fields": {
+        "exercise_id": 1,
+        "reactive_id": 1,
+        "exercise_id_Text_to_text": null,
+        "exercise_id_Text_to_media": null,
+        "exercise_id_Media_to_text": null,
+        "exercise_id_Media_to_media": 4,
+        "order": 4,
+        "experience": 100,
+        "active": true
+    }
+}, {
+    "model": "exercises.exercise_detail",
+    "pk": 5,
+    "fields": {
+        "exercise_id": 1,
+        "reactive_id": 2,
+        "exercise_id_Text_to_text": null,
+        "exercise_id_Text_to_media": null,
+        "exercise_id_Media_to_text": 1,
+        "exercise_id_Media_to_media": null,
+        "order": 5,
+        "experience": 100,
+        "active": true
+    }
+}, {
+    "model": "exercises.exercise_detail",
+    "pk": 6,
+    "fields": {
+        "exercise_id": 1,
+        "reactive_id": 3,
+        "exercise_id_Text_to_text": null,
+        "exercise_id_Text_to_media": null,
+        "exercise_id_Media_to_text": 2,
+        "exercise_id_Media_to_media": null,
+        "order": 6,
+        "experience": 100,
+        "active": true
+    }
+}, {
+    "model": "exercises.exercise_detail",
+    "pk": 7,
+    "fields": {
+        "exercise_id": 1,
+        "reactive_id": 2,
+        "exercise_id_Text_to_text": null,
+        "exercise_id_Text_to_media": null,
+        "exercise_id_Media_to_text": 3,
+        "exercise_id_Media_to_media": null,
+        "order": 7,
+        "experience": 100,
+        "active": true
+    }
+}, {
+    "model": "exercises.exercise_detail",
+    "pk": 8,
+    "fields": {
+        "exercise_id": 1,
+        "reactive_id": 4,
+        "exercise_id_Text_to_text": null,
+        "exercise_id_Text_to_media": null,
+        "exercise_id_Media_to_text": null,
+        "exercise_id_Media_to_media": 5,
+        "order": 8,
+        "experience": 100,
+        "active": true
+    }
+}, {
+    "model": "exercises.exercise_detail",
+    "pk": 9,
+    "fields": {
+        "exercise_id": 1,
+        "reactive_id": 1,
+        "exercise_id_Text_to_text": null,
+        "exercise_id_Text_to_media": null,
+        "exercise_id_Media_to_text": null,
+        "exercise_id_Media_to_media": 6,
+        "order": 9,
+        "experience": 100,
+        "active": true
+    }
+}, {
+    "model": "exercises.exercise_detail",
+    "pk": 10,
+    "fields": {
+        "exercise_id": 1,
+        "reactive_id": 1,
+        "exercise_id_Text_to_text": null,
+        "exercise_id_Text_to_media": null,
+        "exercise_id_Media_to_text": null,
+        "exercise_id_Media_to_media": 7,
+        "order": 10,
+        "experience": 100,
+        "active": true
+    }
+}, {
+    "model": "exercises.exercise_detail",
+    "pk": 11,
+    "fields": {
+        "exercise_id": 1,
+        "reactive_id": 1,
+        "exercise_id_Text_to_text": null,
+        "exercise_id_Text_to_media": null,
+        "exercise_id_Media_to_text": null,
+        "exercise_id_Media_to_media": 8,
+        "order": 11,
+        "experience": 100,
+        "active": true
+    }
+}, {
+    "model": "exercises.exercise_detail",
+    "pk": 12,
+    "fields": {
+        "exercise_id": 1,
+        "reactive_id": 3,
+        "exercise_id_Text_to_text": null,
+        "exercise_id_Text_to_media": null,
+        "exercise_id_Media_to_text": 5,
+        "exercise_id_Media_to_media": null,
+        "order": 12,
+        "experience": 100,
+        "active": true
+    }
+}, {
+    "model": "exercises.exercise_detail",
+    "pk": 15,
+    "fields": {
+        "exercise_id": 1,
+        "reactive_id": 1,
+        "exercise_id_Text_to_text": null,
+        "exercise_id_Text_to_media": null,
+        "exercise_id_Media_to_text": null,
+        "exercise_id_Media_to_media": 14,
+        "order": 13,
+        "experience": 100,
+        "active": true
+    }
+}, {
+    "model": "exercises.exercise_detail",
+    "pk": 16,
+    "fields": {
+        "exercise_id": 1,
+        "reactive_id": 1,
+        "exercise_id_Text_to_text": null,
+        "exercise_id_Text_to_media": null,
+        "exercise_id_Media_to_text": null,
+        "exercise_id_Media_to_media": 15,
+        "order": 14,
+        "experience": 100,
+        "active": true
+    }
+}, {
+    "model": "exercises.exercise_detail",
+    "pk": 17,
+    "fields": {
+        "exercise_id": 1,
+        "reactive_id": 1,
+        "exercise_id_Text_to_text": null,
+        "exercise_id_Text_to_media": null,
+        "exercise_id_Media_to_text": null,
+        "exercise_id_Media_to_media": 16,
+        "order": 15,
+        "experience": 100,
+        "active": true
+    }
+}, {
+    "model": "exercises.exercise_detail",
+    "pk": 18,
+    "fields": {
+        "exercise_id": 1,
+        "reactive_id": 1,
+        "exercise_id_Text_to_text": null,
+        "exercise_id_Text_to_media": null,
+        "exercise_id_Media_to_text": null,
+        "exercise_id_Media_to_media": 17,
+        "order": 16,
+        "experience": 100,
+        "active": true
+    }
+}, {
+    "model": "exercises.exercise_detail",
+    "pk": 19,
+    "fields": {
+        "exercise_id": 1,
+        "reactive_id": 1,
+        "exercise_id_Text_to_text": null,
+        "exercise_id_Text_to_media": null,
+        "exercise_id_Media_to_text": null,
+        "exercise_id_Media_to_media": 18,
+        "order": 17,
+        "experience": 100,
+        "active": true
+    }
+}, {
+    "model": "exercises.exercise_detail",
+    "pk": 20,
+    "fields": {
+        "exercise_id": 1,
+        "reactive_id": 1,
+        "exercise_id_Text_to_text": null,
+        "exercise_id_Text_to_media": null,
+        "exercise_id_Media_to_text": null,
+        "exercise_id_Media_to_media": 19,
+        "order": 18,
+        "experience": 100,
+        "active": true
+    }
+}, {
+    "model": "exercises.exercise_detail",
+    "pk": 21,
+    "fields": {
+        "exercise_id": 1,
+        "reactive_id": 5,
+        "exercise_id_Text_to_text": null,
+        "exercise_id_Text_to_media": null,
+        "exercise_id_Media_to_text": null,
+        "exercise_id_Media_to_media": 9,
+        "order": 19,
+        "experience": 100,
+        "active": true
+    }
+}, {
+    "model": "exercises.exercise_detail",
+    "pk": 22,
+    "fields": {
+        "exercise_id": 1,
+        "reactive_id": 4,
+        "exercise_id_Text_to_text": null,
+        "exercise_id_Text_to_media": null,
+        "exercise_id_Media_to_text": null,
+        "exercise_id_Media_to_media": 11,
+        "order": 20,
+        "experience": 100,
+        "active": true
+    }
+}, {
+    "model": "exercises.exercise_detail",
+    "pk": 25,
+    "fields": {
+        "exercise_id": 1,
+        "reactive_id": 4,
+        "exercise_id_Text_to_text": null,
+        "exercise_id_Text_to_media": null,
+        "exercise_id_Media_to_text": null,
+        "exercise_id_Media_to_media": 12,
+        "order": 21,
+        "experience": 100,
+        "active": true
+    }
+}, {
+    "model": "exercises.exercise_detail",
+    "pk": 26,
+    "fields": {
+        "exercise_id": 1,
+        "reactive_id": 4,
+        "exercise_id_Text_to_text": null,
+        "exercise_id_Text_to_media": null,
+        "exercise_id_Media_to_text": null,
+        "exercise_id_Media_to_media": 13,
+        "order": 22,
+        "experience": 100,
+        "active": true
+    }
+}, {
+    "model": "exercises.exercise_detail",
+    "pk": 27,
+    "fields": {
+        "exercise_id": 1,
+        "reactive_id": 6,
+        "exercise_id_Text_to_text": null,
+        "exercise_id_Text_to_media": 1,
+        "exercise_id_Media_to_text": null,
+        "exercise_id_Media_to_media": null,
+        "order": 23,
+        "experience": 100,
+        "active": true
+    }
+}, {
+    "model": "exercises.exercise_detail",
+    "pk": 28,
+    "fields": {
+        "exercise_id": 1,
+        "reactive_id": 7,
+        "exercise_id_Text_to_text": 1,
+        "exercise_id_Text_to_media": null,
+        "exercise_id_Media_to_text": null,
+        "exercise_id_Media_to_media": null,
+        "order": 24,
+        "experience": 100,
+        "active": true
+    }
+}, {
+    "model": "exercises.exercise_detail",
+    "pk": 29,
+    "fields": {
+        "exercise_id": 1,
+        "reactive_id": 7,
+        "exercise_id_Text_to_text": 2,
+        "exercise_id_Text_to_media": null,
+        "exercise_id_Media_to_text": null,
+        "exercise_id_Media_to_media": null,
+        "order": 25,
+        "experience": 100,
+        "active": true
+    }
+}, {
+    "model": "exercises.exercise_detail",
+    "pk": 30,
+    "fields": {
+        "exercise_id": 1,
+        "reactive_id": 7,
+        "exercise_id_Text_to_text": 3,
+        "exercise_id_Text_to_media": null,
+        "exercise_id_Media_to_text": null,
+        "exercise_id_Media_to_media": null,
+        "order": 26,
+        "experience": 100,
+        "active": true
+    }
+}, {
+    "model": "exercises.exercise_detail",
+    "pk": 31,
+    "fields": {
+        "exercise_id": 1,
+        "reactive_id": 8,
+        "exercise_id_Text_to_text": 4,
+        "exercise_id_Text_to_media": null,
+        "exercise_id_Media_to_text": null,
+        "exercise_id_Media_to_media": null,
+        "order": 27,
+        "experience": 100,
+        "active": true
+    }
+}, {
+    "model": "exercises.exercise_detail",
+    "pk": 32,
+    "fields": {
+        "exercise_id": 1,
+        "reactive_id": 8,
+        "exercise_id_Text_to_text": 5,
+        "exercise_id_Text_to_media": null,
+        "exercise_id_Media_to_text": null,
+        "exercise_id_Media_to_media": null,
+        "order": 28,
+        "experience": 100,
+        "active": true
+    }
+}, {
+    "model": "exercises.exercise_detail",
+    "pk": 33,
+    "fields": {
+        "exercise_id": 1,
+        "reactive_id": 8,
+        "exercise_id_Text_to_text": 6,
+        "exercise_id_Text_to_media": null,
+        "exercise_id_Media_to_text": null,
+        "exercise_id_Media_to_media": null,
+        "order": 29,
+        "experience": 100,
+        "active": true
+    }
+}, {
+    "model": "exercises.exercise_detail",
+    "pk": 34,
+    "fields": {
+        "exercise_id": 1,
+        "reactive_id": 8,
+        "exercise_id_Text_to_text": 7,
+        "exercise_id_Text_to_media": null,
+        "exercise_id_Media_to_text": null,
+        "exercise_id_Media_to_media": null,
+        "order": 30,
+        "experience": 100,
+        "active": true
+    }
+}, {
+    "model": "exercises.exercise_detail",
+    "pk": 35,
+    "fields": {
+        "exercise_id": 1,
+        "reactive_id": 8,
+        "exercise_id_Text_to_text": 8,
+        "exercise_id_Text_to_media": null,
+        "exercise_id_Media_to_text": null,
+        "exercise_id_Media_to_media": null,
+        "order": 31,
+        "experience": 100,
+        "active": true
+    }
+}, {
+    "model": "exercises.exercise_detail",
+    "pk": 36,
+    "fields": {
+        "exercise_id": 1,
+        "reactive_id": 7,
+        "exercise_id_Text_to_text": 9,
+        "exercise_id_Text_to_media": null,
+        "exercise_id_Media_to_text": null,
+        "exercise_id_Media_to_media": null,
+        "order": 32,
+        "experience": 100,
+        "active": true
+    }
+}, {
+    "model": "exercises.exercise_detail",
+    "pk": 37,
+    "fields": {
+        "exercise_id": 1,
+        "reactive_id": 7,
+        "exercise_id_Text_to_text": 10,
+        "exercise_id_Text_to_media": null,
+        "exercise_id_Media_to_text": null,
+        "exercise_id_Media_to_media": null,
+        "order": 33,
+        "experience": 100,
+        "active": true
+    }
+}, {
+    "model": "exercises.exercise_detail",
+    "pk": 38,
+    "fields": {
+        "exercise_id": 1,
+        "reactive_id": 7,
+        "exercise_id_Text_to_text": 11,
+        "exercise_id_Text_to_media": null,
+        "exercise_id_Media_to_text": null,
+        "exercise_id_Media_to_media": null,
+        "order": 34,
+        "experience": 100,
+        "active": true
+    }
+}, {
+    "model": "exercises.exercise_detail",
+    "pk": 39,
+    "fields": {
+        "exercise_id": 1,
+        "reactive_id": 7,
+        "exercise_id_Text_to_text": 12,
+        "exercise_id_Text_to_media": null,
+        "exercise_id_Media_to_text": null,
+        "exercise_id_Media_to_media": null,
+        "order": 35,
+        "experience": 100,
+        "active": true
+    }
+}, {
+    "model": "exercises.exercise_detail",
+    "pk": 40,
+    "fields": {
+        "exercise_id": 3,
+        "reactive_id": 7,
+        "exercise_id_Text_to_text": 13,
+        "exercise_id_Text_to_media": null,
+        "exercise_id_Media_to_text": null,
+        "exercise_id_Media_to_media": null,
+        "order": 1,
+        "experience": 100,
+        "active": true
+    }
+}, {
+    "model": "exercises.exercise_detail",
+    "pk": 41,
+    "fields": {
+        "exercise_id": 3,
+        "reactive_id": 7,
+        "exercise_id_Text_to_text": 14,
+        "exercise_id_Text_to_media": null,
+        "exercise_id_Media_to_text": null,
+        "exercise_id_Media_to_media": null,
+        "order": 2,
+        "experience": 100,
+        "active": true
+    }
+}, {
+    "model": "exercises.exercise_detail",
+    "pk": 42,
+    "fields": {
+        "exercise_id": 3,
+        "reactive_id": 7,
+        "exercise_id_Text_to_text": 15,
+        "exercise_id_Text_to_media": null,
+        "exercise_id_Media_to_text": null,
+        "exercise_id_Media_to_media": null,
+        "order": 3,
+        "experience": 100,
+        "active": true
+    }
+}, {
+    "model": "exercises.exercise_detail",
+    "pk": 43,
+    "fields": {
+        "exercise_id": 3,
+        "reactive_id": 8,
+        "exercise_id_Text_to_text": 16,
+        "exercise_id_Text_to_media": null,
+        "exercise_id_Media_to_text": null,
+        "exercise_id_Media_to_media": null,
+        "order": 4,
+        "experience": 100,
+        "active": true
+    }
+}, {
+    "model": "exercises.exercise_detail",
+    "pk": 44,
+    "fields": {
+        "exercise_id": 3,
+        "reactive_id": 8,
+        "exercise_id_Text_to_text": 17,
+        "exercise_id_Text_to_media": null,
+        "exercise_id_Media_to_text": null,
+        "exercise_id_Media_to_media": null,
+        "order": 5,
+        "experience": 100,
+        "active": true
+    }
+}, {
+    "model": "exercises.exercise_detail",
+    "pk": 45,
+    "fields": {
+        "exercise_id": 3,
+        "reactive_id": 6,
+        "exercise_id_Text_to_text": null,
+        "exercise_id_Text_to_media": 2,
+        "exercise_id_Media_to_text": null,
+        "exercise_id_Media_to_media": null,
+        "order": 6,
+        "experience": 100,
+        "active": true
+    }
+}, {
+    "model": "exercises.exercise_detail",
+    "pk": 46,
+    "fields": {
+        "exercise_id": 3,
+        "reactive_id": 6,
+        "exercise_id_Text_to_text": null,
+        "exercise_id_Text_to_media": 3,
+        "exercise_id_Media_to_text": null,
+        "exercise_id_Media_to_media": null,
+        "order": 7,
+        "experience": 100,
+        "active": true
+    }
+}, {
+    "model": "exercises.exercise_detail",
+    "pk": 47,
+    "fields": {
+        "exercise_id": 3,
+        "reactive_id": 3,
+        "exercise_id_Text_to_text": null,
+        "exercise_id_Text_to_media": null,
+        "exercise_id_Media_to_text": 13,
+        "exercise_id_Media_to_media": null,
+        "order": 8,
+        "experience": 100,
+        "active": true
+    }
+}, {
+    "model": "exercises.exercise_detail",
+    "pk": 48,
+    "fields": {
+        "exercise_id": 3,
+        "reactive_id": 5,
+        "exercise_id_Text_to_text": null,
+        "exercise_id_Text_to_media": null,
+        "exercise_id_Media_to_text": null,
+        "exercise_id_Media_to_media": 20,
+        "order": 9,
+        "experience": 100,
+        "active": true
+    }
+}, {
+    "model": "reactives.text_to_text",
+    "pk": 1,
+    "fields": {
+        "question": "Mba’éichapa Sara.",
+        "active": true
+    }
+}, {
+    "model": "reactives.text_to_text",
+    "pk": 2,
+    "fields": {
+        "question": "Tereguaheporaite",
+        "active": true
+    }
+}, {
+    "model": "reactives.text_to_text",
+    "pk": 3,
+    "fields": {
+        "question": "Mba’éichapa Sara.",
+        "active": true
+    }
+}, {
+    "model": "reactives.text_to_text",
+    "pk": 4,
+    "fields": {
+        "question": "Mba’eteko. INPUT cheréra Nicolas, ha INPUT",
+        "active": true
+    }
+}, {
+    "model": "reactives.text_to_text",
+    "pk": 5,
+    "fields": {
+        "question": "INPUT cheréra Antonio.",
+        "active": true
+    }
+}, {
+    "model": "reactives.text_to_text",
+    "pk": 6,
+    "fields": {
+        "question": "Maitei. INPUT piko Jazmín.",
+        "active": true
+    }
+}, {
+    "model": "reactives.text_to_text",
+    "pk": 7,
+    "fields": {
+        "question": "Mba’éichapa INPUT réra Luis. Ha  INPUT  .",
+        "active": true
+    }
+}, {
+    "model": "reactives.text_to_text",
+    "pk": 8,
+    "fields": {
+        "question": "Mba’eteko INPUT Kape. Mba’éicha  INPUT réra  .",
+        "active": true
+    }
+}, {
+    "model": "reactives.text_to_text",
+    "pk": 9,
+    "fields": {
+        "question": "¿Cómo se dice “hola” en Guaraní? -  How do you say “hola” in gu",
+        "active": true
+    }
+}, {
+    "model": "reactives.text_to_text",
+    "pk": 10,
+    "fields": {
+        "question": "¿Cómo se dice “muy bien” en Guaraní? -  How do you say “muy",
+        "active": true
+    }
+}, {
+    "model": "reactives.text_to_text",
+    "pk": 11,
+    "fields": {
+        "question": "¿Cómo se dice “Cheréra Ana” en Castellano? -  How do yo",
+        "active": true
+    }
+}, {
+    "model": "reactives.text_to_text",
+    "pk": 12,
+    "fields": {
+        "question": "¿Cómo se dice “Tu nombre es Ruth” en Guaraní? -  H",
+        "active": true
+    }
+}, {
+    "model": "reactives.text_to_text",
+    "pk": 13,
+    "fields": {
+        "question": "Moôguápa nde? /De dónde eres?/Where are you from?",
+        "active": true
+    }
+}, {
+    "model": "reactives.text_to_text",
+    "pk": 14,
+    "fields": {
+        "question": "Moõguápa ha'e /¿De dónde es él?/ Where is he from?",
+        "active": true
+    }
+}, {
+    "model": "reactives.text_to_text",
+    "pk": 15,
+    "fields": {
+        "question": "Moõguápa ha'ekuéra/ ¿De dónde son ellos?/ Where are they from?",
+        "active": true
+    }
+}, {
+    "model": "reactives.text_to_text",
+    "pk": 16,
+    "fields": {
+        "question": "Moõguapa José <br/>  INPUT España-gua",
+        "active": true
+    }
+}, {
+    "model": "reactives.text_to_text",
+    "pk": 17,
+    "fields": {
+        "question": "Moõguápa Ruth <br/> INPUT Brasil-gua",
+        "active": true
+    }
+}, {
+    "model": "reactives.text_to_text_detail",
+    "pk": 1,
+    "fields": {
+        "text_to_text_id": 1,
+        "answer": "Cheréra Lucía",
+        "correct_answer": false
+    }
+}, {
+    "model": "reactives.text_to_text_detail",
+    "pk": 2,
+    "fields": {
+        "text_to_text_id": 1,
+        "answer": "Iporãnte",
+        "correct_answer": true
+    }
+}, {
+    "model": "reactives.text_to_text_detail",
+    "pk": 3,
+    "fields": {
+        "text_to_text_id": 1,
+        "answer": "Aguyje",
+        "correct_answer": false
+    }
+}, {
+    "model": "reactives.text_to_text_detail",
+    "pk": 4,
+    "fields": {
+        "text_to_text_id": 2,
+        "answer": "Maiteimi",
+        "correct_answer": false
+    }
+}, {
+    "model": "reactives.text_to_text_detail",
+    "pk": 5,
+    "fields": {
+        "text_to_text_id": 2,
+        "answer": "Iporãnte",
+        "correct_answer": false
+    }
+}, {
+    "model": "reactives.text_to_text_detail",
+    "pk": 6,
+    "fields": {
+        "text_to_text_id": 2,
+        "answer": "Aguyje.",
+        "correct_answer": true
+    }
+}, {
+    "model": "reactives.text_to_text_detail",
+    "pk": 7,
+    "fields": {
+        "text_to_text_id": 3,
+        "answer": "Cheréra Lucía",
+        "correct_answer": false
+    }
+}, {
+    "model": "reactives.text_to_text_detail",
+    "pk": 8,
+    "fields": {
+        "text_to_text_id": 3,
+        "answer": "Iporãnte",
+        "correct_answer": true
+    }
+}, {
+    "model": "reactives.text_to_text_detail",
+    "pk": 9,
+    "fields": {
+        "text_to_text_id": 3,
+        "answer": "Aguyje",
+        "correct_answer": false
+    }
+}, {
+    "model": "reactives.text_to_text_detail",
+    "pk": 10,
+    "fields": {
+        "text_to_text_id": 4,
+        "answer": "Che",
+        "correct_answer": true
+    }
+}, {
+    "model": "reactives.text_to_text_detail",
+    "pk": 11,
+    "fields": {
+        "text_to_text_id": 4,
+        "answer": "nde",
+        "correct_answer": true
+    }
+}, {
+    "model": "reactives.text_to_text_detail",
+    "pk": 12,
+    "fields": {
+        "text_to_text_id": 5,
+        "answer": "Che",
+        "correct_answer": true
+    }
+}, {
+    "model": "reactives.text_to_text_detail",
+    "pk": 13,
+    "fields": {
+        "text_to_text_id": 6,
+        "answer": "nde",
+        "correct_answer": true
+    }
+}, {
+    "model": "reactives.text_to_text_detail",
+    "pk": 14,
+    "fields": {
+        "text_to_text_id": 7,
+        "answer": "che",
+        "correct_answer": true
+    }
+}, {
+    "model": "reactives.text_to_text_detail",
+    "pk": 15,
+    "fields": {
+        "text_to_text_id": 7,
+        "answer": "nde",
+        "correct_answer": true
+    }
+}, {
+    "model": "reactives.text_to_text_detail",
+    "pk": 16,
+    "fields": {
+        "text_to_text_id": 8,
+        "answer": "che",
+        "correct_answer": true
+    }
+}, {
+    "model": "reactives.text_to_text_detail",
+    "pk": 17,
+    "fields": {
+        "text_to_text_id": 8,
+        "answer": "nde",
+        "correct_answer": true
+    }
+}, {
+    "model": "reactives.text_to_text_detail",
+    "pk": 18,
+    "fields": {
+        "text_to_text_id": 9,
+        "answer": "Maitei/ mba’eteko",
+        "correct_answer": true
+    }
+}, {
+    "model": "reactives.text_to_text_detail",
+    "pk": 19,
+    "fields": {
+        "text_to_text_id": 9,
+        "answer": "Iporãnte",
+        "correct_answer": false
+    }
+}, {
+    "model": "reactives.text_to_text_detail",
+    "pk": 20,
+    "fields": {
+        "text_to_text_id": 9,
+        "answer": "Aguyje",
+        "correct_answer": false
+    }
+}, {
+    "model": "reactives.text_to_text_detail",
+    "pk": 21,
+    "fields": {
+        "text_to_text_id": 10,
+        "answer": "Mbaeteko",
+        "correct_answer": false
+    }
+}, {
+    "model": "reactives.text_to_text_detail",
+    "pk": 22,
+    "fields": {
+        "text_to_text_id": 10,
+        "answer": "Aguyje",
+        "correct_answer": false
+    }
+}, {
+    "model": "reactives.text_to_text_detail",
+    "pk": 23,
+    "fields": {
+        "text_to_text_id": 10,
+        "answer": "Iporã /  Iporãnte / Iporãiterei / Iporãmínte.",
+        "correct_answer": true
+    }
+}, {
+    "model": "reactives.text_to_text_detail",
+    "pk": 24,
+    "fields": {
+        "text_to_text_id": 11,
+        "answer": "Gracias Ana",
+        "correct_answer": false
+    }
+}, {
+    "model": "reactives.text_to_text_detail",
+    "pk": 25,
+    "fields": {
+        "text_to_text_id": 11,
+        "answer": "Mi nombre es Ana",
+        "correct_answer": true
+    }
+}, {
+    "model": "reactives.text_to_text_detail",
+    "pk": 26,
+    "fields": {
+        "text_to_text_id": 11,
+        "answer": "Hola Ana",
+        "correct_answer": false
+    }
+}, {
+    "model": "reactives.text_to_text_detail",
+    "pk": 27,
+    "fields": {
+        "text_to_text_id": 12,
+        "answer": "Aguyje Ruth",
+        "correct_answer": false
+    }
+}, {
+    "model": "reactives.text_to_text_detail",
+    "pk": 28,
+    "fields": {
+        "text_to_text_id": 12,
+        "answer": "Maitei Ruth",
+        "correct_answer": false
+    }
+}, {
+    "model": "reactives.text_to_text_detail",
+    "pk": 29,
+    "fields": {
+        "text_to_text_id": 12,
+        "answer": "Nderéra Ruth",
+        "correct_answer": true
+    }
+}, {
+    "model": "reactives.text_to_text_detail",
+    "pk": 30,
+    "fields": {
+        "text_to_text_id": 13,
+        "answer": "Che Paraguáigua",
+        "correct_answer": true
+    }
+}, {
+    "model": "reactives.text_to_text_detail",
+    "pk": 31,
+    "fields": {
+        "text_to_text_id": 13,
+        "answer": "Che Paraguáire",
+        "correct_answer": false
+    }
+}, {
+    "model": "reactives.text_to_text_detail",
+    "pk": 32,
+    "fields": {
+        "text_to_text_id": 13,
+        "answer": "Che Paraguáirã",
+        "correct_answer": false
+    }
+}, {
+    "model": "reactives.text_to_text_detail",
+    "pk": 33,
+    "fields": {
+        "text_to_text_id": 14,
+        "answer": "Ha´e Españare",
+        "correct_answer": false
+    }
+}, {
+    "model": "reactives.text_to_text_detail",
+    "pk": 34,
+    "fields": {
+        "text_to_text_id": 14,
+        "answer": "Ha´e Españagua",
+        "correct_answer": true
+    }
+}, {
+    "model": "reactives.text_to_text_detail",
+    "pk": 35,
+    "fields": {
+        "text_to_text_id": 14,
+        "answer": "Ha´e Españarã",
+        "correct_answer": false
+    }
+}, {
+    "model": "reactives.text_to_text_detail",
+    "pk": 36,
+    "fields": {
+        "text_to_text_id": 15,
+        "answer": "Ha´ekuéra Franciarã",
+        "correct_answer": false
+    }
+}, {
+    "model": "reactives.text_to_text_detail",
+    "pk": 37,
+    "fields": {
+        "text_to_text_id": 15,
+        "answer": "Ha´ekuéra Franciare",
+        "correct_answer": false
+    }
+}, {
+    "model": "reactives.text_to_text_detail",
+    "pk": 38,
+    "fields": {
+        "text_to_text_id": 15,
+        "answer": "Ha´ekuéra Franciagua",
+        "correct_answer": true
+    }
+}, {
+    "model": "reactives.text_to_text_detail",
+    "pk": 39,
+    "fields": {
+        "text_to_text_id": 16,
+        "answer": "Ha'e",
+        "correct_answer": true
+    }
+}, {
+    "model": "reactives.text_to_text_detail",
+    "pk": 41,
+    "fields": {
+        "text_to_text_id": 17,
+        "answer": "Ha'e",
+        "correct_answer": true
+    }
+}, {
+    "model": "reactives.text_to_media",
+    "pk": 1,
+    "fields": {
+        "question": "Mba’eteko. Cheréra Pedro. Mba’éichapa Cheréra Luis",
+        "active": true
+    }
+}, {
+    "model": "reactives.text_to_media",
+    "pk": 2,
+    "fields": {
+        "question": "Ha´e España-gua",
+        "active": true
+    }
+}, {
+    "model": "reactives.text_to_media",
+    "pk": 3,
+    "fields": {
+        "question": "Ha´ekuéra Argentina-gua",
+        "active": true
+    }
+}, {
+    "model": "reactives.text_to_media_detail",
+    "pk": 1,
+    "fields": {
+        "text_to_media_id": 1,
+        "answer_filename": "text_to_media/1.jpg",
+        "correct_answer": true,
+        "description": ""
+    }
+}, {
+    "model": "reactives.text_to_media_detail",
+    "pk": 2,
+    "fields": {
+        "text_to_media_id": 1,
+        "answer_filename": "text_to_media/2.png",
+        "correct_answer": false,
+        "description": ""
+    }
+}, {
+    "model": "reactives.text_to_media_detail",
+    "pk": 3,
+    "fields": {
+        "text_to_media_id": 1,
+        "answer_filename": "text_to_media/3.jpg",
+        "correct_answer": false,
+        "description": ""
+    }
+}, {
+    "model": "reactives.text_to_media_detail",
+    "pk": 4,
+    "fields": {
+        "text_to_media_id": 2,
+        "answer_filename": "text_to_media/Ha_e_4.1_-7.1_7.2_rta_correcta._10_columna_A.png",
+        "correct_answer": true,
+        "description": ""
+    }
+}, {
+    "model": "reactives.text_to_media_detail",
+    "pk": 5,
+    "fields": {
+        "text_to_media_id": 2,
+        "answer_filename": "text_to_media/4._2-_7.2_y_7.4_Ha_ekuéra_y_columna_A.png",
+        "correct_answer": false,
+        "description": ""
+    }
+}, {
+    "model": "reactives.text_to_media_detail",
+    "pk": 6,
+    "fields": {
+        "text_to_media_id": 2,
+        "answer_filename": "text_to_media/Che_7.1-7.1-_opción_incorrecta_y_columna_A.png",
+        "correct_answer": false,
+        "description": ""
+    }
+}, {
+    "model": "reactives.text_to_media_detail",
+    "pk": 7,
+    "fields": {
+        "text_to_media_id": 3,
+        "answer_filename": "text_to_media/Che_7.1-7.1-_opción_incorrecta_y_columna_A_Sm3TeQ5.png",
+        "correct_answer": false,
+        "description": ""
+    }
+}, {
+    "model": "reactives.text_to_media_detail",
+    "pk": 8,
+    "fields": {
+        "text_to_media_id": 3,
+        "answer_filename": "text_to_media/4._2-_7.2_y_7.4_Ha_ekuéra_y_columna_A_YrDTE8w.png",
+        "correct_answer": true,
+        "description": ""
+    }
+}, {
+    "model": "reactives.text_to_media_detail",
+    "pk": 9,
+    "fields": {
+        "text_to_media_id": 3,
+        "answer_filename": "text_to_media/Ha_e_4.1_-7.1_7.2_rta_correcta._10_columna_A_rwgdYeB.png",
+        "correct_answer": false,
+        "description": ""
+    }
+}, {
+    "model": "reactives.media_to_text",
+    "pk": 1,
+    "fields": {
+        "filename": "media_to_text/1.A.5.m4a",
+        "description": "Maitei INPUT Sára.",
+        "active": true
+    }
+}, {
+    "model": "reactives.media_to_text",
+    "pk": 2,
+    "fields": {
+        "filename": "media_to_text/1.A.6.m4a",
+        "description": "Mba’eteko. Cheréra Pedro",
+        "active": true
+    }
+}, {
+    "model": "reactives.media_to_text",
+    "pk": 3,
+    "fields": {
+        "filename": "media_to_text/1.A.7.m4a",
+        "description": "Maiteimi. INPUT Sara.",
+        "active": true
+    }
+}, {
+    "model": "reactives.media_to_text",
+    "pk": 5,
+    "fields": {
+        "filename": "media_to_text/1.A.12.m4a",
+        "description": "Maitei. Mba’éichapa nderéra.",
+        "active": true
+    }
+}, {
+    "model": "reactives.media_to_text",
+    "pk": 13,
+    "fields": {
+        "filename": "media_to_text/Maitei.m4a",
+        "description": "Maitei Cheréra Belén ha che Paraguáigua",
+        "active": true
+    }
+}, {
+    "model": "reactives.media_to_text_detail",
+    "pk": 1,
+    "fields": {
+        "media_to_text_id": 1,
+        "answer": "Cheréra",
+        "correct_answer": true
+    }
+}, {
+    "model": "reactives.media_to_text_detail",
+    "pk": 4,
+    "fields": {
+        "media_to_text_id": 2,
+        "answer": "Maitei",
+        "correct_answer": false
+    }
+}, {
+    "model": "reactives.media_to_text_detail",
+    "pk": 5,
+    "fields": {
+        "media_to_text_id": 2,
+        "answer": "Mba’eteko",
+        "correct_answer": true
+    }
+}, {
+    "model": "reactives.media_to_text_detail",
+    "pk": 6,
+    "fields": {
+        "media_to_text_id": 2,
+        "answer": "Mba’éichapa",
+        "correct_answer": false
+    }
+}, {
+    "model": "reactives.media_to_text_detail",
+    "pk": 7,
+    "fields": {
+        "media_to_text_id": 3,
+        "answer": "Cheréra",
+        "correct_answer": true
+    }
+}, {
+    "model": "reactives.media_to_text_detail",
+    "pk": 11,
+    "fields": {
+        "media_to_text_id": 5,
+        "answer": "Aguyje",
+        "correct_answer": false
+    }
+}, {
+    "model": "reactives.media_to_text_detail",
+    "pk": 12,
+    "fields": {
+        "media_to_text_id": 5,
+        "answer": "Ha nde.",
+        "correct_answer": false
+    }
+}, {
+    "model": "reactives.media_to_text_detail",
+    "pk": 13,
+    "fields": {
+        "media_to_text_id": 5,
+        "answer": "Cheréra Aldo",
+        "correct_answer": true
+    }
+}, {
+    "model": "reactives.media_to_text_detail",
+    "pk": 21,
+    "fields": {
+        "media_to_text_id": 13,
+        "answer": "Hola, me llamo Belén  y soy de Paraguay",
+        "correct_answer": true
+    }
+}, {
+    "model": "reactives.media_to_text_detail",
+    "pk": 22,
+    "fields": {
+        "media_to_text_id": 13,
+        "answer": "Yo vivo en Paraguay",
+        "correct_answer": false
+    }
+}, {
+    "model": "reactives.media_to_text_detail",
+    "pk": 23,
+    "fields": {
+        "media_to_text_id": 13,
+        "answer": "Mi nombre es Belén y mi familia vive en Paraguay",
+        "correct_answer": false
+    }
+}, {
+    "model": "reactives.media_to_media",
+    "pk": 1,
+    "fields": {
+        "filename": "media_to_media/1.a.1_aCVu5p3.jpg",
+        "description": "",
+        "active": true
+    }
+}, {
+    "model": "reactives.media_to_media",
+    "pk": 2,
+    "fields": {
+        "filename": "media_to_media/1.a.2_Fg7GP8F.jpg",
+        "description": "",
+        "active": true
+    }
+}, {
+    "model": "reactives.media_to_media",
+    "pk": 3,
+    "fields": {
+        "filename": "media_to_media/1.a.3_9sNjWzl.jpg",
+        "description": "",
+        "active": true
+    }
+}, {
+    "model": "reactives.media_to_media",
+    "pk": 4,
+    "fields": {
+        "filename": "media_to_media/1.a.4_oJdUstq.jpg",
+        "description": "",
+        "active": true
+    }
+}, {
+    "model": "reactives.media_to_media",
+    "pk": 5,
+    "fields": {
+        "filename": "media_to_media/1.A.1.m4a",
+        "description": "Ejercicio-8",
+        "active": true
+    }
+}, {
+    "model": "reactives.media_to_media",
+    "pk": 6,
+    "fields": {
+        "filename": "media_to_media/1.a.9.jpg",
+        "description": "",
+        "active": true
+    }
+}, {
+    "model": "reactives.media_to_media",
+    "pk": 7,
+    "fields": {
+        "filename": "media_to_media/1.a.10.jpg",
+        "description": "",
+        "active": true
+    }
+}, {
+    "model": "reactives.media_to_media",
+    "pk": 8,
+    "fields": {
+        "filename": "media_to_media/1.a.11.jpg",
+        "description": "",
+        "active": true
+    }
+}, {
+    "model": "reactives.media_to_media",
+    "pk": 9,
+    "fields": {
+        "filename": "media_to_media/1.A.19.aif",
+        "description": "Lucía Paraguaigua",
+        "active": true
+    }
+}, {
+    "model": "reactives.media_to_media",
+    "pk": 10,
+    "fields": {
+        "filename": "media_to_media/1.A.19_v68Yrb6.aif",
+        "description": "Lucía Paraguaigua",
+        "active": true
+    }
+}, {
+    "model": "reactives.media_to_media",
+    "pk": 11,
+    "fields": {
+        "filename": "media_to_media/1.A.20.aif",
+        "description": "Mba’éichapa",
+        "active": true
+    }
+}, {
+    "model": "reactives.media_to_media",
+    "pk": 12,
+    "fields": {
+        "filename": "media_to_media/1.A.21_rta_correcta.m4a",
+        "description": "Maiteimi. Cheréra Lucía",
+        "active": true
+    }
+}, {
+    "model": "reactives.media_to_media",
+    "pk": 13,
+    "fields": {
+        "filename": "media_to_media/1.A.22.aif",
+        "description": "Ndépiko Aldo Vega.",
+        "active": true
+    }
+}, {
+    "model": "reactives.media_to_media",
+    "pk": 14,
+    "fields": {
+        "filename": "media_to_media/1.a.13.jpg",
+        "description": "",
+        "active": true
+    }
+}, {
+    "model": "reactives.media_to_media",
+    "pk": 15,
+    "fields": {
+        "filename": "media_to_media/1.a.14.jpg",
+        "description": "",
+        "active": true
+    }
+}, {
+    "model": "reactives.media_to_media",
+    "pk": 16,
+    "fields": {
+        "filename": "media_to_media/1.a.15.jpg",
+        "description": "",
+        "active": true
+    }
+}, {
+    "model": "reactives.media_to_media",
+    "pk": 17,
+    "fields": {
+        "filename": "media_to_media/1.a.16.jpg",
+        "description": "",
+        "active": true
+    }
+}, {
+    "model": "reactives.media_to_media",
+    "pk": 18,
+    "fields": {
+        "filename": "media_to_media/1.a.17.jpg",
+        "description": "",
+        "active": true
+    }
+}, {
+    "model": "reactives.media_to_media",
+    "pk": 19,
+    "fields": {
+        "filename": "media_to_media/1.a.18.jpg",
+        "description": "",
+        "active": true
+    }
+}, {
+    "model": "reactives.media_to_media",
+    "pk": 20,
+    "fields": {
+        "filename": "media_to_media/7._1_cap_1b.m4a",
+        "description": "Ha'e",
+        "active": true
+    }
+}, {
+    "model": "reactives.media_to_media_detail",
+    "pk": 1,
+    "fields": {
+        "media_to_media_id": 1,
+        "answer_filename": "Media_to_media_details/1.A.1_rMsTuMJ.m4a",
+        "correct_answer": true,
+        "description": "Maitei. Che cheréra Sara."
+    }
+}, {
+    "model": "reactives.media_to_media_detail",
+    "pk": 2,
+    "fields": {
+        "media_to_media_id": 2,
+        "answer_filename": "Media_to_media_details/1.A.2_rYhbJfA.m4a",
+        "correct_answer": true,
+        "description": "Mba’éichapa. Che cheréra Daniel."
+    }
+}, {
+    "model": "reactives.media_to_media_detail",
+    "pk": 3,
+    "fields": {
+        "media_to_media_id": 3,
+        "answer_filename": "Media_to_media_details/1.A.3.7.10.21_o5YM27l.m4a",
+        "correct_answer": true,
+        "description": "Maiteimi. Cheréra Lucía."
+    }
+}, {
+    "model": "reactives.media_to_media_detail",
+    "pk": 4,
+    "fields": {
+        "media_to_media_id": 4,
+        "answer_filename": "Media_to_media_details/1.A.4.6_brAx8FS.aif",
+        "correct_answer": true,
+        "description": "Mba’eteko. Cheréra Pedro."
+    }
+}, {
+    "model": "reactives.media_to_media_detail",
+    "pk": 5,
+    "fields": {
+        "media_to_media_id": 5,
+        "answer_filename": "Media_to_media_details/1.A.1_Bng7d1v.m4a",
+        "correct_answer": false,
+        "description": ""
+    }
+}, {
+    "model": "reactives.media_to_media_detail",
+    "pk": 6,
+    "fields": {
+        "media_to_media_id": 5,
+        "answer_filename": "Media_to_media_details/1.A.2_NLspLFm.m4a",
+        "correct_answer": true,
+        "description": ""
+    }
+}, {
+    "model": "reactives.media_to_media_detail",
+    "pk": 7,
+    "fields": {
+        "media_to_media_id": 5,
+        "answer_filename": "Media_to_media_details/1.A.3.7.10.21_h2RlTyy.m4a",
+        "correct_answer": false,
+        "description": ""
+    }
+}, {
+    "model": "reactives.media_to_media_detail",
+    "pk": 8,
+    "fields": {
+        "media_to_media_id": 6,
+        "answer_filename": "Media_to_media_details/1.A.9.m4a",
+        "correct_answer": true,
+        "description": "Ruth: Maitei. Mba’éichapa nderéra. Aldo: Aldo."
+    }
+}, {
+    "model": "reactives.media_to_media_detail",
+    "pk": 9,
+    "fields": {
+        "media_to_media_id": 7,
+        "answer_filename": "Media_to_media_details/1.A.1_VvVWSim.m4a",
+        "correct_answer": true,
+        "description": "Maiteimi. Cheréra Lucía."
+    }
+}, {
+    "model": "reactives.media_to_media_detail",
+    "pk": 10,
+    "fields": {
+        "media_to_media_id": 8,
+        "answer_filename": "Media_to_media_details/1.A.11..m4a",
+        "correct_answer": true,
+        "description": "Mba’eteko. Cheréra Pedro. Mba’éichapa. Cheréra Luis."
+    }
+}, {
+    "model": "reactives.media_to_media_detail",
+    "pk": 11,
+    "fields": {
+        "media_to_media_id": 9,
+        "answer_filename": "Media_to_media_details/ENGLAND_FLAG.webp",
+        "correct_answer": false,
+        "description": ""
+    }
+}, {
+    "model": "reactives.media_to_media_detail",
+    "pk": 12,
+    "fields": {
+        "media_to_media_id": 9,
+        "answer_filename": "Media_to_media_details/PARAGUAY_FLAG.png",
+        "correct_answer": true,
+        "description": ""
+    }
+}, {
+    "model": "reactives.media_to_media_detail",
+    "pk": 13,
+    "fields": {
+        "media_to_media_id": 9,
+        "answer_filename": "Media_to_media_details/usaflag.png",
+        "correct_answer": false,
+        "description": ""
+    }
+}, {
+    "model": "reactives.media_to_media_detail",
+    "pk": 14,
+    "fields": {
+        "media_to_media_id": 10,
+        "answer_filename": "Media_to_media_details/ENGLAND_FLAG_zFYvaxA.webp",
+        "correct_answer": false,
+        "description": ""
+    }
+}, {
+    "model": "reactives.media_to_media_detail",
+    "pk": 15,
+    "fields": {
+        "media_to_media_id": 10,
+        "answer_filename": "Media_to_media_details/PARAGUAY_FLAG_RGUA1nk.png",
+        "correct_answer": true,
+        "description": ""
+    }
+}, {
+    "model": "reactives.media_to_media_detail",
+    "pk": 16,
+    "fields": {
+        "media_to_media_id": 10,
+        "answer_filename": "Media_to_media_details/US_FLAG_tyzjVhI.png",
+        "correct_answer": false,
+        "description": ""
+    }
+}, {
+    "model": "reactives.media_to_media_detail",
+    "pk": 17,
+    "fields": {
+        "media_to_media_id": 11,
+        "answer_filename": "Media_to_media_details/1.A.20.aguyje.aif",
+        "correct_answer": false,
+        "description": ""
+    }
+}, {
+    "model": "reactives.media_to_media_detail",
+    "pk": 18,
+    "fields": {
+        "media_to_media_id": 11,
+        "answer_filename": "Media_to_media_details/1.A.20.iporante.aif",
+        "correct_answer": true,
+        "description": ""
+    }
+}, {
+    "model": "reactives.media_to_media_detail",
+    "pk": 19,
+    "fields": {
+        "media_to_media_id": 11,
+        "answer_filename": "Media_to_media_details/1.A.20.hee.aif",
+        "correct_answer": false,
+        "description": ""
+    }
+}, {
+    "model": "reactives.media_to_media_detail",
+    "pk": 20,
+    "fields": {
+        "media_to_media_id": 12,
+        "answer_filename": "Media_to_media_details/1.A.21_rta_correcta.m4a",
+        "correct_answer": true,
+        "description": "Maitei. Che cheréra Sara"
+    }
+}, {
+    "model": "reactives.media_to_media_detail",
+    "pk": 21,
+    "fields": {
+        "media_to_media_id": 12,
+        "answer_filename": "Media_to_media_details/1.A.21_opción_2.m4a",
+        "correct_answer": false,
+        "description": "Aguyje"
+    }
+}, {
+    "model": "reactives.media_to_media_detail",
+    "pk": 22,
+    "fields": {
+        "media_to_media_id": 12,
+        "answer_filename": "Media_to_media_details/1.A.21_opción_3.m4a",
+        "correct_answer": false,
+        "description": "Paraguaigua"
+    }
+}, {
+    "model": "reactives.media_to_media_detail",
+    "pk": 23,
+    "fields": {
+        "media_to_media_id": 13,
+        "answer_filename": "Media_to_media_details/1.A.22.iporante.aif",
+        "correct_answer": true,
+        "description": "Iporãnte"
+    }
+}, {
+    "model": "reactives.media_to_media_detail",
+    "pk": 24,
+    "fields": {
+        "media_to_media_id": 13,
+        "answer_filename": "Media_to_media_details/1.A.22.mba_eteko.aif",
+        "correct_answer": false,
+        "description": "Mba’eteko"
+    }
+}, {
+    "model": "reactives.media_to_media_detail",
+    "pk": 25,
+    "fields": {
+        "media_to_media_id": 13,
+        "answer_filename": "Media_to_media_details/1.A.22.nahaniri._che_aldo_vera.aif",
+        "correct_answer": false,
+        "description": "Nahániri. Che Aldo Vera"
+    }
+}, {
+    "model": "reactives.media_to_media_detail",
+    "pk": 26,
+    "fields": {
+        "media_to_media_id": 14,
+        "answer_filename": "Media_to_media_details/1.A.13.m4a",
+        "correct_answer": true,
+        "description": "Ndépiko Aldo Vera. Nahániri. Che Aldo Vega."
+    }
+}, {
+    "model": "reactives.media_to_media_detail",
+    "pk": 27,
+    "fields": {
+        "media_to_media_id": 15,
+        "answer_filename": "Media_to_media_details/1.A.14.m4a",
+        "correct_answer": true,
+        "description": "Cheréra Ruth Pereira. <br/> Mba’éichapa Ruth. <br/> Iporãnte, ha nde. <br/> Iporãnte avei."
+    }
+}, {
+    "model": "reactives.media_to_media_detail",
+    "pk": 28,
+    "fields": {
+        "media_to_media_id": 16,
+        "answer_filename": "Media_to_media_details/1.A.15.m4a",
+        "correct_answer": true,
+        "description": "Tereg̃uahẽ porãite <br/> Aguyje"
+    }
+}, {
+    "model": "reactives.media_to_media_detail",
+    "pk": 29,
+    "fields": {
+        "media_to_media_id": 17,
+        "answer_filename": "Media_to_media_details/1.A.16.m4a",
+        "correct_answer": true,
+        "description": "Mba’eteko Carlos. <br/> Mba’éiko Carol."
+    }
+}, {
+    "model": "reactives.media_to_media_detail",
+    "pk": 30,
+    "fields": {
+        "media_to_media_id": 18,
+        "answer_filename": "Media_to_media_details/1.A.17.m4a",
+        "correct_answer": true,
+        "description": "Cheréra Ruth. <br/> Mba’éichapa Ruth. <br/> Iporãnte, ha nde. <br/>  Iporãnte avei."
+    }
+}, {
+    "model": "reactives.media_to_media_detail",
+    "pk": 31,
+    "fields": {
+        "media_to_media_id": 19,
+        "answer_filename": "Media_to_media_details/1.A.18.m4a",
+        "correct_answer": true,
+        "description": "Ha ndepiko Paraguaja. <br/> Heẽ . Upéicha"
+    }
+}, {
+    "model": "reactives.media_to_media_detail",
+    "pk": 32,
+    "fields": {
+        "media_to_media_id": 20,
+        "answer_filename": "Media_to_media_details/Ha_e_4.1_-7.1_7.2_rta_correcta._10_columna_A.png",
+        "correct_answer": true,
+        "description": ""
+    }
+}, {
+    "model": "reactives.media_to_media_detail",
+    "pk": 33,
+    "fields": {
+        "media_to_media_id": 20,
+        "answer_filename": "Media_to_media_details/4._2-_7.2_y_7.4_Ha_ekuéra_y_columna_A.png",
+        "correct_answer": false,
+        "description": ""
+    }
+}, {
+    "model": "reactives.media_to_media_detail",
+    "pk": 34,
+    "fields": {
+        "media_to_media_id": 20,
+        "answer_filename": "Media_to_media_details/Che_7.1-7.1-_opción_incorrecta_y_columna_A.png",
+        "correct_answer": false,
+        "description": ""
+    }
+}]
