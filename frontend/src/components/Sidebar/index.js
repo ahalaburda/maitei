@@ -2,8 +2,10 @@ import React, { Component } from 'react'
 import {
     Link
 } from "react-router-dom";
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTachometerAlt, faUser, faTable, faHandsHelping, faUserCircle, faChevronLeft } from '@fortawesome/free-solid-svg-icons'
+import { faTachometerAlt, faUser, faTable, faHandsHelping, faUserCircle, faGreaterThan, faLessThan } from '@fortawesome/free-solid-svg-icons'
+import Logo from "./components/Logo";
 import './Sidebar.css'
 
 import $ from "jquery";
@@ -23,43 +25,40 @@ class Sidebar extends Component {
     }
 
     render() {
-        /**Si el usuario es admin, se muestra las opciones de tipo de expediente y objeto de gastos en el sidebar
-         * y si no es admin se ocultan
-         */
         return (
             <>
-            <nav className="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0" >
+            <nav className="navbar-nav bg-gradient-success sidebar active sidebar-dark" id="sidebar">
               <div className="container-fluid d-flex flex-column p-0">
-                <a className="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
-                  <div className="sidebar-brand-icon rotate-n-15"><i className="far fa-comments"></i></div>
-                  <div className="sidebar-brand-text mx-3"><span>Maitei Guarani</span></div>
-                </a>
+                <Logo toggleIcon={this.state.toggle}/>
                 <hr className="sidebar-divider my-0" />
                 <ul className="nav navbar-nav text-light" id="accordionSidebar">
                   <li className="nav-item">
-                    <Link className="nav-link" to="/"><FontAwesomeIcon icon={faTachometerAlt} /><span> Incio</span></Link>
+                    <Link className="nav-link" to="/"><FontAwesomeIcon icon={faTachometerAlt} /><span style={{paddingLeft: '1em'}}> Inicio</span></Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" to="/profile"><FontAwesomeIcon icon={faUser} /><span> Profile</span></Link>
+                    <Link className="nav-link" to="/levels"><FontAwesomeIcon icon={faTable} /><span style={{paddingLeft: '1em'}}> Niveles</span></Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" to="/levels"><FontAwesomeIcon icon={faTable} /><span> Niveles</span></Link>
+                    <Link className="nav-link" to="/chapters"><FontAwesomeIcon icon={faHandsHelping} /><span style={{paddingLeft: '1em'}}> Capitulos</span></Link>
+                  </li>
+                  <hr/>
+                  {/* <li className="nav-item">
+                    <Link className="nav-link" to="/login"><FontAwesomeIcon icon={faUserCircle} /><span style={{paddingLeft: '1em'}}> Iniciar Sesion</span></Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" to="/chapters"><FontAwesomeIcon icon={faHandsHelping} /><span> Capitulos</span></Link>
+                    <Link className="nav-link" to="/signup"><FontAwesomeIcon icon={faUser} /><span style={{paddingLeft: '1em'}}> Registro</span></Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" to="/exercises"><FontAwesomeIcon icon={faHandsHelping} /><span> Ejercicios</span></Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link className="nav-link" to="/login"><FontAwesomeIcon icon={faUserCircle} /><span> Iniciar Sesion</span></Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link className="nav-link" to="/signup"><FontAwesomeIcon icon={faUser} /><span> Registro</span></Link>
-                  </li>
+                    <Link className="nav-link" to="/profile"><FontAwesomeIcon icon={faUser} /><span style={{paddingLeft: '1em'}}> Perfil</span></Link>
+                  </li> */}
                 </ul>
-                <div className="text-center d-none d-md-inline">
-                  <button className="btn rounded-circle border-0" id="sidebarToggle" type="button"><FontAwesomeIcon icon={faChevronLeft} /></button>
+                <div className="text-center">
+                  <button className="btn rounded-circle border-0" id="sidebarToggle" type="button" onClick={this.toggleMenu}>
+                    {this.state.toggle ? 
+                      <FontAwesomeIcon icon={faLessThan} className="text-white"/> :
+                      <FontAwesomeIcon icon={faGreaterThan} className="text-white"/>
+                    }
+                  </button>
                 </div>
               </div>
             </nav>

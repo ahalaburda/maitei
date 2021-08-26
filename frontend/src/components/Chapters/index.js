@@ -1,7 +1,4 @@
 import React, { Component } from 'react'
-import {
-    Link
-  } from "react-router-dom";
 import ChaptersService from "../../services/Chapters";
 
 class Chapters extends Component {
@@ -53,7 +50,8 @@ class Chapters extends Component {
                         return (
                             <div className="col-md-6 col-lg-4 col-xl-3 mb-4" key={idx}>
                                 <a href="/exercises" onClick={() => this.handleClick(d.id)}>
-                                    <div className="card"><img className="card-img w-100 d-block" src={d.chapterImage} />
+                                    <div className="card" style={{height: '11em'}}>
+                                        {/* <img className="card-img w-100 d-block" src={d.chapterImage} alt={"img"+d.description}/> */}
                                         <div className="card-img-overlay">
                                             <h4 style={{fontSize: '2.5rem', color: '#009688'}}>{d.description}</h4>
                                             <p>{d.description}</p>

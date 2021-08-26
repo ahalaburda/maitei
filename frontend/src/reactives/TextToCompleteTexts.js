@@ -1,10 +1,12 @@
 import React from "react";
 
-function Text_to_complete_text(props) {
+function TextToCompleteText(props) {
+  let inputCounter=0;
+
   return (
     <div className="container">
         <div className="row">
-            <span style={{fontSize: '30px'}}>Completa la Oracion</span>
+            <span style={{fontSize: '30px'}}>Selecciona la respuesta correcta.</span>
             <br/>
             <br/>
         </div>
@@ -16,9 +18,11 @@ function Text_to_complete_text(props) {
             <br/>
             <br/>
                 <div className="row justify-content-center">
-                  { props.question.split(' ').map((data,idx) =>{
+                  { 
+                  props.question.split(' ').map((data,idx) =>{
                       if (data === "INPUT") {
-                        return <input type="text" key={idx}/>
+                        inputCounter++;
+                        return <input type="text" key={idx} id={"answer-"+inputCounter} />
                       } else {
                         return <p className="ml-1 mr-1" key={idx}>{data}</p>
                       }
@@ -31,4 +35,4 @@ function Text_to_complete_text(props) {
   );
 }
 
-export default Text_to_complete_text;
+export default TextToCompleteText;

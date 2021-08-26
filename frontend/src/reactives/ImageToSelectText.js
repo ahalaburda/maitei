@@ -15,11 +15,17 @@ function toggleClass(id){
   element.classList.add("active");
 }
 
-function Text_to_select_text(props) {
+function ImageToSelectText(props) {
   return (
     <div className="container">
         <div className="row">
-            <span style={{fontSize: '30px'}}>Lee y Selecciona la respuesta correcta</span>
+            <span style={{fontSize: '30px'}}>Selecciona la respuesta correcta</span>
+            <br/>
+            <br/>
+        </div>
+
+        <div className="col-lg-12 text-md-center">
+            <img src={props.filename} alt={props.filename} height="200px" width="auto" />
             <br/>
             <br/>
         </div>
@@ -27,13 +33,7 @@ function Text_to_select_text(props) {
         <div className="col-lg-12 text-md-center">
             <br/>
             <br/>
-            <h5 id="text">{props.question}</h5>
-        </div>
-
-        <div className="col-lg-12 text-md-center">
-            <br/>
-            <br/>
-            <label>Lee y Selecciona la respuesta correcta</label>
+            <label>Selecciona la respuesta correcta</label>
             <hr/>
             <br/>
                 <div className="row justify-content-center">
@@ -41,7 +41,7 @@ function Text_to_select_text(props) {
                     { props.answers.map((data,idx) => {
                       return (
                         <label className="btn btn-primary" id={"radio_label_" + data.id} key={idx}>
-                          <input type="radio" name="options" onClick={() => {toggleClass(data.id)}} id={"option" + data.id} /> {data.answer}
+                          <input type="radio" name="options" onClick={() => {toggleClass(data.id)}} id={"answer-" + (idx+1)} /> {data.answer}
                         </label>
                       )
                     })}
@@ -53,4 +53,4 @@ function Text_to_select_text(props) {
   );
 }
 
-export default Text_to_select_text;
+export default ImageToSelectText;

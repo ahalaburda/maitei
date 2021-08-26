@@ -2,7 +2,9 @@ import React from "react";
 import ReactAudioPlayer from 'react-audio-player';
 
 
-function Audio_to_complete_texts(props) {
+function AudioToCompleteTexts(props) {
+  let inputCounter=0;
+
   return (
     <div className="container">
         <div className="row">
@@ -31,10 +33,18 @@ function Audio_to_complete_texts(props) {
                 <div className="row justify-content-center">
                   { props.question.split(' ').map((data,idx) =>{
                       if (data === "INPUT") {
-                        return <input type="text" key={idx} />
+                        inputCounter++;
+                        return <input type="text" key={idx} id={"answer-"+inputCounter} />
                       } else {
                         return <p className="ml-1 mr-1" key={idx}>{data}</p>
                       }
+                    })
+                  }
+                </div>
+                <div>
+                  { props.correct_answer.map((data,idx) =>{
+                      let answer = data.answer
+                      return  <input key={idx} id={"answer-1"+idx} name={"answer-1"+idx} type="hidden" value={answer.toLowerCase()} />
                     })
                   }
                 </div>
@@ -44,4 +54,4 @@ function Audio_to_complete_texts(props) {
   );
 }
 
-export default Audio_to_complete_texts;
+export default AudioToCompleteTexts;

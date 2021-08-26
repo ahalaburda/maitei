@@ -2,7 +2,7 @@ import React from "react";
 import ReactAudioPlayer from 'react-audio-player';
 
 
-function Audio_to_audios(props) {
+function ImageToSelectAudio(props) {
   return (
     <div className="container">
         <div className="row">
@@ -12,14 +12,9 @@ function Audio_to_audios(props) {
         </div>
 
         <div className="col-lg-12 text-md-center">
-            <ReactAudioPlayer
-              src={ props.filename}
-              autoPlay
-              controls
-            />
+            <img src={props.filename} alt={props.filename} height="200px" width="auto" />
             <br/>
             <br/>
-            <div id="text">{props.description}</div>
         </div>
 
         <div className="col-lg-12 text-md-center">
@@ -33,7 +28,7 @@ function Audio_to_audios(props) {
                 { props.answers.map((data, idx) => {
                     return (
                     <div key={idx}>
-                        <input type="radio" name="options" id={"option" + data.id} />
+                        <input type="radio" name="options" id={"answer-" +(idx+1)} />
                         <br/>
                         <ReactAudioPlayer
                             src={"http://localhost:8000" +  data.answer_filename}
@@ -49,4 +44,4 @@ function Audio_to_audios(props) {
   );
 }
 
-export default Audio_to_audios;
+export default ImageToSelectAudio;

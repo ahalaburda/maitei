@@ -59,7 +59,7 @@ class Levels extends Component {
                                                 <div className="text-uppercase text-info font-weight-bold text-xs mb-1"><span>{d.description}</span></div>
                                                 <div className="row experience-row align-items-center">
                                                     <div className="col-auto">
-                                                        <div className="text-dark font-weight-bold h5"><span>50%</span></div>
+                                                        <div className="text-dark font-weight-bold h5"><span>0%</span></div>
                                                     </div>
                                                     <div className="col">
                                                         <div className="progress progress-sm">
