@@ -1,6 +1,7 @@
 import React, {
   Component
 } from 'react'
+import {IntlProvider, FormattedMessage, FormattedNumber} from 'react-intl'
 import ProgressBar from 'react-bootstrap/ProgressBar';
 import swal from '@sweetalert/with-react';
 import ReactAudioPlayer from 'react-audio-player';
@@ -18,6 +19,14 @@ import ImageToSelectText from '../../reactives/ImageToSelectText';
 import ImageToCompleteTexts from '../../reactives/ImageToCompleteTexts';
 import ImageToSelectAudio from '../../reactives/ImageToSelectAudio';
 
+const messagesInEnglish = {
+  nextButton: "Next",
+}
+
+const messagesInFrench = {
+  myMessage: "Aujourd'hui, c'est le {ts, date, ::yyyyMMdd}",
+}
+
 class Exercises extends Component {
   constructor(props) {
     super(props);
@@ -25,7 +34,7 @@ class Exercises extends Component {
       exerciseId: 0,
       exercises: [],
       answers: [],
-      currentOrder: 5
+      currentOrder: 1
     };
   }
 
@@ -287,6 +296,7 @@ class Exercises extends Component {
             case 8:  // 8- Text to Complete text
               return <TextToCompleteTexts
                         key = { id }
+                        description = { data.exercise_Text_to_text.description }
                         question = { data.exercise_Text_to_text.question }
                         answers = { data.exercise_Text_to_text.answers } />
             case 9:  // 9- Text to Select Audio
@@ -317,6 +327,19 @@ class Exercises extends Component {
     })
     return ( 
       <>
+
+<IntlProvider messages={messagesInFrench} locale="fr" defaultLocale="en">
+  <p>
+    <FormattedMessage
+      id="myMessage"
+      defaultMessage="Today is {ts, date, ::yyyyMMdd}"
+      values={{ts: Date.now()}}
+    />
+  </p>
+</IntlProvider>
+
+
+
         <div className = "d-sm-flex justify-content-between align-items-center mb-4" >
           <h3 className = "text-dark mb-0" > Ejercicio# { this.state.currentOrder } </h3>
         </div> 
