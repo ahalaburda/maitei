@@ -36,7 +36,7 @@ function AudioToAudios(props) {
                         <input type="radio" name="options" id={"answer-" +(idx+1)} />
                         <br/>
                         <ReactAudioPlayer
-                            src={"http://localhost:8000" +  data.answer_filename}
+                            src={"http://137.184.36.83:8000" +  data.answer_filename}
                             controls
                         />
                   </div>

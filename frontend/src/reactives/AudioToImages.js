@@ -41,7 +41,7 @@ function AudioToImages(props) {
                     <div style={{padding: "0 1em"}} key={idx}>
                         <input type="radio" name="options" id={"answer-" + (idx+1)} />
                         <br/>
-                        <img src={"http://localhost:8000" + data.answer_filename} alt="" height="100px" width="auto" />
+                        <img src={"http://137.184.36.83:8000" + data.answer_filename} alt="" height="100px" width="auto" />
                   </div>
                   )
                 })}  

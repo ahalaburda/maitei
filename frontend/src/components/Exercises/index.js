@@ -25,7 +25,7 @@ class Exercises extends Component {
       exerciseId: 0,
       exercises: [],
       answers: [],
-      currentOrder: 5
+      currentOrder: 1
     };
   }
 
@@ -170,7 +170,7 @@ class Exercises extends Component {
                         <p>La respuesta correcta es:</p>
                         <h4>Opción #{correct+1}</h4>
                         <ReactAudioPlayer
-                          src={"http://localhost:8000" + answers[correct].answer_filename}
+                          src={"http://137.184.36.83:8000" + answers[correct].answer_filename}
                           controls
                         />
                       </div>,
@@ -198,7 +198,7 @@ class Exercises extends Component {
               title: "Lo siento",
               content: <div>  
                         <p>La respuesta correcta es:</p>
-                        <img src={"http://localhost:8000" + answers[correct].answer_filename} alt="" height="50px" width="auto" />
+                        <img src={"http://137.184.36.83:8000" + answers[correct].answer_filename} alt="" height="50px" width="auto" />
                       </div>,
               icon: "error",
             }).then(() => {

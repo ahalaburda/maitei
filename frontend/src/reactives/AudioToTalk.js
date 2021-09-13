@@ -33,7 +33,7 @@ function AudioToTalk(props) {
         <div className="col-lg-12 text-md-center">
             <br/>
             <ReactAudioPlayer
-              src={"http://localhost:8000" + props.fileAnswer}
+              src={"http://137.184.36.83:8000" + props.fileAnswer}
               autoPlay
               controls
             />

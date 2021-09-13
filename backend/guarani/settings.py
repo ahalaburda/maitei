@@ -16,7 +16,7 @@ SECRET_KEY = 'django-insecure-^c!9s3i9ssbk=+fvyj0psr2)5*l)rkl3w3pz4zbb)^m&(j$i%5
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['137.184.36.83']
 
 
 # Application definition
@@ -78,9 +78,9 @@ WSGI_APPLICATION = 'guarani.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'guarani_api_dev',
-        'USER': 'adrian',
-        'PASSWORD': '123',
+        'NAME': 'maitei_api',
+        'USER': 'maitei',
+        'PASSWORD': 'M41te1*4dm1n*21',
         'HOST': 'localhost',
         'PORT': '3306',
     }
@@ -163,7 +163,7 @@ SIMPLE_JWT = {
 }
 
 CORS_ORIGIN_ALLOW_ALL = True
-# CORS_ORIGIN_WHITELIST = ('http://localhost:3000',)
+CORS_ORIGIN_WHITELIST = ('http://137.184.36.83:3000','http://137.184.36.83')
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_METHODS = [
     'DELETE',
