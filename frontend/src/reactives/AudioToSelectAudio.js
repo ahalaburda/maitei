@@ -1,12 +1,13 @@
 import React from "react";
 import ReactAudioPlayer from 'react-audio-player';
-
+import { baseURL } from "../services/http-common";
+import i18n from '../i18n/index'
 
 function AudioToAudios(props) {
   return (
     <div className="container">
         <div className="row">
-            <span style={{fontSize: '30px'}}>Escucha y Selecciona la respuesta correcta</span>
+            <span  className="text-dark" style={{fontSize: '30px'}}>{i18n.t('listen_and_select')}</span>
             <br/>
             <br/>
         </div>
@@ -19,13 +20,23 @@ function AudioToAudios(props) {
             />
             <br/>
             <br/>
-            <div id="text">{props.description}</div>
+            <div className="col-lg-12 text-md-center">
+              <div id="text" style={{textAlign: 'center'}}>
+                <div  style={{margin: '0 10%',
+                              padding: '2em',
+                              color: 'black'}}>
+                    { props.description.split('<br/>').map((data, idx) =>{
+                        return (
+                          <p key={idx} style={{textAlign: 'center'}}>— {data}</p>
+                        )
+                    })
+                  }
+                </div>
+              </div>
+            </div>
         </div>
 
         <div className="col-lg-12 text-md-center">
-            <br/>
-            <br/>
-            <label>Selecciona la respuesta correcta</label>
             <hr/>
             <br/>
             <br/>
@@ -36,7 +47,11 @@ function AudioToAudios(props) {
                         <input type="radio" name="options" id={"answer-" +(idx+1)} />
                         <br/>
                         <ReactAudioPlayer
+<<<<<<< HEAD
                             src={"http://137.184.36.83:8000" +  data.answer_filename}
+=======
+                            src={baseURL +  data.answer_filename}
+>>>>>>> d75881f056f889b41038fab3fe511f5de5a65118
                             controls
                         />
                   </div>
