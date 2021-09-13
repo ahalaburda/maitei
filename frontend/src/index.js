@@ -4,9 +4,25 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// import {IntlProvider} from 'react-intl';
+// import Spanish from './lang/es.json';
+// import English from './lang/en.json';
+
+// const locale = navigator.language;
+
+// let lang;
+
+// if (locale==="en") {
+//    lang = English;
+// } else {
+//     lang = Spanish;
+// }
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    {/* <IntlProvider locale ={locale} messages={Spanish}> */}
+       <App />
+   {/* </IntlProvider>, */}
   </React.StrictMode>,
   document.getElementById('root')
 );

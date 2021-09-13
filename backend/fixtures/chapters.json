@@ -1,0 +1,111 @@
+[
+{
+  "model": "exercises.chapter",
+  "pk": 1,
+  "fields":
+  {
+    "level_id": 1,
+    "description": "Capitulo - 1.A",
+    "active": true,
+    "chapter_image": ""
+  }
+},
+{
+  "model": "exercises.chapter",
+  "pk": 2,
+  "fields":
+  {
+    "level_id": 1,
+    "description": "Capitulo - 1.B",
+    "active": true,
+    "chapter_image": ""
+  }
+},
+{
+  "model": "exercises.chapter",
+  "pk": 3,
+  "fields":
+  {
+    "level_id": 1,
+    "description": "Capitulo - 1.C",
+    "active": true,
+    "chapter_image": ""
+  }
+},
+{
+  "model": "exercises.chapter",
+  "pk": 4,
+  "fields":
+  {
+    "level_id": 1,
+    "description": "Capitulo - 1.D",
+    "active": true,
+    "chapter_image": ""
+  }
+},
+{
+  "model": "exercises.chapter",
+  "pk": 5,
+  "fields":
+  {
+    "level_id": 1,
+    "description": "Capitulo - 2.A",
+    "active": true,
+    "chapter_image": ""
+  }
+},
+{
+  "model": "exercises.chapter",
+  "pk": 6,
+  "fields":
+  {
+    "level_id": 1,
+    "description": "Capitulo - 2.B",
+    "active": true,
+    "chapter_image": ""
+  }
+},
+{
+  "model": "exercises.chapter",
+  "pk": 7,
+  "fields":
+  {
+    "level_id": 1,
+    "description": "Capitulo - 2.C",
+    "active": true,
+    "chapter_image": ""
+  }
+},
+{
+  "model": "exercises.chapter",
+  "pk": 8,
+  "fields":
+  {
+    "level_id": 1,
+    "description": "Capitulo - 3.A",
+    "active": true,
+    "chapter_image": ""
+  }
+},
+{
+  "model": "exercises.chapter",
+  "pk": 9,
+  "fields":
+  {
+    "level_id": 1,
+    "description": "Capitulo - 3.B",
+    "active": true,
+    "chapter_image": ""
+  }
+},
+{
+  "model": "exercises.chapter",
+  "pk": 10,
+  "fields":
+  {
+    "level_id": 1,
+    "description": "Capitulo - 3.C",
+    "active": true,
+    "chapter_image": ""
+  }
+}]

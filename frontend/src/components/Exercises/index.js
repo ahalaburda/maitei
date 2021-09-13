@@ -18,9 +18,10 @@ import TextToSelectAudio from '../../reactives/TextToSelectAudio';
 import ImageToSelectText from '../../reactives/ImageToSelectText';
 import ImageToCompleteTexts from '../../reactives/ImageToCompleteTexts';
 import ImageToSelectAudio from '../../reactives/ImageToSelectAudio';
+import Chapter1A from '../../intros/es/Chapter1A'
 
 const messagesInEnglish = {
-  nextButton: "Next",
+  myMessage: "Aujourd'hui, c'est le {ts, date, ::yyyyMMdd}",
 }
 
 const messagesInFrench = {
@@ -34,7 +35,7 @@ class Exercises extends Component {
       exerciseId: 0,
       exercises: [],
       answers: [],
-      currentOrder: 1
+      currentOrder: 0
     };
   }
 
@@ -233,6 +234,15 @@ class Exercises extends Component {
 
   render() {
     // eslint-disable-next-line array-callback-return
+    if(this.state.currentOrder === 0){
+      let chapter = parseInt(sessionStorage.getItem('maitei_chapter_id'))
+      switch (chapter) {
+        case 1:
+          return <Chapter1A />
+        default:
+          break;
+      }
+    }
     let reactive = this.state.exercises.map((data, id) => {
       if (this.state.exercises.length+1 === this.state.currentOrder) {
         swal({
@@ -328,11 +338,11 @@ class Exercises extends Component {
     return ( 
       <>
 
-<IntlProvider messages={messagesInFrench} locale="fr" defaultLocale="en">
+<IntlProvider messages={messagesInFrench} locale="es" defaultLocale="es">
   <p>
     <FormattedMessage
       id="myMessage"
-      defaultMessage="Today is {ts, date, ::yyyyMMdd}"
+      defaultMessage="Hoy es {ts, date, ::yyyyMMdd}"
       values={{ts: Date.now()}}
     />
   </p>

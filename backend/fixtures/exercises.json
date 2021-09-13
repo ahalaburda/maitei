@@ -1,0 +1,102 @@
+[
+{
+  "model": "exercises.exercise",
+  "pk": 1,
+  "fields":
+  {
+    "chapter_id": 1,
+    "description": "Ejercitario - 1.A",
+    "active": true
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 2,
+  "fields":
+  {
+    "chapter_id": 2,
+    "description": "Ejercitario - 1.B",
+    "active": true
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 3,
+  "fields":
+  {
+    "chapter_id": 3,
+    "description": "Ejercitario - 1.C",
+    "active": true
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 5,
+  "fields":
+  {
+    "chapter_id": 5,
+    "description": "Ejercitario - 2.A",
+    "active": true
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 6,
+  "fields":
+  {
+    "chapter_id": 6,
+    "description": "Ejercitario - 2.B",
+    "active": true
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 7,
+  "fields":
+  {
+    "chapter_id": 7,
+    "description": "Ejercitario - 2.C",
+    "active": true
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 8,
+  "fields":
+  {
+    "chapter_id": 8,
+    "description": "Ejercitario - 3.A",
+    "active": true
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 9,
+  "fields":
+  {
+    "chapter_id": 9,
+    "description": "Ejercitario - 3.B",
+    "active": true
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 10,
+  "fields":
+  {
+    "chapter_id": 10,
+    "description": "Ejercitario - 3.C",
+    "active": true
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 11,
+  "fields":
+  {
+    "chapter_id": 4,
+    "description": "Ejercicios - 1.D",
+    "active": true
+  }
+}
+]
