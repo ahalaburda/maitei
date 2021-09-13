@@ -1,0 +1,109 @@
+[
+{
+  "model": "exercises.reactive",
+  "pk": 1,
+  "fields":
+  {
+    "description": "Audio / Hablar",
+    "active": true
+  }
+},
+{
+  "model": "exercises.reactive",
+  "pk": 2,
+  "fields":
+  {
+    "description": "Audio / Completar Oracion",
+    "active": true
+  }
+},
+{
+  "model": "exercises.reactive",
+  "pk": 3,
+  "fields":
+  {
+    "description": "Audio / Seleccionar Texto",
+    "active": true
+  }
+},
+{
+  "model": "exercises.reactive",
+  "pk": 4,
+  "fields":
+  {
+    "description": "Audio / Seleccionar Audio",
+    "active": true
+  }
+},
+{
+  "model": "exercises.reactive",
+  "pk": 5,
+  "fields":
+  {
+    "description": "Audio / Seleccionar Imagen",
+    "active": true
+  }
+},
+{
+  "model": "exercises.reactive",
+  "pk": 6,
+  "fields":
+  {
+    "description": "Texto / Seleccionar Imagen",
+    "active": true
+  }
+},
+{
+  "model": "exercises.reactive",
+  "pk": 7,
+  "fields":
+  {
+    "description": "Texto / Seleccionar Texto",
+    "active": true
+  }
+},
+{
+  "model": "exercises.reactive",
+  "pk": 8,
+  "fields":
+  {
+    "description": "Texto /  Completar Oracion",
+    "active": true
+  }
+},
+{
+  "model": "exercises.reactive",
+  "pk": 9,
+  "fields":
+  {
+    "description": "Texto / Seleccionar Audio",
+    "active": true
+  }
+},
+{
+  "model": "exercises.reactive",
+  "pk": 10,
+  "fields":
+  {
+    "description": "Imagen / Seleccionar Texto",
+    "active": true
+  }
+},
+{
+  "model": "exercises.reactive",
+  "pk": 11,
+  "fields":
+  {
+    "description": "Imagen / Completar Oracion",
+    "active": true
+  }
+},
+{
+  "model": "exercises.reactive",
+  "pk": 12,
+  "fields":
+  {
+    "description": "Imagen / Seleccionar Audio",
+    "active": true
+  }
+}]

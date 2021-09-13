@@ -2,13 +2,14 @@ import React, { Component } from 'react'
 import {
     Link
 } from "react-router-dom";
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTachometerAlt, faUser, faTable, faHandsHelping, faUserCircle, faGreaterThan, faLessThan } from '@fortawesome/free-solid-svg-icons'
 import Logo from "./components/Logo";
 import './Sidebar.css'
-
 import $ from "jquery";
+
+import i18n from '../../i18n/index'
+
 
 class Sidebar extends Component {
     constructor(props) {
@@ -27,19 +28,19 @@ class Sidebar extends Component {
     render() {
         return (
             <>
-            <nav className="navbar-nav bg-gradient-success sidebar active sidebar-dark" id="sidebar">
+            <nav className="navbar navbar-light align-items-start sidebar active accordion shadow-lg p-2" id="sidebar">
               <div className="container-fluid d-flex flex-column p-0">
                 <Logo toggleIcon={this.state.toggle}/>
-                <hr className="sidebar-divider my-0" />
+                <hr/>
                 <ul className="nav navbar-nav text-light" id="accordionSidebar">
                   <li className="nav-item">
-                    <Link className="nav-link" to="/"><FontAwesomeIcon icon={faTachometerAlt} /><span style={{paddingLeft: '1em'}}> Inicio</span></Link>
+                    <Link className="nav-link" to="/"><FontAwesomeIcon icon={faTachometerAlt} /><span style={{paddingLeft: '1em'}}>{i18n.t('home')}</span></Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" to="/levels"><FontAwesomeIcon icon={faTable} /><span style={{paddingLeft: '1em'}}> Niveles</span></Link>
+                    <Link className="nav-link" to="/levels"><FontAwesomeIcon icon={faTable} /><span style={{paddingLeft: '1em'}}>{i18n.t('levels')}</span></Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" to="/chapters"><FontAwesomeIcon icon={faHandsHelping} /><span style={{paddingLeft: '1em'}}> Capitulos</span></Link>
+                    <Link className="nav-link" to="/chapters"><FontAwesomeIcon icon={faHandsHelping} /><span style={{paddingLeft: '1em'}}>{i18n.t('chapters')}</span></Link>
                   </li>
                   <hr/>
                   {/* <li className="nav-item">
@@ -53,7 +54,7 @@ class Sidebar extends Component {
                   </li> */}
                 </ul>
                 <div className="text-center">
-                  <button className="btn rounded-circle border-0" id="sidebarToggle" type="button" onClick={this.toggleMenu}>
+                  <button className="btn rounded-circle" id="sidebarToggle" type="button" onClick={this.toggleMenu}>
                     {this.state.toggle ? 
                       <FontAwesomeIcon icon={faLessThan} className="text-white"/> :
                       <FontAwesomeIcon icon={faGreaterThan} className="text-white"/>

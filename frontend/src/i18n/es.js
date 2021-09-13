@@ -1,0 +1,43 @@
+export const esp = {
+    home: 'Inicio',
+    profile: 'Perfil',
+    level: 'Nivel',
+    levels: 'Niveles',
+    chapter: 'Capítulo',
+    chapters: 'Capítulos',
+    exercise: 'Ejercicio',
+    exercises: 'Ejercicios',
+    welcome: 'Bienvenido',
+    welcome_learned_words: 'Palabras Aprendidas',
+    welcome_current_progress: 'Progreso Actual',
+    welcome_pending_chapters: 'Capitulos Pendientes',
+    welcome_news: 'Noticias Recientes',
+    welcome_start_button: 'Empecemos',
+    start: 'Iniciar',
+    next: 'Siguiente',
+    back: 'Anterior',
+    'Principiante': 'Principiante',
+    'Intermedio': 'Intermedio',
+    'Avanzado': 'Avanzado',
+    toastr_message_1: 'Sigue asi!',
+    toastr_message_2: 'Genial',
+    toastr_message_3: 'Excelente',
+    error_title_message: 'Lo siento',
+    error_subtitle_message: 'La repuesta correcta es:',
+    option: 'Opción',
+
+    congrats: 'Felicidades, sigue asi!',
+    restart: 'Volver a empezar',
+    continue: 'Continuar',
+
+    listen_and_repeat: 'Escucha y repite:',
+    listen_and_complete: 'Escucha y completa la oración:',
+    listen_and_select: 'Escucha y selecciona la respuesta correcta:',
+    read_and_select: 'Lee y Selecciona la respuesta correcta:',
+
+    complete_sentence: 'Complete la oración:',
+    select_correct_answer: 'Selecciona la respuesta correcta:',
+
+    '¿Cómo se dice “hola” en Guaraní?': '¿Cómo se dice “hola” en Guaraní?',
+    
+}

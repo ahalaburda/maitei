@@ -1,0 +1,9 @@
+[{
+  "model": "exercises.level",
+  "pk": 1,
+  "fields":
+  {
+    "description": "Principiante",
+    "active": true
+  }
+}]
