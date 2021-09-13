@@ -17,7 +17,7 @@
 }
 
 #sidebar.active {
-    width: 9.5rem !important;
+    width: 12.5rem !important;
 }
 
 #sidebar.active .nav-item .nav-link {
@@ -32,4 +32,20 @@
 
 .sidebar .nav-item .nav-link {
     width: auto !important;
+}
+
+#logo{
+    height: 50%;
+    width: auto;
+    margin: 0.5em 0;
+}
+
+#min-logo{
+    height: 50%;
+    width: auto;
+    margin: 0.5em 0;
+}
+
+.sidebar .sidebar-brand {
+    padding: 0 1rem !important;
 }

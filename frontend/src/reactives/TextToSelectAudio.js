@@ -1,35 +1,32 @@
 import React from "react";
 import ReactAudioPlayer from 'react-audio-player';
-
+import { baseURL } from "../services/http-common";
+import i18n from '../i18n/index'
 
 function TextToSelectAudio(props) {
   return (
     <div className="container">
         <div className="row">
-            <span style={{fontSize: '30px'}}>Escucha y Selecciona la respuesta correcta</span>
+            <span className="text-dark" style={{fontSize: '30px'}}>{i18n.t('listen_and_select')}</span>
             <br/>
             <br/>
         </div>
-
         <div className="col-lg-12 text-md-center">
-            <label>
-              { props.question.split(' ').map((data,idx) =>{
-                  if (data === "\n") {
-                    return <br/>
-                  } else {
-                    return data
-                  }
+          <div id="text" style={{textAlign: 'center'}}>
+            <div  style={{margin: '0 30%',
+                          padding: '2em',
+                          color: 'black'}}>
+              { props.question.split('<br/>').map((data, idx) =>{
+                    return (
+                      <p key={idx} style={{textAlign: 'left'}}> {data}</p>
+                    )
                 })
               }
-            </label>
-            <br/>
-            <br/>
+            </div>
+          </div>
         </div>
 
         <div className="col-lg-12 text-md-center">
-            <br/>
-            <br/>
-            <label>Selecciona la respuesta correcta</label>
             <hr/>
             <br/>
             <br/>
@@ -40,7 +37,7 @@ function TextToSelectAudio(props) {
                         <input type="radio" name="options" id={"answer-" +(idx+1)} />
                         <br/>
                         <ReactAudioPlayer
-                            src={"http://localhost:8000" +  data.answer_filename}
+                            src={baseURL +  data.answer_filename}
                             controls
                         />
                   </div>

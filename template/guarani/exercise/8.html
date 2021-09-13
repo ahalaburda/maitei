@@ -139,7 +139,18 @@
                         </div>
                     </div>
                     <br>
-                    <a href="9.html" class="btn btn-primary float-right">Siguiente</a>
+                    <a href="#" class="btn btn-primary float-right" onclick="errorMessage()">Siguiente</a>
+                    <script>
+                             function errorMessage() {
+                                console.log("error");
+                                Swal.fire({
+                                    title: "<i>Sorry</i>",
+                                    icon: 'error',
+                                    html: "The correct answer is option 1",  
+                                    confirmButtonText: '<a href="9.html"  class="btn" onclick="errorMessage()">Next</a>'
+                                })
+                             }
+                         </script>
                 </div>
             </div>
         </div>
@@ -150,6 +161,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
     <script src="../../assets/js/script.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>

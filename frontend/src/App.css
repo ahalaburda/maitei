@@ -6557,6 +6557,7 @@ button.bg-dark:focus {
 
 .rounded-circle {
   border-radius: 50% !important;
+  background-color: #d1d3e2;
 }
 
 .rounded-pill {
@@ -7851,6 +7852,9 @@ button.bg-dark:focus {
 
 .p-5 {
   padding: 3rem !important;
+}
+.p-6 {
+  padding: 5rem !important;
 }
 
 .pt-5,
@@ -10341,13 +10345,6 @@ a:focus {
   cursor: pointer;
 }
 
-.sidebar #sidebarToggle::after {
-  font-weight: 900;
-  content: '\f104';
-  font-family: 'Font Awesome 5 Free';
-  margin-right: 0.1rem;
-}
-
 .sidebar #sidebarToggle:hover {
   text-decoration: none;
 }
@@ -10752,19 +10749,19 @@ a:focus {
 }
 
 .bg-login-image {
-  background: url("https://source.unsplash.com/K4mSJ7kc0As/600x800");
+  background: url("assets/img/maitei-logo.jpeg");
   background-position: center;
   background-size: cover;
 }
 
 .bg-register-image {
-  background: url("https://source.unsplash.com/Mv9hjnEUHR4/600x800");
+  background: url("assets/img/maitei-logo.jpeg");
   background-position: center;
   background-size: cover;
 }
 
 .bg-password-image {
-  background: url("https://source.unsplash.com/oWTW-jNGl9I/600x800");
+  background: url("assets/img/maitei-logo.jpeg");
   background-position: center;
   background-size: cover;
 }
@@ -11247,4 +11244,15 @@ body.sidebar-toggled footer.sticky-footer {
 .bg-black {
   background-color: #424242!important;
   color: #fff;
+}
+
+.btn-back{
+  position: absolute;
+}
+
+.input-material{
+  border: 0;
+  border-bottom: 2px solid grey;
+  height: 1.5rem;
+  background-color: rgb(0 0 0 / 0%);
 }

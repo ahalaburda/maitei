@@ -1,12 +1,13 @@
 import React from "react";
 import ReactAudioPlayer from 'react-audio-player';
-
+import { baseURL } from "../services/http-common";
+import i18n from '../i18n/index'
 
 function ImageToSelectAudio(props) {
   return (
     <div className="container">
         <div className="row">
-            <span style={{fontSize: '30px'}}>Escucha y Selecciona la respuesta correcta</span>
+            <span className="text-dark" style={{fontSize: '30px'}}>{i18n.t('listen_and_select')}</span>
             <br/>
             <br/>
         </div>
@@ -18,9 +19,6 @@ function ImageToSelectAudio(props) {
         </div>
 
         <div className="col-lg-12 text-md-center">
-            <br/>
-            <br/>
-            <label>Selecciona la respuesta correcta</label>
             <hr/>
             <br/>
             <br/>
@@ -31,7 +29,7 @@ function ImageToSelectAudio(props) {
                         <input type="radio" name="options" id={"answer-" +(idx+1)} />
                         <br/>
                         <ReactAudioPlayer
-                            src={"http://localhost:8000" +  data.answer_filename}
+                            src={baseURL +  data.answer_filename}
                             controls
                         />
                   </div>

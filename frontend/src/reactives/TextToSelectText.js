@@ -1,4 +1,5 @@
 import React from "react";
+import i18n from '../i18n/index'
 
 function initialState () {
   var elements = document.querySelectorAll('[id^="radio_label_"]');
@@ -19,7 +20,7 @@ function TextToSelectText(props) {
   return (
     <div className="container">
         <div className="row">
-            <span style={{fontSize: '30px'}}>Lee y Selecciona la respuesta correcta</span>
+            <span className="text-dark" style={{fontSize: '30px'}}>{i18n.t('read_and_select')}</span>
             <br/>
             <br/>
         </div>
@@ -27,13 +28,11 @@ function TextToSelectText(props) {
         <div className="col-lg-12 text-md-center">
             <br/>
             <br/>
-            <h5 id="text">{props.question}</h5>
+            <h5 id="text" style={{color: 'black'}}>{i18n.t(props.question)}</h5>
+            
         </div>
 
         <div className="col-lg-12 text-md-center">
-            <br/>
-            <br/>
-            <label>Lee y Selecciona la respuesta correcta</label>
             <hr/>
             <br/>
                 <div className="row justify-content-center">

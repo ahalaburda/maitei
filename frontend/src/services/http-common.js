@@ -1,10 +1,10 @@
 import axios from 'axios';
 
 // URL base para la conexiona con la API
-const baseURL = 'http://127.0.0.1:8000/api';
+export const baseURL = 'http://localhost:8000';
 
 const axiosInstance = axios.create({
-  baseURL: baseURL,
+  baseURL: baseURL+'/api/',
   headers: {
     'Authorization': 'JWT ' + sessionStorage.getItem('access_token'),
     'Content-type': 'application/json',

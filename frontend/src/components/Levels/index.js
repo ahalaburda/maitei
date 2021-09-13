@@ -5,6 +5,7 @@ import {
     Link
 } from "react-router-dom";
 import LevelsService from "../../services/Levels";
+import i18n from '../../i18n/index'
 
 class Levels extends Component {
     constructor(props) {
@@ -45,7 +46,7 @@ class Levels extends Component {
         return (
             <>
                 <div className="d-sm-flex justify-content-between align-items-center mb-4">
-                    <h3 className="text-dark mb-0">Niveles</h3>
+                    <h3 className="text-dark mb-0">{i18n.t('levels')}</h3>
                 </div>
                 <div className="row">
                     {this.state.levels.map((d, idx) => {
@@ -56,7 +57,7 @@ class Levels extends Component {
                                     <div className="card-body">
                                         <div className="row align-items-center">
                                             <div className="col mr-2">
-                                                <div className="text-uppercase text-info font-weight-bold text-xs mb-1"><span>{d.description}</span></div>
+                                                <div className="text-uppercase text-info font-weight-bold text-xs mb-1"><span>{i18n.t(d.description)}</span></div>
                                                 <div className="row experience-row align-items-center">
                                                     <div className="col-auto">
                                                         <div className="text-dark font-weight-bold h5"><span>0%</span></div>
@@ -71,7 +72,7 @@ class Levels extends Component {
                                             </div>
                                         </div>
                                         <Link to='/chapters'>
-                                            <button className="btn btn-primary btn-sm" onClick={() => this.handleClick(d.id)}>Iniciar</button>
+                                            <button className="btn btn-primary btn-sm" onClick={() => this.handleClick(d.id)}>{i18n.t('start')}</button>
                                         </Link>
                                     </div>
                                 </div>

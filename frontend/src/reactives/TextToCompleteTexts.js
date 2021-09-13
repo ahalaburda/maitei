@@ -1,4 +1,5 @@
 import React from "react";
+import i18n from '../i18n/index'
 
 function TextToCompleteText(props) {
   let inputCounter=0;
@@ -6,7 +7,7 @@ function TextToCompleteText(props) {
   return (
     <div className="container">
       <div className="row">
-        <span style={{fontSize: '30px'}}>Selecciona la respuesta correcta.</span>
+        <span className="text-dark" style={{fontSize: '30px'}}>{i18n.t('complete_sentence')}</span>
         <br/>
         <br/>
       </div>
@@ -21,7 +22,7 @@ function TextToCompleteText(props) {
           { props.question.split(' ').map((data,idx) =>{
               if (data === "INPUT") {
                 inputCounter++;
-                return <input type="text" key={idx} id={"answer-"+inputCounter} />
+                return <input type="text" key={idx} id={"answer-"+inputCounter} className={'input-material'} />
               } else {
                 return <p className="ml-1 mr-1" key={idx}>{data}</p>
               }

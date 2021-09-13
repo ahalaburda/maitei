@@ -1,5 +1,6 @@
 import React from "react";
 import ReactAudioPlayer from 'react-audio-player';
+import i18n from '../i18n/index'
 
 function initialState () {
   var elements = document.querySelectorAll('[id^="radio_label_"]');
@@ -20,7 +21,7 @@ function AudioToSelectTexts(props) {
   return (
     <div className="container">
         <div className="row">
-            <span style={{fontSize: '30px'}}>Escucha y Selecciona la respuesta correcta.</span>
+            <span  className="text-dark" style={{fontSize: '30px'}}>{i18n.t('listen_and_select')}</span>
             <br/>
             <br/>
         </div>
@@ -33,13 +34,23 @@ function AudioToSelectTexts(props) {
             />
             <br/>
             <br/>
-            <div id="text">{props.description}</div>
+            <div className="col-lg-12 text-md-center">
+              <div id="text" style={{textAlign: 'center'}}>
+                <div  style={{margin: '0 30%',
+                              padding: '2em',
+                              color: 'black'}}>
+                    { props.description.split('<br/>').map((data, idx) =>{
+                        return (
+                          <p key={idx} style={{textAlign: 'center'}}>{data}</p>
+                        )
+                    })
+                  }
+                </div>
+              </div>
+            </div>
         </div>
 
         <div className="col-lg-12 text-md-center">
-            <br/>
-            <br/>
-            <label>Completa la Oracion</label>
             <hr/>
             <br/>
                 <div className="row justify-content-center">

@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import ChaptersService from "../../services/Chapters";
+import i18n from '../../i18n/index'
+import {Link} from "react-router-dom";
 
 class Chapters extends Component {
     constructor(props){
@@ -43,21 +45,20 @@ class Chapters extends Component {
         return (
             <>
                 <div className="d-sm-flex justify-content-between align-items-center mb-4">
-                    <h3 className="text-dark mb-0">Capitulos</h3>
+                    <h3 className="text-dark mb-0">{i18n.t('chapters')}</h3>
                 </div>
                 <div className="row">
                     {this.state.chapters.map((d, idx) => {
                         return (
                             <div className="col-md-6 col-lg-4 col-xl-3 mb-4" key={idx}>
-                                <a href="/exercises" onClick={() => this.handleClick(d.id)}>
-                                    <div className="card" style={{height: '11em'}}>
-                                        {/* <img className="card-img w-100 d-block" src={d.chapterImage} alt={"img"+d.description}/> */}
-                                        <div className="card-img-overlay">
-                                            <h4 style={{fontSize: '2.5rem', color: '#009688'}}>{d.description}</h4>
-                                            <p>{d.description}</p>
-                                        </div>
+                                <Link className="" to="/exercises" onClick={() => this.handleClick(d.id)}>
+                                <div className="card" style={{height: '18rem', borderRadius:'0'}}>
+                                    <img className="card-img-top" src={d.chapterImage} alt={"img"+d.description} height='78%' width='auto' />
+                                    <div className="card-body text-center">
+                                        <p className="card-text" style={{color:'#f47706'}}><strong>{i18n.t(d.description)}</strong></p>
                                     </div>
-                                </a>
+                                </div>
+                                </Link>
                             </div>
                         )
                     })}
