@@ -28,17 +28,13 @@ function AudioToTalk(props) {
                     )
                 })
               }
-            </div>  
+            </div>
             </div>
         </div>
         <div className="col-lg-12 text-md-center">
             <br/>
             <ReactAudioPlayer
-<<<<<<< HEAD
-              src={"http://137.184.36.83:8000" + props.fileAnswer}
-=======
               src={baseURL + props.fileAnswer}
->>>>>>> d75881f056f889b41038fab3fe511f5de5a65118
               autoPlay
               controls
             />
