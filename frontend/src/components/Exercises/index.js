@@ -45,7 +45,7 @@ class Exercises extends Component {
       exerciseId: 0,
       exercises: [],
       answers: [],
-      currentOrder: 15
+      currentOrder: 0
     };
   }
 
@@ -251,7 +251,7 @@ class Exercises extends Component {
           if (correct_answer === false) {
             swal({
               title: i18n.t('error_title_message'),
-              content: <div>  
+              content: <div>
                         <p>{i18n.t('error_subtitle_message')}</p>
                         <img src={baseURL + answers[correct].answer_filename} alt="" height="50px" width="auto" />
                       </div>,

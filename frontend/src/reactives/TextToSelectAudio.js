@@ -42,7 +42,7 @@ function TextToSelectAudio(props) {
                         />
                   </div>
                   )
-                })}  
+                })}
                 </div>
         </div>
 

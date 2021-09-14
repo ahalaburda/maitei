@@ -47,7 +47,7 @@ function AudioToImages(props) {
                         <img src={baseURL + data.answer_filename} alt="" height="100px" width="auto" />
                   </div>
                   )
-                })}  
+                })}
                 </div>
         </div>
 

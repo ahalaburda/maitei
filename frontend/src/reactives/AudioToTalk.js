@@ -28,7 +28,7 @@ function AudioToTalk(props) {
                     )
                 })
               }
-            </div>  
+            </div>
             </div>
         </div>
         <div className="col-lg-12 text-md-center">

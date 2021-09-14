@@ -34,7 +34,7 @@ function ImageToSelectAudio(props) {
                         />
                   </div>
                   )
-                })}  
+                })}
                 </div>
         </div>
 
