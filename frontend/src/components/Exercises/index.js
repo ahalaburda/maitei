@@ -45,7 +45,7 @@ class Exercises extends Component {
       exerciseId: 0,
       exercises: [],
       answers: [],
-      currentOrder: 26
+      currentOrder: 15
     };
   }
 
@@ -406,9 +406,10 @@ class Exercises extends Component {
                         answers = { data.exercise_Media_to_text.answers } />
             case 11: // 11- Image to Complete text
               return <ImageToCompleteTexts
-                        key = { id }
-                        question = { data.exercise_Media_to_text.question }
-                        answers = { data.exercise_Media_to_text.answers } />
+                        filename = { data.exercise_Media_to_text.filename }
+                        description = { data.exercise_Media_to_text.description }
+                        answers = { data.exercise_Media_to_text.answers }
+                        correct_answer = { data.exercise_Media_to_text.answers } />
             case 12: // 12- Image to Select Audio
               return <ImageToSelectAudio
                         key = { id }

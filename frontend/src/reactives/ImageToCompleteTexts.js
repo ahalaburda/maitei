@@ -20,7 +20,7 @@ function ImageToCompleteTexts(props) {
         <div className="col-lg-12 text-md-center">
             <br/>
             <div className="row justify-content-center">
-              { props.question.split(' ').map((data,idx) =>{
+              { props.description.split(' ').map((data,idx) =>{
                   if (data === "INPUT") {
                     inputCounter++;
                     return <input type="text" key={idx} id={"answer-"+inputCounter} className={'input-material'} />
