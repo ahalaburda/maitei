@@ -55,7 +55,8 @@ urlpatterns = [
     path('api/', include('apps.exercises.urls')),
     path('api/', include('apps.progress.urls')),
     path('api/', include('apps.reactives.urls')),
-    path('api/', include('apps.authentication.urls'))
+    path('api/', include('apps.authentication.urls')),
+     path('api/', include('apps.users.urls'))
 ]
 
 if settings.DEBUG:
