@@ -15,10 +15,13 @@ import Exercises from './components/Exercises';
 import Profile from './components/Profile/index'
 import Login from './components/Login';
 import SignUp from './components/SignUp';
+import NoMatch from './components/Errors/404';
 
 import axiosBase from "./services/http-common";
 import IdleTimer from './helpers/IdleTimer';
 import { ToastContainer, toast } from 'react-toastify';
+import UserService from "./services/Users";
+import i18n from './i18n/index'
 
 import './App.css';
 
@@ -45,7 +48,23 @@ function AutoLogout() {
   return <div>{isTimeout}</div>;
 }
 
-
+const ProtectedRoute = ({ component: Comp, loggedIn, path, ...rest }) => {
+  return (
+    <Route path={path} {...rest}
+    render={(props) => {
+        return loggedIn ? 
+        (<Comp {...props} />) :
+        (<Redirect to={{
+              pathname: "/login",
+              state: {
+                prevLocation: path,
+                error: "You need to login first!",
+              },
+         }}/>);
+      }}
+    />
+  );
+};
 
 class App extends Component {
   constructor(props) {
@@ -53,10 +72,14 @@ class App extends Component {
     this.state = {
       signup: false,
       loggedIn: !!sessionStorage.getItem('access_token'),
-      username: sessionStorage.getItem('username') === null ? '' : sessionStorage.getItem('username')
+      username: sessionStorage.getItem('username') === null ? '' : sessionStorage.getItem('username'),
+      avatar: '',
+      last_login: '',
+      language: ''
     }
     this.handleLogin = this.handleLogin.bind(this);
     this.currentUser = this.currentUser.bind(this);
+    
     // interceptor para que al momento de que el refresh token expire, borre los datos de la sesion y sea necesario
     // iniciar de nuevo sesion y asi actualizar los tokens de acceso
     axiosBase.interceptors.response.use(
@@ -87,13 +110,28 @@ class App extends Component {
     );
   }
 
+  retrieveUser(id) {
+    UserService.getUserById(id)
+        .then((response) => {
+            this.setState({
+                avatar: response.data.avatar,
+                language: response.data.language,
+                last_login: response.data.last_login
+            })
+        })
+        .catch((e) => {
+            alert(e);
+            console.log(e);
+        })
+  }
+
   /**
-   * Solicitar al api el par de tokens de acuerdo a las credenciales.
-   * Si la api devuelve correctamente el par, se setea el localstorage con los tokens y
-   * modifica el header por defecto de axios.
-   * Si no, loggea y muestra un error.
-   * @param e Evento del input
-   * @param data Datos del usuario (usuario y contrasenha)
+   * Request to the API a pair of tokens according to the credentials.
+   * If the API reponse correctly the pair, is seted to the localstorage with the tokens and  
+   * modify the header by default.
+   * if not login return a error
+   * @param e Input event
+   * @param data User data (username & password)
    */
   handleLogin = (e, data) => {
     e.preventDefault();
@@ -105,12 +143,15 @@ class App extends Component {
       sessionStorage.setItem('access_token', response.data.access);
       sessionStorage.setItem('refresh_token', response.data.refresh);
       sessionStorage.setItem('username', data.username);
+      sessionStorage.setItem('id', response.data.user_id);
       sessionStorage.setItem('isAdmin', response.data.admin);
-    //TODO: add lang token response
-    //   sessionStorage.setItem('lang', response.data.lang);
+      this.retrieveUser(response.data.user_id);
+      i18n.changeLanguage(this.state.avatar);
+      sessionStorage.setItem('lang', this.state.language);
+
       this.setState({
         loggedIn: true,
-        username: data.username
+        username: data.username,
       });
     }).catch(e => {
       toast.error('Usuario o contraseña incorrectas.', {
@@ -125,6 +166,8 @@ class App extends Component {
     });
   }
 
+  
+
 
   /**
    * Setear el campo username
@@ -133,6 +176,7 @@ class App extends Component {
   currentUser = e => {
     this.setState({ username: e.target.value });
   }
+    
   /**
    * Agregar a la blacklist el token utilizado
    * Borrar el access y refresh token del local storage
@@ -166,6 +210,7 @@ class App extends Component {
     })
   }
 
+  componentWillMoun
   render() {
    
   return (
@@ -173,24 +218,28 @@ class App extends Component {
         <AutoLogout />
         <div id="page-top">
             <Router>
-              {this.state.loggedIn ? <Redirect to='/' /> : <Redirect to='/login' />}
+            {this.state.loggedIn ? <Redirect to='/' /> : ''}
               <Switch>
+              <React.Fragment>
                 <div id="wrapper">
                   {this.state.loggedIn && <Sidebar />}
                   <div id="content-wrapper" className="d-flex flex-column">
                     <div id="content">
-                      {this.state.loggedIn && <Header username={this.state.username} handleLogout={this.handleLogout} image='' />}
+                      {this.state.loggedIn && <Header username={this.state.username} handleLogout={this.handleLogout} image={this.state.avatar} />}
                       <div className="container-fluid">
-                        <Route exact path='/' component={Home} />
-                        <Route exact path='/profile' component={Profile} />
-                        <Route exact path='/levels' component={Levels} />
-                        <Route exact path='/chapters' component={Chapters} />
-                        <Route exact path='/exercises' component={Exercises} />
+                        <Switch>
+                        <ProtectedRoute exact path='/' loggedIn={this.state.loggedIn} component={Home} />
+                        <ProtectedRoute exact path='/profile' loggedIn={this.state.loggedIn} component={Profile} />
+                        <ProtectedRoute exact path='/levels' loggedIn={this.state.loggedIn} component={Levels} />
+                        <ProtectedRoute exact path='/chapters' loggedIn={this.state.loggedIn} component={Chapters} />
+                        <ProtectedRoute exact path='/exercises' loggedIn={this.state.loggedIn} component={Exercises} />
                         <Route exact path='/login'>
                           <Login handleLogin={this.handleLogin} username={this.state.username}
                             currentUser={this.currentUser} />
                         </Route>
                         <Route exact path='/signup' component={SignUp} />
+                        <Route path="*" exact={true} component={NoMatch} />
+                        </Switch>
                       </div>
                     </div>
                     <ToastContainer
@@ -207,6 +256,7 @@ class App extends Component {
                     <Footer />
                   </div>
                 </div>
+                </React.Fragment>
               </Switch>
             </Router>
         </div>

@@ -20,7 +20,7 @@ function TextToImages(props) {
                               color: 'black'}}>
                     { props.question.split('<br/>').map((data, idx) =>{
                         return (
-                          <p key={idx} style={{textAlign: 'center'}}>— {data}</p>
+                          <h5 key={idx} style={{textAlign: 'center'}}>{data}</h5>
                         )
                     })
                   }

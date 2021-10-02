@@ -30,10 +30,15 @@ import ImageToSelectAudio from '../../reactives/ImageToSelectAudio';
 //Intros
 //es
 import Chapter1A from '../../intros/es/Chapter1A';
-// import {Chapter1A as Chapter1A_es} from '../../intros/es/Chapter1A';
+import Chapter1B from '../../intros/es/Chapter1B';
+import Chapter1C from '../../intros/es/Chapter1C';
+import Chapter1D from '../../intros/es/Chapter1D';
 
 //en
 import Chapter1AEN from '../../intros/en/Chapter1A';
+import Chapter1BEN from '../../intros/en/Chapter1B';
+import Chapter1CEN from '../../intros/en/Chapter1C';
+import Chapter1DEN from '../../intros/en/Chapter1D';
 //i18n
 import i18n from '../../i18n/index'
 
@@ -96,6 +101,7 @@ class Exercises extends Component {
     if (this.state.currentOrder === 0) {
       this.nextStep();
     }
+    // eslint-disable-next-line array-callback-return
     this.state.exercises.map((data, id) => {
       if (data.order === this.state.currentOrder) {
         if (data.exercise_Text_to_text != null) {
@@ -304,10 +310,13 @@ class Exercises extends Component {
         case 'es':
           switch (chapter) {
             case 1:
-              return <Chapter1A />
-              
+              return <Chapter1A />              
             case 2:
-                return <Chapter1A />
+              return <Chapter1B />
+            case 3:
+              return <Chapter1C />
+            case 4:
+              return <Chapter1D />
           }
         // eslint-disable-next-line no-fallthrough
         case 'en':
@@ -315,7 +324,11 @@ class Exercises extends Component {
             case 1:
               return <Chapter1AEN />
             case 2:
-                return <Chapter1AEN />
+              return <Chapter1BEN />
+            case 3:
+                return <Chapter1CEN />
+            case 4:
+              return <Chapter1DEN />
           }
       }
     }

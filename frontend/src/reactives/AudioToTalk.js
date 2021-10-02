@@ -24,7 +24,7 @@ function AudioToTalk(props) {
                           color: 'black'}}>
               { props.description.split('<br/>').map((data, idx) =>{
                     return (
-                      <p key={idx} style={{textAlign: 'left'}}>— {data}</p>
+                      <p key={idx} style={{textAlign: 'left'}}>{data}</p>
                     )
                 })
               }

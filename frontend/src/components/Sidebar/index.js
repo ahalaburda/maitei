@@ -43,15 +43,12 @@ class Sidebar extends Component {
                     <Link className="nav-link" to="/chapters"><FontAwesomeIcon icon={faHandsHelping} /><span style={{paddingLeft: '1em'}}>{i18n.t('chapters')}</span></Link>
                   </li>
                   <hr/>
-                  {/* <li className="nav-item">
-                    <Link className="nav-link" to="/login"><FontAwesomeIcon icon={faUserCircle} /><span style={{paddingLeft: '1em'}}> Iniciar Sesion</span></Link>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/profile"><FontAwesomeIcon icon={faUser} /><span style={{paddingLeft: '1em'}}>{i18n.t('profile')}</span></Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" to="/signup"><FontAwesomeIcon icon={faUser} /><span style={{paddingLeft: '1em'}}> Registro</span></Link>
+                    <Link className="nav-link" to="/logout"><span style={{paddingLeft: '1em'}}>{i18n.t('logout')}</span></Link>
                   </li>
-                  <li className="nav-item">
-                    <Link className="nav-link" to="/profile"><FontAwesomeIcon icon={faUser} /><span style={{paddingLeft: '1em'}}> Perfil</span></Link>
-                  </li> */}
                 </ul>
                 <div className="text-center">
                   <button className="btn rounded-circle" id="sidebarToggle" type="button" onClick={this.toggleMenu}>

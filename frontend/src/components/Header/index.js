@@ -1,7 +1,7 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import './Header.css'
 import UserInfo from "./components/UserInfo";
-import Utils from '../../helpers/Utils'
 import Avatar from './components/Avatar'
 
 function Header(props) {

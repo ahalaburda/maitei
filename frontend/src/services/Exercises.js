@@ -4,7 +4,7 @@ class Exercise {
   /**
    * Get all exercises details by exercise_id ID
    * @param id exercise_id ID
-   * @returns {Promise<AxiosResponse<Chapr>>}
+   * @returns {Promise<AxiosResponse<Exercise>>}
    */
   getExerciseDetails(id) {
     return http.get(`exercise_details/?format=json&exercise_id=${id}`);
@@ -12,7 +12,7 @@ class Exercise {
   /**
    * Get all exerciseID by chapter
    * @param id chapter_id ID
-   * @returns {Promise<AxiosResponse<Chapr>>}
+   * @returns {Promise<AxiosResponse<Exercises>>}
    */
   getExercises(id) {
     return http.get(`exercises/?format=json&chapter=${id}`);

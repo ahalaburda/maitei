@@ -4,7 +4,7 @@ class Chapters {
   /**
    * Get all Chapters by Level ID
    * @param id Level ID
-   * @returns {Promise<AxiosResponse<Chapr>>}
+   * @returns {Promise<AxiosResponse<Chapters>>}
    */
   getChapters(id) {
     return http.get(`chapters/?format=json&level=${id}`);

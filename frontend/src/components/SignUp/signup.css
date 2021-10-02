@@ -1,0 +1,66 @@
+.btn-en {
+    background-image: url('../../assets/img/english_flag.png') !important;
+    background-size: contain;
+}
+
+.btn-es {
+    background-image: url('../../assets/img/spanish_flag.png') !important;
+    background-size: contain;
+}
+
+.btn-image{
+    padding: 15px 32px;
+    margin: 0 1rem;
+    color: #00000000;
+    font-weight: bold;
+}
+button{
+    border: none;
+    border-radius: 2pt;
+    box-shadow: 0 0 0 1pt grey;
+    outline: none;
+    transition: .1s;
+
+}
+button:focus{
+    outline: 3px solid gray !important;
+}
+
+.DayPickerInput{
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #d1d3e2;
+    border-radius: 10rem;
+    color: #6e707e;
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 400;
+    height: calc(1.5em + 0.75rem + 2px);
+    line-height: 1.5;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    padding: 1.5rem 1rem;
+    width: 100%;
+}
+.DayPickerInput > input{
+    border: 0;
+    position: absolute;
+    top: 46px;
+}
+.DayPickerInput-Overlay{
+    box-shadow: none ;
+    border: 0;
+}
+.DayPickerInput-Overlay:focus { 
+    outline: none;
+    border-color: #9ecaed;
+}
+#content > div > div > div > div > div > div.p-5 > form > div:nth-child(9) > div > div > div{
+    border-radius: 2rem;
+}
+#content > div > div > div > div > div > div.p-5 > form > div:nth-child(9) > div > div > div > div:nth-child(1) > div{
+    height: 3rem !important;
+}
+#content > div > div > div > div > div > div.p-5 > form > div:nth-child(9) > div > div > div > div:nth-child(1) > div > div{
+    font-size: 0.8rem;
+    padding-left: 2%;
+}
