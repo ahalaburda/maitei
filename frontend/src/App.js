@@ -210,7 +210,6 @@ class App extends Component {
     })
   }
 
-  componentWillMoun
   render() {
    
   return (

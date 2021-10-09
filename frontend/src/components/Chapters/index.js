@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import ChaptersService from "../../services/Chapters";
 import i18n from '../../i18n/index'
-import {Link} from "react-router-dom";
+import {Link, Redirect} from "react-router-dom";
+import swal from '@sweetalert/with-react';
+
 
 class Chapters extends Component {
     constructor(props){
@@ -26,9 +28,19 @@ class Chapters extends Component {
             })
         })
         .catch((e) =>{
-            alert(e);
-            console.log(e);
-        })
+
+            // alert(e);
+            swal({
+                title: i18n.t('error_title_message'),
+                content: <div>
+                          <p>{i18n.t('error_no_level')}</p>
+                        </div>,
+                icon: "error",
+                }).then((value) => {
+                    window.location.href = "/levels";
+                    <Redirect to='/levels' />
+              });       
+             })
     }
 
     handleClick(id) {

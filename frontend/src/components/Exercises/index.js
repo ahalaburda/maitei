@@ -39,6 +39,7 @@ import Chapter1AEN from '../../intros/en/Chapter1A';
 import Chapter1BEN from '../../intros/en/Chapter1B';
 import Chapter1CEN from '../../intros/en/Chapter1C';
 import Chapter1DEN from '../../intros/en/Chapter1D';
+
 //i18n
 import i18n from '../../i18n/index'
 
@@ -451,7 +452,7 @@ class Exercises extends Component {
         <br />
         {this.intro(this.state.currentOrder)}
         <div className = "row">
-          <div className = "col-md-6 col-lg-4 col-xl-3 mb-4" >
+          <div className = "col-lg-12 mb-4" >
             {reactive}
           </div>
         </div>

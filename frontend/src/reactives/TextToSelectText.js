@@ -18,7 +18,7 @@ function toggleClass(id){
 
 function TextToSelectText(props) {
   return (
-    <div className="container">
+    <div className="">
         <div className="row">
             <span className="text-dark" style={{fontSize: '30px'}}>{i18n.t('read_and_select')}</span>
             <br/>
@@ -28,7 +28,7 @@ function TextToSelectText(props) {
         <div className="col-lg-12 text-md-center">
             <br/>
             <br/>
-            <h5 id="text" style={{color: 'black'}}>{i18n.t(props.question)}</h5>
+            <h5 id="text" className='text-center' style={{color: 'black'}}>{i18n.t(props.question)}</h5>
             
         </div>
 
@@ -40,7 +40,7 @@ function TextToSelectText(props) {
                     { props.answers.map((data,idx) => {
                       return (
                         <label className="btn btn-primary" id={"radio_label_" + data.id} key={idx}>
-                          <input type="radio" name="options" onClick={() => {toggleClass(data.id)}} id={"answer-" + (idx+1)} /> {data.answer}
+                          <input type="radio" name="options" onClick={() => {toggleClass(data.id)}} id={"answer-" + (idx+1)} /> <br />{data.answer}
                         </label>
                       )
                     })}

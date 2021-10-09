@@ -3,7 +3,7 @@ import React from 'react';
 
 function Chapter1A() {
 	return (
-        <div className="container" style={{color:'black'}}>
+        <div className="" style={{color:'black'}}>
             <h3><strong><em>Maitei/Hola</em></strong></h3>
             <br />
             <p>En esta unidad aprenderemos sobre los pronombres personales como sujeto: <strong>Che</strong> y <strong>Nde</strong>. Asimismo, veremos  cómo saludar en guaraní.</p>

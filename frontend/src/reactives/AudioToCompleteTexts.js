@@ -6,7 +6,7 @@ function AudioToCompleteTexts(props) {
   let inputCounter=0;
 
   return (
-    <div className="container">
+    <div className="">
         <div className="row">
             <span  className="text-dark" style={{fontSize: '30px'}}>{i18n.t('listen_and_complete')}</span>
             <br/>
@@ -33,7 +33,7 @@ function AudioToCompleteTexts(props) {
                         inputCounter++;
                         return <input type="text" key={idx} id={"answer-"+inputCounter} className={'input-material'} />
                       } else {
-                        return <p className="ml-1 mr-1" key={idx}>{data}</p>
+                        return <h5 className="ml-1 mr-1" key={idx}>{data}</h5>
                       }
                     })
                   }

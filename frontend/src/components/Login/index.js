@@ -1,6 +1,8 @@
 import React, {Component} from "react";
 import SimpleReactValidator from "simple-react-validator";
 import {Link} from "react-router-dom";
+import './login.css'
+import minLogo from "../../assets/img/maitei.png"
 
 class Login extends Component {
   constructor(props) {
@@ -50,21 +52,25 @@ class Login extends Component {
     }
   }
   render() {
+    
     return (
     <>
-      <div className="container">
+      <div className="">
         <div className="row justify-content-center">
-          <div className="col-md-9 col-lg-12 col-xl-10">
+          <div className="col-lg-12 col-md-9 col-xl-10">
             <div className="card shadow-lg o-hidden border-0 my-5">
               <div className="card-body p-0">
                 <div className="row">
-                  <div className="col-lg-6 d-none d-lg-flex">
+                  <div className="col-lg-6 col-sm-6  d-lg-flex">
                     <div className="flex-grow-1 bg-login-image"/>
+                    <div className="text-center">
+                    <img src={minLogo} id="logo-login" alt="sse-min-logo"/>
+                    </div>
                   </div>
-                  <div className="col-lg-6">
-                    <div className="p-6">
+                  <div className="col-lg-6 col-md-12 col-sm-6">
+                    <div className="p-6-login">
                       <div className="text-center">
-                        <h4 className="text-dark mb-4">Maitei, bievenido!</h4>
+                        <h4 className="text-dark mb-4">Bievenido!</h4>
                       </div>
                       <form onSubmit={e => this.handleSubmit(e)} className="user">
                         <div className="form-group">

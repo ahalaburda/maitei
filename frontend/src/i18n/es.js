@@ -41,6 +41,7 @@ export const esp = {
     error_title_message: 'Lo siento',
     error_subtitle_message: 'La repuesta correcta es:',
     option: 'Opción',
+    error_no_level:'Debes seleccionar un idioma primero para continuar.',
 
     congrats: 'Felicidades, sigue asi!',
     restart: 'Volver a empezar',

@@ -6,11 +6,11 @@ import 'react-day-picker/lib/style.css';
 import { withTranslation } from 'react-i18next';
 import i18n from '../../i18n/index'
 import './signup.css'
-import Logo from "../Sidebar/components/Logo";
 import conacyt from "../../assets/img/conacyt.png";
 import prociencia from "../../assets/img/prociencia.jpg";
 import uni from "../../assets/img/uni_logo.png";
 import axios from 'axios';
+import logo from "../../assets/img/logo.png"
 
 
 
@@ -116,19 +116,26 @@ class SignUp extends React.Component {
 
   return (
     <>
-      <div className="card shadow-lg o-hidden border-0 my-5 " style={{ margin: '0 15%'}}>
+      <div className="card shadow-lg o-hidden border-0 my-5 margin-signup ">
         <div className="card-body p-0">
           <div className="row">
             <div className="col-lg-12">
-              <Logo toggleIcon="false" />
+               <div className="text-center">
+               <img src={logo} id="logo-signup" alt="sse-min-logo"/>
+               </div>
               <div className="p-5">
-                <div className="text-center">
-                  <button onClick={() => changeLanguage('es')} type="button" className="btn-image btn-es white-text" >ES</button>
-                  <button onClick={() => changeLanguage('en')} type="button" className="btn-image btn-en white-text" >EN</button>
-                  <h3 className="text-dark mt-4 mb-4"><strong>{i18n.t('signup')}</strong></h3>
-                  <h5 className="mb-4">{i18n.t('signup_subtitle')}</h5>
-                  <span id="msg-error" className="Error-msg">asd{this.state.error}</span>
+                <div className="row">
+                  <div className="col-lg-12">
+                    <div className="text-center">
+                      <button onClick={() => changeLanguage('es')} type="button" className="btn-image btn-es white-text" >ES</button>
+                      <button onClick={() => changeLanguage('en')} type="button" className="btn-image btn-en white-text" >EN</button>
+                      <h3 className="text-dark mt-4 mb-4"><strong>{i18n.t('signup')}</strong></h3>
+                      <h5 className="mb-4">{i18n.t('signup_subtitle')}</h5>
+                      <span id="msg-error" className="Error-msg">{this.state.error}</span>
+                    </div>
+                  </div>
                 </div>
+                
                 <form className="user" onSubmit={ this.handleSubmit }>
                   <input type="hidden" defaultValue={this.state.lang} /> 
                   <div className="form-group row">

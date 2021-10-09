@@ -42,6 +42,7 @@ export const eng = {
     error_subtitle_message: 'The correct answer is:',
     option: 'Option',
 
+    error_no_level:'You must select a level first.',
     congrats: 'Congratulations, keep it up!',
     restart: 'Restart',
     continue: 'Continue',

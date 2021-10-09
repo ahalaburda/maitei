@@ -5,14 +5,20 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlay } from '@fortawesome/free-solid-svg-icons'
 import i18n from '../../i18n/index'
+import './Home.css'
 
 function Home() {
     return (
         <>
-            <div className="d-sm-flex justify-content-between align-items-center mb-4">
-                <h3 className="text-dark mb-0">{i18n.t('welcome')}</h3>
-                <Link className="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" to="/levels"><FontAwesomeIcon icon={faPlay} /><span>   {i18n.t('welcome_start_button')}</span></Link>
+        <div className="row">
+            <div className="col-lg-12">
+                <div className="d-sm-flex justify-content-between align-items-center mb-4">
+                    <h3 className="text-dark mb-0">{i18n.t('welcome')}</h3>
+                    <Link className="btn btn-primary btn-sm btn-start d-sm-inline-block" role="button" to="/levels"><FontAwesomeIcon icon={faPlay} /><span>   {i18n.t('welcome_start_button')}</span></Link>
+                </div>    
             </div>
+        </div>
+            
             <div className="row">
                 <div className="col-md-6 col-xl-3 mb-4">
                     <div className="card shadow border-left-primary py-2">
@@ -27,7 +33,7 @@ function Home() {
                         </div>
                     </div>
                 </div>
-                <div className="col-md-6 col-xl-3 mb-4">
+                {/* <div className="col-md-6 col-xl-3 mb-4">
                     <div className="card shadow border-left-info py-2">
                         <div className="card-body">
                             <div className="row align-items-center no-gutters">
@@ -48,8 +54,8 @@ function Home() {
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="col-md-6 col-xl-3 mb-4">
+                </div> */}
+                {/* <div className="col-md-6 col-xl-3 mb-4">
                     <div className="card shadow border-left-warning py-2">
                         <div className="card-body">
                             <div className="row align-items-center no-gutters">
@@ -61,10 +67,10 @@ function Home() {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
             <div>
-                <h5>{i18n.t('welcome_news')}</h5>
+                {/* <h5>{i18n.t('welcome_news')}</h5> */}
             </div>
             <div className="row">
                 <div className="col-md-6 col-xl-3 mb-4"></div>

@@ -5,7 +5,7 @@ function TextToCompleteText(props) {
   let inputCounter=0;
 
   return (
-    <div className="container">
+    <div className="">
       <div className="row">
         <span className="text-dark" style={{fontSize: '30px'}}>{i18n.t('complete_sentence')}</span>
         <br/>

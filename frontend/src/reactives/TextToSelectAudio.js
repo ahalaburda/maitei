@@ -5,7 +5,7 @@ import i18n from '../i18n/index'
 
 function TextToSelectAudio(props) {
   return (
-    <div className="container">
+    <div className="">
         <div className="row">
             <span className="text-dark" style={{fontSize: '30px'}}>{i18n.t('listen_and_select')}</span>
             <br/>

@@ -18,7 +18,7 @@ function toggleClass(id){
 
 function ImageToSelectText(props) {
   return (
-    <div className="container">
+    <div className="">
         <div className="row">
             <span className="text-dark" style={{fontSize: '30px'}}>{i18n.t('select_correct_answer')}</span>
             <br/>
@@ -39,7 +39,7 @@ function ImageToSelectText(props) {
                     { props.answers.map((data,idx) => {
                       return (
                         <label className="btn btn-primary" id={"radio_label_" + data.id} key={idx}>
-                          <input type="radio" name="options" onClick={() => {toggleClass(data.id)}} id={"answer-" + (idx+1)} /> {data.answer}
+                          <input type="radio" name="options" onClick={() => {toggleClass(data.id)}} id={"answer-" + (idx+1)} /> <br />{data.answer}
                         </label>
                       )
                     })}

@@ -1,6 +1,7 @@
 import React from "react";
 import ReactAudioPlayer from 'react-audio-player';
 import i18n from '../i18n/index'
+import "./Reactives.css"
 
 function initialState () {
   var elements = document.querySelectorAll('[id^="radio_label_"]');
@@ -19,7 +20,7 @@ function toggleClass(id){
 
 function AudioToSelectTexts(props) {
   return (
-    <div className="container">
+    <div className="">
         <div className="row">
             <span  className="text-dark" style={{fontSize: '30px'}}>{i18n.t('listen_and_select')}</span>
             <br/>
@@ -35,10 +36,8 @@ function AudioToSelectTexts(props) {
             <br/>
             <br/>
             <div className="col-lg-12 text-md-center">
-              <div id="text" style={{textAlign: 'center'}}>
-                <div  style={{margin: '0 30%',
-                              padding: '2em',
-                              color: 'black'}}>
+              <div id="text" style={{textAlign: 'center', fontSize:'1.4rem'}}>
+                <div className='audio-select_text'>
                     { props.description.split('<br/>').map((data, idx) =>{
                         return (
                           <p key={idx} style={{textAlign: 'center'}}>{data}</p>
@@ -58,7 +57,7 @@ function AudioToSelectTexts(props) {
                     { props.answers.map((data,idx) => {
                       return (
                         <label className="btn btn-primary" id={"radio_label_" + data.id} key={idx}>
-                          <input type="radio" name="options" onClick={() => {toggleClass(data.id)}} id={"answer-" + (idx+1)} /> {data.answer}
+                          <input type="radio" name="options" onClick={() => {toggleClass(data.id)}} id={"answer-" + (idx+1)} /> <br />{data.answer}
                         </label>
                       )
                     })}

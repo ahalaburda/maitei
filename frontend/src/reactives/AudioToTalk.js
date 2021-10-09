@@ -2,26 +2,25 @@ import React from "react";
 import ReactAudioPlayer from 'react-audio-player';
 import { baseURL } from "../services/http-common";
 import i18n from '../i18n/index'
+import './Reactives.css'
 
 function AudioToTalk(props) {
-
-
   return (
-    <div className="container">
+    <div className="">
         <div className="row">
-            <span className="text-dark" style={{fontSize: '30px'}}>{i18n.t('listen_and_repeat')}</span>
+            <span className="text-dark react-title">{i18n.t('listen_and_repeat')}</span>
             <br/>
             <br/>
         </div>
-        <div className="col-lg-12 text-md-center">
-            <img src={props.filename} alt="" height="200px" width="auto" />
+        <div className="col-lg-12">
+            <div className="text-center">
+              <img src={props.filename} alt="" height="200px" width="auto" />
+            </div>
+            
             <br/>
             <br/>
             <div id="text" style={{textAlign: 'center'}}>
-            <div  style={{margin: '0 30%',
-                          padding: '2em',
-                          backgroundColor: '#e8e8e8',
-                          color: 'black'}}>
+            <div className="audio-talk-conversation">
               { props.description.split('<br/>').map((data, idx) =>{
                     return (
                       <p key={idx} style={{textAlign: 'left'}}>{data}</p>

@@ -5,7 +5,7 @@ import i18n from '../i18n/index'
 
 function AudioToImages(props) {
   return (
-    <div className="container">
+    <div className="">
         <div className="row">
             <span style={{fontSize: '30px'}}>{i18n.t('listen_and_select')}</span>
             <br/>
@@ -45,6 +45,8 @@ function AudioToImages(props) {
                         <input type="radio" name="options" id={"answer-" + (idx+1)} />
                         <br/>
                         <img src={baseURL + data.answer_filename} alt="" height="100px" width="auto" />
+                        <br/>
+                        <br/>
                   </div>
                   )
                 })}

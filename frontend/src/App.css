@@ -11254,5 +11254,64 @@ body.sidebar-toggled footer.sticky-footer {
   border: 0;
   border-bottom: 2px solid grey;
   height: 1.5rem;
+  width: 8rem;
   background-color: rgb(0 0 0 / 0%);
+}
+
+@media only screen and (min-width: 768px) {
+  .input-material{
+    border: 0;
+    border-bottom: 2px solid grey;
+    height: 1.5rem;
+    width: 9rem;
+    background-color: rgb(0 0 0 / 0%);
+  }
+  
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .input-material{
+    border: 0;
+    border-bottom: 2px solid grey;
+    height: 1.5rem;
+    width: 11rem;
+    background-color: rgb(0 0 0 / 0%);
+  }
+  
+}
+
+#sidebar {
+  width: 6.5rem !important;
+  transition: all 500ms;
+}
+
+.sidebar .sidebar-brand {
+  height: 6rem !important;
+}
+
+#sidebar .nav-item .nav-link span {
+  display: none;
+}
+
+#sidebar .nav-item .nav-link {
+  display: flex;
+  justify-content: center;
+}
+
+#sidebar.active {
+  width: 12.5rem !important;
+}
+
+#sidebar.active .nav-item .nav-link {
+  display: flex;
+  justify-content: flex-start;
+}
+
+#sidebar.active .nav-item .nav-link span {
+  display: inline;
+  animation: fadeIn ease 2s;
+}
+
+.sidebar .nav-item .nav-link {
+  width: auto !important;
 }

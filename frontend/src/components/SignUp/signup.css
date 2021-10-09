@@ -64,3 +64,42 @@ button:focus{
     font-size: 0.8rem;
     padding-left: 2%;
 }
+
+#logo-signup{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    height: 24vh;
+    width: auto;
+
+}
+
+.margin-signup{
+    margin: 0 ;
+}
+
+@media only screen and (min-width: 768px) {
+    .margin-signup{
+        margin: 0 15% ;
+    }
+    #logo-signup{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        height: 6rem;
+        width: auto;
+    
+    }
+    
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .margin-signup{
+        margin: 0 15% ;
+    }
+    #logo-signup{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        height: 24vh;
+        width: auto;
+    
+    }
+}

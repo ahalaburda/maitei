@@ -3,21 +3,22 @@ import {
     Link
 } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTachometerAlt, faUser, faTable, faHandsHelping, faUserCircle, faGreaterThan, faLessThan } from '@fortawesome/free-solid-svg-icons'
+import { faTachometerAlt, faUser, faTable, faHandsHelping, faGreaterThan, faLessThan } from '@fortawesome/free-solid-svg-icons'
 import Logo from "./components/Logo";
 import './Sidebar.css'
 import $ from "jquery";
-
+import axiosBase from "../../services/http-common"
 import i18n from '../../i18n/index'
-
 
 class Sidebar extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            toggle: true
+            toggle: true,
+            showChapter: false
         }
         this.toggleMenu = this.toggleMenu.bind(this);
+        this.getLevelId = this.getLevelId.bind(this);
     }
 
     toggleMenu = () => {
@@ -25,6 +26,45 @@ class Sidebar extends Component {
         this.setState({ toggle: !this.state.toggle });
     }
 
+    getLevelId = () =>{
+      var level = sessionStorage.getItem('matei_level_id');
+      console.log(level);
+      if(level !=null){
+        this.setState({ showChapter: true });
+      }
+    }
+
+    logout = () =>{
+      axiosBase.post('/token/blacklist/', {
+        "refresh_token": sessionStorage.getItem('refresh_token')
+      }).then(response => {
+        if (response.status === 205) {
+          sessionStorage.clear();
+          axiosBase.defaults.headers['Authorization'] = null;
+          this.setState({
+            loggedIn: false,
+            username: ''
+          }); 
+              window.location.href='/login';
+              
+        }
+      }).catch(e => {
+        console.log(e);
+      })
+    }
+    componentDidMount(){
+      if ($(window).width() < 768) {
+        $(".sidebar").hide();
+      };
+      $(window).resize(function() {
+        console.log('soy chico')
+        // Toggle the side navigation when window is resized below 480px
+        if ($(window).width() < 480) {
+          
+          $(".sidebar").hide();
+        };
+      });
+    }
     render() {
         return (
             <>
@@ -43,11 +83,11 @@ class Sidebar extends Component {
                     <Link className="nav-link" to="/chapters"><FontAwesomeIcon icon={faHandsHelping} /><span style={{paddingLeft: '1em'}}>{i18n.t('chapters')}</span></Link>
                   </li>
                   <hr/>
-                  <li className="nav-item">
+                  {/* <li className="nav-item">
                     <Link className="nav-link" to="/profile"><FontAwesomeIcon icon={faUser} /><span style={{paddingLeft: '1em'}}>{i18n.t('profile')}</span></Link>
-                  </li>
+                  </li> */}
                   <li className="nav-item">
-                    <Link className="nav-link" to="/logout"><span style={{paddingLeft: '1em'}}>{i18n.t('logout')}</span></Link>
+                    <Link className="nav-link" to="/logout" onClick={this.logout} ><span style={{paddingLeft: '1em'}}>{i18n.t('logout')}</span></Link>
                   </li>
                 </ul>
                 <div className="text-center">

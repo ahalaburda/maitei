@@ -4,7 +4,7 @@ import i18n from '../i18n/index'
 
 function TextToImages(props) {
   return (
-    <div className="container">
+    <div className="">
       <div className="row">
         <span className="text-dark" style={{fontSize: '30px'}}>{i18n.t('select_correct_answer')}</span>
         <br/>

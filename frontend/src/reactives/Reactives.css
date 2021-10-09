@@ -1,0 +1,55 @@
+.react-title{
+    font-size: 30px;
+}
+
+.audio-talk-conversation{
+    margin: 0 ;
+    padding: 2em;
+    background-color: #e8e8e8;
+    color: black;
+}
+
+@media only screen and (min-width: 768px) {
+    .audio-talk-conversation{
+        margin: 0 30%;
+        padding: 2em;
+        background-color: #e8e8e8;
+        color: black;
+    }
+    
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .audio-talk-conversation{
+        margin: 0 30%;
+        padding: 2em;
+        background-color: #e8e8e8;
+        color: black;
+    }
+    
+}
+
+.audio-select_text{
+    margin: 0 ;
+    padding: 2em;
+    color: black;
+}
+
+@media only screen and (min-width: 768px) {
+    .audio-select_text{
+        margin: 0 30%;
+        padding: 2em;
+        color: black;
+    }
+    
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .audio-select_text{
+        margin: 0 30%;
+        padding: 2em;
+        color: black;
+    }
+    
+}
+

@@ -1,0 +1,33 @@
+
+.p-6-login{
+    padding: 2rem !important;
+}
+
+#logo-login{
+    margin: 3em 1em 0;
+    height: 6rem;
+    width: auto;
+}
+
+
+@media only screen and (min-width: 768px) {    
+    .p-6-login{
+        padding: 5rem !important;
+    }   
+    #logo-login{
+        height: 0;
+        width: 0;
+    }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+    .p-6-login{
+        padding: 5rem !important;
+    }
+
+    #logo-login{
+        height: 0;
+        width: 0;
+    }
+}
