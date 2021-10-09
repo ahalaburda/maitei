@@ -16,7 +16,7 @@ SECRET_KEY = 'django-insecure-^c!9s3i9ssbk=+fvyj0psr2)5*l)rkl3w3pz4zbb)^m&(j$i%5
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# ALLOWED_HOSTS = ['137.184.36.83','maitei.uni.edu.py']
+#ALLOWED_HOSTS = ['137.184.36.83','maitei.uni.edu.py']
 ALLOWED_HOSTS = ['*']
 
 
@@ -33,7 +33,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'django_filters',
-    'drf_yasg',
+   # 'drf_yasg',
     'corsheaders',
     'rest_framework_simplejwt.token_blacklist',
     'apps.exercises',
@@ -82,8 +82,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'guarani_api_dev',
-        'USER': 'adrian',
-        'PASSWORD': '123',
+        'USER': 'adrina',
+        'PASSWORD': 'M4it3i@uni',
         'HOST': 'localhost',
         'PORT': '3306',
     }
@@ -167,7 +167,7 @@ CORS_ORIGIN_WHITELIST = (
     'http://127.0.0.1:8000',
     'http://137.184.36.83:3000',
     'http://maitei.uni.edu.py',
-    'http://maitei.uni.edu.py:3000',    
+    'http://maitei.uni.edu.py:3000'
 )
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_METHODS = ['DELETE', 'GET', 'PATCH', 'POST']
