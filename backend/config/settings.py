@@ -16,7 +16,7 @@ SECRET_KEY = 'django-insecure-^c!9s3i9ssbk=+fvyj0psr2)5*l)rkl3w3pz4zbb)^m&(j$i%5
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# ALLOWED_HOSTS = ['137.184.36.83']
+# ALLOWED_HOSTS = ['137.184.36.83','maitei.uni.edu.py']
 ALLOWED_HOSTS = ['*']
 
 
@@ -166,7 +166,8 @@ CORS_ORIGIN_WHITELIST = (
     'http://127.0.0.1',
     'http://127.0.0.1:8000',
     'http://137.184.36.83:3000',
-    'http://137.184.36.83',
+    'http://maitei.uni.edu.py',
+    'http://maitei.uni.edu.py:3000',    
 )
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_METHODS = ['DELETE', 'GET', 'PATCH', 'POST']
