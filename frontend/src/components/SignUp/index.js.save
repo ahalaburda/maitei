@@ -9,8 +9,7 @@ import './signup.css'
 import conacyt from "../../assets/img/conacyt.png";
 import prociencia from "../../assets/img/prociencia.jpg";
 import uni from "../../assets/img/uni_logo.png";
-import axios from 'axios';
-import logo from "../../assets/img/logo.png"
+import axios from 'axios';import logo from "../../assets/img/logo.png"
 
 
 
@@ -19,7 +18,7 @@ class SignUp extends React.Component {
     constructor(props){
         super(props)
         this.state = {
-          csrfToken: null,
+    9      csrfToken: null,
           file: 'http://simpleicon.com/wp-content/uploads/account.png',
           lang: 'es',
           username: '',
@@ -28,8 +27,8 @@ class SignUp extends React.Component {
           lastname: '',
           password: null,
           motherTongue: '',
-          birthdate: '2000-01-01T15:00:00.000Z',
-          country: '',
+     8     birthdate: '2000-01-01T15:00:00.000Z',
+      þ    country: '',
           error: ''
         }
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -77,7 +76,7 @@ class SignUp extends React.Component {
       handleSubmit = event => {
         event.preventDefault();
         const token = document.querySelector('meta[name="csrf-token"]');
-        const baseURL = 'http://maitei.uni.edu.py:8000/api/create/';
+        const baseURL = 'http://maite.uni.edu.py:8000/api/create/';
         axios.post(baseURL, {
           'avatar': this.state.file,
           'language': this.state.lang,

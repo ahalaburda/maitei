@@ -3,7 +3,8 @@ import axios from 'axios';
 // URL base para la conexiona con la API
 
 // export const baseURL = 'http://137.184.36.83:8000';
-export const baseURL = 'http://localhost:8000';
+//export const baseURL = 'http://localhost:8000';
+export const baseURL = 'http://maitei.uni.edu.py:8000';
 
 const axiosInstance = axios.create({
   baseURL: baseURL+'/api/',
