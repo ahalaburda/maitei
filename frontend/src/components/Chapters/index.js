@@ -28,8 +28,6 @@ class Chapters extends Component {
             })
         })
         .catch((e) =>{
-
-            // alert(e);
             swal({
                 title: i18n.t('error_title_message'),
                 content: <div>
@@ -61,18 +59,21 @@ class Chapters extends Component {
                 </div>
                 <div className="row">
                     {this.state.chapters.map((d, idx) => {
-                        return (
-                            <div className="col-md-6 col-lg-4 col-xl-3 mb-4" key={idx}>
-                                <Link className="" to="/exercises" onClick={() => this.handleClick(d.id)}>
-                                <div className="card" style={{height: '18rem', borderRadius:'0'}}>
-                                    <img className="card-img-top" src={d.chapterImage} alt={"img"+d.description} height='78%' width='auto' />
-                                    <div className="card-body text-center">
-                                        <p className="card-text" style={{color:'#f47706'}}><strong>{i18n.t(d.description)}</strong></p>
+                        console.log(d.active)
+                        if(d.active == true){
+                            return (
+                                <div className="col-md-6 col-lg-4 col-xl-3 mb-4" key={idx}>
+                                    <Link className="" to="/exercises" onClick={() => this.handleClick(d.id)}>
+                                    <div className="card" style={{height: '18rem', borderRadius:'0'}}>
+                                        <img className="card-img-top" src={d.chapterImage} alt={"img"+d.description} height='78%' width='auto' />
+                                        <div className="card-body text-center">
+                                            <p className="card-text" style={{color:'#f47706'}}><strong>{i18n.t(d.description)}</strong></p>
+                                        </div>
                                     </div>
+                                    </Link>
                                 </div>
-                                </Link>
-                            </div>
-                        )
+                            )
+                        }
                     })}
                 </div>
             </>

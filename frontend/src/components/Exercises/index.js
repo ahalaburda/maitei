@@ -33,12 +33,24 @@ import Chapter1A from '../../intros/es/Chapter1A';
 import Chapter1B from '../../intros/es/Chapter1B';
 import Chapter1C from '../../intros/es/Chapter1C';
 import Chapter1D from '../../intros/es/Chapter1D';
+import Chapter2A from '../../intros/es/Chapter2A';
+import Chapter2B from '../../intros/es/Chapter2B';
+import Chapter2C from '../../intros/es/Chapter2C';
+import Chapter3A from '../../intros/es/Chapter3A';
+import Chapter3B from '../../intros/es/Chapter3B';
+import Chapter3C from '../../intros/es/Chapter3C';
 
 //en
 import Chapter1AEN from '../../intros/en/Chapter1A';
 import Chapter1BEN from '../../intros/en/Chapter1B';
 import Chapter1CEN from '../../intros/en/Chapter1C';
 import Chapter1DEN from '../../intros/en/Chapter1D';
+import Chapter2AEN from '../../intros/en/Chapter2A';
+import Chapter2BEN from '../../intros/en/Chapter2B';
+import Chapter2CEN from '../../intros/en/Chapter2C';
+import Chapter3AEN from '../../intros/en/Chapter3A';
+import Chapter3BEN from '../../intros/en/Chapter3B';
+import Chapter3CEN from '../../intros/en/Chapter3C';
 
 //i18n
 import i18n from '../../i18n/index'
@@ -318,6 +330,18 @@ class Exercises extends Component {
               return <Chapter1C />
             case 4:
               return <Chapter1D />
+            case 5:
+              return <Chapter2A />
+            case 6:
+              return <Chapter2B />
+            case 7:
+              return <Chapter2C />
+            case 8:
+              return <Chapter3A />
+            case 9:
+              return <Chapter3B />
+            case 10:
+              return <Chapter3C />
           }
         // eslint-disable-next-line no-fallthrough
         case 'en':
@@ -330,6 +354,18 @@ class Exercises extends Component {
                 return <Chapter1CEN />
             case 4:
               return <Chapter1DEN />
+            case 5:
+              return <Chapter2AEN />
+            case 6:
+              return <Chapter2BEN />
+            case 7:
+              return <Chapter2CEN />
+            case 8:
+              return <Chapter3AEN />
+            case 9:
+              return <Chapter3BEN />
+            case 10:
+              return <Chapter3CEN />
           }
       }
     }

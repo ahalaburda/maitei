@@ -23,7 +23,7 @@ button{
 
 }
 button:focus{
-    outline: 3px solid gray !important;
+    outline: 4px solid #4e73df !important
 }
 
 .DayPickerInput{
@@ -103,3 +103,41 @@ button:focus{
     
     }
 }
+
+.PasswordStrength {
+    background-color: #4285F4;
+    color: #FFFFFF !important;
+
+}
+
+.PasswordStrength input {
+    padding: 5px;
+    flex-grow: 1;
+    outline: none;
+}
+
+.PasswordStrength::-webkit-input-placeholder {
+    color: #fff !important;
+    opacity: 1;
+  }
+  
+  .PasswordStrength::-moz-placeholder {
+    color: #fff !important;
+    opacity: 1;
+  }
+  
+  .PasswordStrength:-ms-input-placeholder {
+    color: #fff !important;
+    opacity: 1;
+  }
+  
+  .PasswordStrength::-ms-input-placeholder {
+    color: #fff !important;
+    opacity: 1;
+  }
+  
+  .PasswordStrength::placeholder {
+    color: #fff !important;
+    opacity: 1;
+  }
+  

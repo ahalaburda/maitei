@@ -1,5 +1,5 @@
 import React from "react";
-import {Link, Redirect} from "react-router-dom";
+import {Link} from "react-router-dom";
 import CountrySelector from "../../helpers/CountrySelector";
 import DayPickerInput from 'react-day-picker/DayPickerInput';
 import 'react-day-picker/lib/style.css';
@@ -11,8 +11,12 @@ import prociencia from "../../assets/img/prociencia.jpg";
 import uni from "../../assets/img/uni_logo.png";
 import axios from 'axios';
 import logo from "../../assets/img/logo.png"
+import { baseURL } from "../../services/http-common";
 
 
+// eslint-disable-next-line no-useless-escape
+const strongRegex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
+const mediumRegex = new RegExp("^(.{8,})");
 
 class SignUp extends React.Component {
     
@@ -30,7 +34,8 @@ class SignUp extends React.Component {
           motherTongue: '',
           birthdate: '2000-01-01T15:00:00.000Z',
           country: '',
-          error: ''
+          error: '',
+          backgroundColor: ""
         }
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleAvatarChange = this.handleAvatarChange.bind(this)
@@ -56,6 +61,13 @@ class SignUp extends React.Component {
         this.setState({ email: event.target.value });
       }
       handlePasswordChange = event => {
+        if(strongRegex.test(event.target.value)) {
+          this.setState({ backgroundColor: "#0F9D58" });
+        } else if(mediumRegex.test(event.target.value)) {
+            this.setState({ backgroundColor: "#F4B400" });
+        } else {
+            this.setState({ backgroundColor: "#DB4437" });
+        }
         this.setState({ password: event.target.value });
       }
       handleFirstNameChange = event => {
@@ -77,8 +89,8 @@ class SignUp extends React.Component {
       handleSubmit = event => {
         event.preventDefault();
         const token = document.querySelector('meta[name="csrf-token"]');
-        const baseURL = 'http://maitei.uni.edu.py:8000/api/create/';
-        axios.post(baseURL, {
+        const createURL = baseURL+'/api/create/';
+        axios.post(createURL, {
           'avatar': this.state.file,
           'language': this.state.lang,
           'username': this.state.username,
@@ -106,6 +118,7 @@ class SignUp extends React.Component {
         });
       }
 
+      
       render(){
         const changeLanguage = lng => {          
           i18n.changeLanguage(lng);
@@ -158,8 +171,8 @@ class SignUp extends React.Component {
                   </div>
                   <div className="form-group row">
                     <div className="col-sm-12 col-md-6 mb-3 mb-sm-0">
-                      <label id="password-label" htmlFor="password">{i18n.t('password')}</label>
-                      <input className="form-control form-control-user" type="password" id="examplePasswordInput" placeholder={i18n.t('password')} name="password" required onChange={ this.handlePasswordChange }/>
+                      <label id="password-label" for="password">{i18n.t('password')}</label>
+                      <input className="form-control form-control-user PasswordStrength" type="password" id="examplePasswordInput" placeholder={i18n.t('password_message')} name="password" onChange={ this.handlePasswordChange } style={{ backgroundColor: this.state.backgroundColor }}/>
                     </div>
                   </div>
 

@@ -3,7 +3,7 @@ import {
     Link
 } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTachometerAlt, faUser, faTable, faHandsHelping, faGreaterThan, faLessThan } from '@fortawesome/free-solid-svg-icons'
+import { faTachometerAlt, faUser, faTable, faHandsHelping, faGreaterThan, faLessThan, faEnvelope, faTimesCircle, faInfo } from '@fortawesome/free-solid-svg-icons'
 import Logo from "./components/Logo";
 import './Sidebar.css'
 import $ from "jquery";
@@ -57,7 +57,6 @@ class Sidebar extends Component {
         $(".sidebar").hide();
       };
       $(window).resize(function() {
-        console.log('soy chico')
         // Toggle the side navigation when window is resized below 480px
         if ($(window).width() < 480) {
           
@@ -83,11 +82,15 @@ class Sidebar extends Component {
                     <Link className="nav-link" to="/chapters"><FontAwesomeIcon icon={faHandsHelping} /><span style={{paddingLeft: '1em'}}>{i18n.t('chapters')}</span></Link>
                   </li>
                   <hr/>
-                  {/* <li className="nav-item">
-                    <Link className="nav-link" to="/profile"><FontAwesomeIcon icon={faUser} /><span style={{paddingLeft: '1em'}}>{i18n.t('profile')}</span></Link>
-                  </li> */}
                   <li className="nav-item">
-                    <Link className="nav-link" to="/logout" onClick={this.logout} ><span style={{paddingLeft: '1em'}}>{i18n.t('logout')}</span></Link>
+                    <Link className="nav-link" to="/about"><FontAwesomeIcon icon={faInfo} /><span style={{paddingLeft: '1em'}}>{i18n.t('about_us')}</span></Link>
+                  </li>
+                  <li className="nav-item">
+                    <a href="mailto:pinv18-1284@humanidades.uni.edu.py" className="nav-link"><FontAwesomeIcon icon={faEnvelope} /><span style={{paddingLeft: '1em'}}>{i18n.t('contact_us')}</span></a> 
+                  </li>
+                  <hr />
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/logout" onClick={this.logout} ><FontAwesomeIcon icon={faTimesCircle} /><span style={{paddingLeft: '1em'}}>{i18n.t('logout')}</span></Link>
                   </li>
                 </ul>
                 <div className="text-center">

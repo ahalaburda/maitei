@@ -19,6 +19,8 @@ export const eng = {
     back: 'Back',
     signup: 'Sign up',
     signup_subtitle: 'This information will let us know more about you.',
+    about_us: 'About us.',
+    contact_us: 'Contact us',
 
     username: 'Username',
     email: 'Email',
@@ -26,6 +28,7 @@ export const eng = {
     lastname: 'Last Name',
     password: 'Password',
     re_password: 'Confirm Password',
+    password_message: '8 characters minimum',
     personal_info: 'Personal Information.',
     birthdate: 'Birthdate',
     native_language: 'Native Language',

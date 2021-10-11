@@ -83,6 +83,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'guarani_api_dev',
         'USER': 'adrina',
+        # 'USER': 'adrian',
+        # 'PASSWORD': '123',
         'PASSWORD': 'M4it3i@uni',
         'HOST': 'localhost',
         'PORT': '3306',

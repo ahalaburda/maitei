@@ -8,7 +8,7 @@ import { faBars, faTable } from '@fortawesome/free-solid-svg-icons'
 import $ from "jquery";
 
 function toggleMenu () {
-	if ($(window).width() < 768 && !$(".sidebar").hasClass("sidebar-show")) {
+	if (!$(".sidebar").hasClass("sidebar-show")) {
 		$(".sidebar").addClass('sidebar-show');
 		$(".sidebar").show();
 	  }else{
@@ -48,39 +48,3 @@ function Header(props) {
 }
 
 export default Header;
-
-
-// import React from 'react';
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import UserInfo from "./components/UserInfo";
-// import Utils from '../../helpers/Utils'
-// import SeleccionarTema from './components/SeleccionarTema';
-
-// function setTheme() {
-// 	let theme = Utils.getTheme() === 'dark' ? "navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow bg-black " :
-// 	"navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow";
-// 	return theme
-// }
-
-// function Header(props) {
-// 	return (
-// 		<nav className={setTheme()}>
-// 			{/* Sidebar Toggle (Topbar) */}
-// 			<button id="sidebarToggleTop" className="btn btn-link d-md-none rounded-circle mr-3">
-// 				<FontAwesomeIcon icon="bars" />
-// 			</button>
-
-// 			{/* Topbar Navbar */}
-// 			<ul className="navbar-nav ">
-// 				{/* Nav Item - SeleccionarTema */}
-// 				<SeleccionarTema />
-// 				{/* Nav Divider */}
-// 				<div className="topbar-divider d-none d-sm-block" />
-// 				{/* Nav Item - User Information */}
-// 				<UserInfo username={props.username} logout={props.handleLogout} />
-// 			</ul>
-// 		</nav>
-// 	);
-// }
-
-// export default Header;
