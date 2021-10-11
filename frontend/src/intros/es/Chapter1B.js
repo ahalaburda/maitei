@@ -10,7 +10,7 @@ function Chapter1B() {
           </strong>
         </h3>
         <br />
-        <p>Aprenderemos los números en Guaraní del 1 al 10</p>
+        <p>En esta lección aprenderemos a contar en guaraní:</p>
         <table classname="table table-responsive table-striped table-bordered">
           <thead classname="thead-dark">
             <tr>
@@ -97,7 +97,7 @@ function Chapter1B() {
             <tr></tr>
             <tr>
               <td classname="text-center">
-                <p>9</p>
+                <p>9&nbsp;&nbsp;&nbsp;=</p>
               </td>
               <td classname="text-center">
                 <p>Porundy</p>
@@ -106,10 +106,10 @@ function Chapter1B() {
             <tr></tr>
             <tr>
               <td classname="text-center">
-                <p>10</p>
+                <p>10 =<span> </span></p>
               </td>
               <td classname="text-center">
-                <p>Pa</p>
+                <p>&nbsp;Pa</p>
               </td>
             </tr>
             <tr></tr>

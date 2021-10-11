@@ -3,7 +3,7 @@ import React from 'react';
 
 function Chapter1AEN() {
 	return (
-        <div className="container" style={{color:'black'}}>
+        <div className="" style={{color:'black'}}>
             <h3><strong><em>Maitei/Hello</em></strong></h3>
             <br />
             <p>In this unit we are going to learn about the personal pronoum <strong>“Che” (I)</strong> and <strong>“Nde” (You)</strong>Also, we are going to learn how to say hi in Guarani</p>

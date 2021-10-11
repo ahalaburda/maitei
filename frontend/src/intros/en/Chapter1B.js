@@ -109,7 +109,7 @@ function Chapter1BEN() {
                 <p>10</p>
               </td>
               <td classname="text-center">
-                <p>Pa</p>
+                <p> Pa</p>
               </td>
             </tr>
             <tr></tr>
