@@ -86,16 +86,16 @@ function Chapter1A() {
             </table>
             <p><span>Se presentan algunos saludos en guaraní :</span></p>
             <div>
-                <strong><i><p>Maitei</p></i></strong>
-                <strong><i><p>Mba&rsquo;&eacute;ichapa,&nbsp;</p></i></strong>
-                <strong><i><p>Mba&rsquo;eteko,&nbsp;</p></i></strong>
-                <strong><i><p>Mba&rsquo;&eacute;ichapa neko&rsquo; ẽ</p></i></strong>
-                <strong><i><p>Mba&rsquo;&eacute;ichapa ndeka&rsquo;aru&nbsp;&nbsp;</p></i></strong>
-                <strong><i><p>Mba&rsquo;&eacute;ichapa ndepyhare Ipor&atilde;,&nbsp;</p></i></strong>
-                <strong><i><p>Ipor&atilde;,&nbsp;</p></i></strong>
-                <strong><i><p>Ipor&atilde;nte,&nbsp;</p></i></strong>
-                <strong><i><p>Ipor&atilde;m&iacute;nte</p></i></strong>
-                <strong><i><p>Ipor&atilde;iterei</p></i></strong>
+                <strong><i><p>Maitei.</p></i></strong>
+                <strong><i><p>Mba&rsquo;&eacute;ichapa.</p></i></strong>
+                <strong><i><p>Mba&rsquo;eteko.</p></i></strong>
+                <strong><i><p>Mba&rsquo;&eacute;ichapa neko&rsquo;ẽ.</p></i></strong>
+                <strong><i><p>Mba&rsquo;&eacute;ichapa ndeka&rsquo;aru.</p></i></strong>
+                <strong><i><p>Mba&rsquo;&eacute;ichapa ndepyhare.</p></i></strong>
+                <strong><i><p>Ipor&atilde;.</p></i></strong>
+                <strong><i><p>Ipor&atilde;nte.</p></i></strong>
+                <strong><i><p>Ipor&atilde;m&iacute;.</p></i></strong>
+                <strong><i><p>Ipor&atilde;iterei.</p></i></strong>
             </div>
         </div>
 	);
