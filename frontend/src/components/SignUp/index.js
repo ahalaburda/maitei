@@ -15,8 +15,10 @@ import { baseURL } from "../../services/http-common";
 
 
 // eslint-disable-next-line no-useless-escape
+const usernameRegex = new RegExp("^(?=.{6,20}$)(?![_.])(?!.*[_.]{2})[a-zA-Z0-9._]+(?<![_.])$");
 const strongRegex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
 const mediumRegex = new RegExp("^(.{8,})");
+const emailRegex = new RegExp("^[^\s@]+@[^\s@]+\.[^\s@]+$");
 
 class SignUp extends React.Component {
     
@@ -35,7 +37,9 @@ class SignUp extends React.Component {
           birthdate: '2000-01-01T15:00:00.000Z',
           country: '',
           error: '',
-          backgroundColor: ""
+          borderColorPassword: "",
+          borderColorEmail: "",
+          borderColorUsername: ""
         }
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleAvatarChange = this.handleAvatarChange.bind(this)
@@ -55,18 +59,28 @@ class SignUp extends React.Component {
         })
       }
       handleUsernameChange = event => {
+        if(usernameRegex.test(event.target.value)) {
+          this.setState({ borderColorUsername: "1px solid #0F9D58" });
+        } else {
+            this.setState({ borderColorUsername: "1px solid #DB4437" });
+        }
         this.setState({ username: event.target.value });
       }
       handleEmailChange = event => {
+        if(emailRegex.test(event.target.value)) {
+          this.setState({ borderColorEmail: "1px solid #0F9D58" });
+        } else {
+            this.setState({ borderColorEmail: "1px solid #DB4437" });
+        }
         this.setState({ email: event.target.value });
       }
       handlePasswordChange = event => {
         if(strongRegex.test(event.target.value)) {
-          this.setState({ backgroundColor: "#0F9D58" });
+          this.setState({ borderColorPassword: "1px solid #0F9D58" });
         } else if(mediumRegex.test(event.target.value)) {
-            this.setState({ backgroundColor: "#F4B400" });
+            this.setState({ borderColorPassword: "1px solid #F4B400" });
         } else {
-            this.setState({ backgroundColor: "#DB4437" });
+            this.setState({ borderColorPassword: "1px solid #DB4437" });
         }
         this.setState({ password: event.target.value });
       }
@@ -154,10 +168,10 @@ class SignUp extends React.Component {
                   <div className="form-group row">
                     <div className="col-sm-12 col-md-6 mb-3 mb-sm-0">
                       <label id="username-label" htmlFor="username">{i18n.t('username')}</label>
-                      <input className="form-control form-control-user" type="text" id="inputUsername" aria-describedby="usernameHelp" placeholder={i18n.t('username')} name="username" required onChange={ this.handleUsernameChange } />
+                      <input className="form-control form-control-user" type="text" id="inputUsername" aria-describedby="usernameHelp" placeholder={i18n.t('username')} name="username" required onChange={ this.handleUsernameChange } style={{ border: this.state.borderColorUsername }}/>
                       <br />
                       <label id="email-label" htmlFor="email">{i18n.t('email')}</label>
-                      <input className="form-control form-control-user" type="email" id="inputEmail" aria-describedby="emailHelp" placeholder="Email" name="email" required onChange={ this.handleEmailChange } />
+                      <input className="form-control form-control-user" type="email" id="inputEmail" aria-describedby="emailHelp" placeholder="Email" name="email" required onChange={ this.handleEmailChange }  style={{ border: this.state.borderColorEmail }}/>
                     </div>
                     <div className="col-sm-12 col-md-6 mb-3 mb-sm-0">
                         <div className="preview text-center">
@@ -172,7 +186,7 @@ class SignUp extends React.Component {
                   <div className="form-group row">
                     <div className="col-sm-12 col-md-6 mb-3 mb-sm-0">
                       <label id="password-label" for="password">{i18n.t('password')}</label>
-                      <input className="form-control form-control-user PasswordStrength" type="password" id="examplePasswordInput" placeholder={i18n.t('password_message')} name="password" onChange={ this.handlePasswordChange } style={{ backgroundColor: this.state.backgroundColor }}/>
+                      <input className="form-control form-control-user PasswordStrength" type="password" id="examplePasswordInput" placeholder={i18n.t('password_message')} name="password" onChange={ this.handlePasswordChange } style={{ border: this.state.borderColorPassword }}/>
                     </div>
                   </div>
 
@@ -194,6 +208,7 @@ class SignUp extends React.Component {
                     <div className="col-sm-6 mb-3 mb-sm-0">
                     <label id="birthdate-label" htmlFor="birthdate">{i18n.t('birthdate')}</label>
                       <DayPickerInput
+                      fromYear={2015} toYear={2025} captionLayout="dropdown"
                         dayPickerProps={{
                           month: new Date(2000, 0),
                           showWeekNumbers: false,

@@ -106,7 +106,7 @@ button:focus{
 
 .PasswordStrength {
     background-color: #4285F4;
-    color: #FFFFFF !important;
+    /*color: #FFFFFF !important;*/
 
 }
 
