@@ -70,7 +70,7 @@ class Login extends Component {
                   <div className="col-lg-6 col-md-12 col-sm-6">
                     <div className="p-6-login">
                       <div className="text-center">
-                        <h4 className="text-dark mb-4">Bievenido!</h4>
+                        <h4 className="text-dark mb-4">Bienvenido!</h4>
                       </div>
                       <form onSubmit={e => this.handleSubmit(e)} className="user">
                         <div className="form-group">
