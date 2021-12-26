@@ -21,6 +21,7 @@ export const esp = {
     signup_subtitle: 'Esta información nos permitirá saber más sobre ti.',
     about_us: 'Acerca de',
     contact_us: 'Contacto',
+    glossary: 'Glosario',
     
     username: 'Usuario',
     email: 'Correo electrónico',

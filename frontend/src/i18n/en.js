@@ -21,6 +21,7 @@ export const eng = {
     signup_subtitle: 'This information will let us know more about you.',
     about_us: 'About us.',
     contact_us: 'Contact us',
+    glossary: 'Glossary',
 
     username: 'Username',
     email: 'Email',

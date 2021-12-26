@@ -3,7 +3,7 @@ import {
     Link
 } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTachometerAlt, faUser, faTable, faHandsHelping, faGreaterThan, faLessThan, faEnvelope, faTimesCircle, faInfo } from '@fortawesome/free-solid-svg-icons'
+import { faTachometerAlt, faTable, faHandsHelping, faGreaterThan, faLessThan, faEnvelope, faTimesCircle, faInfo, faBook } from '@fortawesome/free-solid-svg-icons'
 import Logo from "./components/Logo";
 import './Sidebar.css'
 import $ from "jquery";
@@ -80,6 +80,10 @@ class Sidebar extends Component {
                   </li>
                   <li className="nav-item">
                     <Link className="nav-link" to="/chapters"><FontAwesomeIcon icon={faHandsHelping} /><span style={{paddingLeft: '1em'}}>{i18n.t('chapters')}</span></Link>
+                  </li>
+                  <hr/>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/glossary"><FontAwesomeIcon icon={faBook} /><span style={{paddingLeft: '1em'}}>{i18n.t('glossary')}</span></Link>
                   </li>
                   <hr/>
                   <li className="nav-item">

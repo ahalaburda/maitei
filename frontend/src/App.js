@@ -17,6 +17,7 @@ import Login from './components/Login';
 import SignUp from './components/SignUp';
 import NoMatch from './components/Errors/404';
 import AboutUs from './components/About';
+import Glossary from './components/Glossary';
 
 import axiosBase from "./services/http-common";
 import IdleTimer from './helpers/IdleTimer';
@@ -234,6 +235,7 @@ class App extends Component {
                         <ProtectedRoute exact path='/chapters' loggedIn={this.state.loggedIn} component={Chapters} />
                         <ProtectedRoute exact path='/exercises' loggedIn={this.state.loggedIn} component={Exercises} />
                         <ProtectedRoute exact path='/about' loggedIn={this.state.loggedIn} component={AboutUs} />
+                        <ProtectedRoute exact path='/glossary' loggedIn={this.state.loggedIn} component={Glossary} />
                         <Route exact path='/login'>
                           <Login handleLogin={this.handleLogin} username={this.state.username}
                             currentUser={this.currentUser} />

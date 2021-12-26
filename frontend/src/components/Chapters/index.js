@@ -60,7 +60,7 @@ class Chapters extends Component {
                 <div className="row">
                     {this.state.chapters.map((d, idx) => {
                         console.log(d.active)
-                        if(d.active == true){
+                        if(d.active === true){
                             return (
                                 <div className="col-md-6 col-lg-4 col-xl-3 mb-4" key={idx}>
                                     <Link className="" to="/exercises" onClick={() => this.handleClick(d.id)}>

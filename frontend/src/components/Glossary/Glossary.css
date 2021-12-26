@@ -1,0 +1,22 @@
+.mdb-datatable{
+    color:black;
+}
+
+.mdb-dataTable-head{
+    color: black;
+    background-color: lightgray;
+}
+
+.mdb-datatable > tbody{
+    color: black;
+}
+
+tbody{
+    background-color: white;
+    color: black;
+}
+
+table.mdb-dataTable tbody > tr:not(.selected):hover {
+    background-color: rgb(245 193 62 / 48%) !important;
+    color: black;
+}
