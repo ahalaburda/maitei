@@ -73,8 +73,10 @@ class App extends Component {
     super(props);
     this.state = {
       signup: false,
-      loggedIn: !!sessionStorage.getItem('access_token'),
-      username: sessionStorage.getItem('username') === null ? '' : sessionStorage.getItem('username'),
+      // loggedIn: !!sessionStorage.getItem('access_token'),
+      loggedIn: true,
+      // username: sessionStorage.getItem('username') === null ? '' : sessionStorage.getItem('username'),
+      username: "Demo",
       avatar: '',
       last_login: '',
       language: ''
@@ -216,7 +218,7 @@ class App extends Component {
    
   return (
     <>
-        <AutoLogout />
+        {/* <AutoLogout /> */}
         <div id="page-top">
             <Router>
             {this.state.loggedIn ? <Redirect to='/' /> : ''}
@@ -229,13 +231,13 @@ class App extends Component {
                       {this.state.loggedIn && <Header username={this.state.username} handleLogout={this.handleLogout} image={this.state.avatar} />}
                       <div className="container-fluid">
                         <Switch>
-                        <ProtectedRoute exact path='/' loggedIn={this.state.loggedIn} component={Home} />
-                        <ProtectedRoute exact path='/profile' loggedIn={this.state.loggedIn} component={Profile} />
-                        <ProtectedRoute exact path='/levels' loggedIn={this.state.loggedIn} component={Levels} />
-                        <ProtectedRoute exact path='/chapters' loggedIn={this.state.loggedIn} component={Chapters} />
-                        <ProtectedRoute exact path='/exercises' loggedIn={this.state.loggedIn} component={Exercises} />
-                        <ProtectedRoute exact path='/about' loggedIn={this.state.loggedIn} component={AboutUs} />
-                        <ProtectedRoute exact path='/glossary' loggedIn={this.state.loggedIn} component={Glossary} />
+                        <Route exact path='/' loggedIn={this.state.loggedIn} component={Home} />
+                        <Route exact path='/profile' loggedIn={this.state.loggedIn} component={Profile} />
+                        <Route exact path='/levels' loggedIn={this.state.loggedIn} component={Levels} />
+                        <Route exact path='/chapters' loggedIn={this.state.loggedIn} component={Chapters} />
+                        <Route exact path='/exercises' loggedIn={this.state.loggedIn} component={Exercises} />
+                        <Route exact path='/about' loggedIn={this.state.loggedIn} component={AboutUs} />
+                        <Route exact path='/glossary' loggedIn={this.state.loggedIn} component={Glossary} />
                         <Route exact path='/login'>
                           <Login handleLogin={this.handleLogin} username={this.state.username}
                             currentUser={this.currentUser} />
